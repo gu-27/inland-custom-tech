@@ -7,6 +7,33 @@ repos.
 
 ---
 
+## Where we left off
+
+Last worked 2026-10-19. Phase 1 is done and the new site is live at
+https://inland-custom-tech.pages.dev. Nothing in this plan has run, and nothing on
+inlandnw.ai has been touched.
+
+The whole thing is blocked on one purchase.
+
+**Next, in order:**
+
+1. **Buy inlandcustomtech.com** at dash.cloudflare.com → Domain Registration.
+   Everything else waits on this. See [DOMAIN-AND-EMAIL.md](DOMAIN-AND-EMAIL.md) step 1.
+2. **Run `python3 scripts/connect_domain.py`** to attach apex + www and turn on Email
+   Routing, then click the Cloudflare verification link and set up Gmail "Send mail as".
+3. **Do Stage 0 below.** It fixes things that are broken right now and does not depend on
+   the rename, so it can happen the moment you approve it: the `www.inlandnw.ai` 522, the
+   unrotated Mead `ADMIN_PASSWORD`, and the dead `inland-nw-ai` Worker.
+4. **Then approve Stage 1** and the 301s go in.
+
+Stages 1 through 4 all need your sign-off first. Stage 0 is the only part that is safe to
+start before the domain exists.
+
+Two decisions are still open and only you can make them: whether the "Custom AI Tools &
+Projects" index and Meeting Brain (items 6 and 7) move, retire, or stay put.
+
+---
+
 ## What is actually served today
 
 I probed the live hosts rather than trusting the repos. One thing worth knowing up front:
