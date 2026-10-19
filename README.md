@@ -16,6 +16,9 @@ Live: https://inland-custom-tech.pages.dev (custom domain inlandcustomtech.com p
 | `print/` | Business card print PDF and preview. |
 | `BRAND.md` | Brand rules. Source of truth. |
 | `CLAUDE.md` | Short brand summary and repo rules for AI sessions. |
+| `docs/DOMAIN-AND-EMAIL.md` | Connecting inlandcustomtech.com and setting up email. |
+| `docs/MIGRATION-PLAN.md` | Plan for moving off inlandnw.ai. Not yet approved. |
+| `scripts/connect_domain.py` | Runs the Cloudflare side of the domain and email setup. |
 
 ## Editing
 
