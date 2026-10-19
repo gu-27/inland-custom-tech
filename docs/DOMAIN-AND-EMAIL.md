@@ -131,6 +131,18 @@ volume.
 
 ---
 
+## One thing only you can change
+
+The Google appointment schedule is still **named "Inland NW AI Scheduler"**. That name
+renders inside the booking embed on the new site, so a visitor books an Inland Custom
+Tech consultation on a scheduler branded with the old name.
+
+Google Calendar (web) → **Appointment schedules** → open the schedule → rename it to
+`Inland Custom Tech` → **Save**. The URL does not change, so nothing in the repo needs
+editing.
+
+---
+
 ## What this does not touch
 
 `inlandnw.ai` keeps its Google Workspace MX records and its live site. Nothing here
