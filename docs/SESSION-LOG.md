@@ -6,6 +6,44 @@ the next person has to decide. If you are returning cold, read the top entry, th
 
 ---
 
+## 2026-10-21 (later): polish pass on the pathway redesign
+
+**State: still on `pathway`, preview redeployed, not merged. Production is unchanged.**
+
+John asked for the redesign to be finished and made "really professional and clean." No
+new claims about John were added. Every change is layout, trimming, or rewording of copy
+already on the page.
+
+### What changed
+
+- **Your path is about 900px shorter on desktop.** Each track is now one card holding a
+  timeline (dot per step, thin connecting line, "Learn more" on the right) instead of five
+  boxed cards with arrows. Dimmed steps get a hollow dot and a grey title. Intro line is
+  now "Every step is shown here. Pick a tab to see a typical path."
+- **Who we help:** one button per card ("See your path"). The three extra "Schedule"
+  buttons are gone; that action is already in the header, hero, close band, and contact.
+- **Hero:** shorter lede, the Local/Experienced/Personable row removed (the values strip
+  sits right below it), secondary button now "See How It Works" to `#path`. Fixed a grid
+  bug that cut the "Sound familiar?" rule about 100px short; the C mark was resized to
+  match.
+- **About:** paragraphs tightened. "Selected work" is now a five-item list with bold
+  labels. The 100% / INW / Free stats and the three pillars were removed as filler.
+- **Contact:** "Book a Free Discovery Call" renamed to "Book your free consultation" to
+  match the rest of the site. Phone and service area fill the empty left column. The
+  button under the calendar is now a secondary "Open the booking page" fallback. Email is
+  still left off because inlandcustomtech.com is not registered.
+- **Service pages:** real breadcrumb (Home / Your path / Step). The "Example coming soon"
+  sections on Free Consultation and Implement were removed. "literally" cut on Evaluate.
+
+### Checked
+
+No overflow at 390 or 1440, no console errors, tabs still dim six steps on Enterprise,
+every `services/` link resolves, no em dashes.
+
+The four open questions in the entry below are unchanged and still waiting on John.
+
+---
+
 ## 2026-10-21: evidence audit and the "Your path" redesign
 
 **State: on a branch, deployed to preview, not merged. Production is unchanged.**
@@ -14,7 +52,7 @@ the next person has to decide. If you are returning cold, read the top entry, th
 
 | | |
 |---|---|
-| Branch | `pathway`, pushed, one commit `3a51a98` |
+| Branch | `pathway`, pushed |
 | Preview | <https://pathway.inland-custom-tech.pages.dev> |
 | Production | <https://inland-custom-tech.pages.dev>, still the old page on `main` |
 | Screenshots | `~/Desktop/inland-pathway-review/`, eight PNGs, desktop and mobile on each tab |

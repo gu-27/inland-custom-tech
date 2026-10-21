@@ -46,14 +46,12 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .hd .btn{padding:11px 18px;font-size:14px}
 /* hero */
 .hero{padding-block:72px 0;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:32px;align-items:center}
 .hero h1{font-size:clamp(56px,9.6vw,128px);line-height:.92;font-weight:800;letter-spacing:-.055em;margin:22px 0 30px}
 .hero h1 span{display:block;font-weight:400;color:var(--orange)}
 .o{color:var(--orange)}
 .hero .lede{font-size:20px;color:var(--muted);max-width:44ch}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.traits{display:flex;flex-wrap:wrap;gap:22px;margin-top:30px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.traits span{display:flex;align-items:center;gap:8px} .traits span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--black)}
 .art{position:relative;aspect-ratio:1/1;max-width:100%}
 .reassure{margin-top:14px;font-size:14px;font-weight:700;color:var(--soft)}
 .familiar{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:72px;padding-block:28px 64px;border-top:3px solid var(--black)}
@@ -61,7 +59,7 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .familiar div small{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
 .familiar div small::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
 .familiar div b{display:block;font-size:clamp(22px,2.4vw,30px);line-height:1.15;letter-spacing:-.03em;margin-top:8px}
-.bigc{position:absolute;left:4%;top:-6%;width:135%;height:135%}
+.bigc{position:absolute;left:0;top:0;width:100%;height:100%}
 .chip{position:absolute;background:var(--white);border:1px solid var(--hair);border-radius:14px;padding:12px 14px;box-shadow:0 8px 24px rgba(20,20,19,.08);max-width:200px}
 .chip small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .chip b{display:block;font-size:15px;line-height:1.35;margin-top:3px;letter-spacing:-.01em}
@@ -92,7 +90,19 @@ footer{background:var(--stone)}
 .track{display:grid;gap:12px;align-content:start}
 .track-lab{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:4px}
 .track-lab::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange);flex:0 0 9px}
-.arrow{font-size:20px;font-weight:800;color:var(--orange);text-align:center;line-height:1}
+/* each track is one card holding a timeline: a dot per step on a thin vertical line */
+.track-card{border:2px solid var(--black);border-radius:20px;padding:6px 28px}
+.step.row{position:relative;border:0;border-radius:0;padding:22px 0 22px 34px;grid-template-columns:minmax(0,1fr) auto;column-gap:16px;row-gap:6px;align-items:baseline}
+.step.row+.step.row{border-top:1px solid var(--hair)}
+.step.row::before{content:"";position:absolute;left:0;top:31px;width:12px;height:12px;border-radius:50%;background:var(--orange)}
+.step.row::after{content:"";position:absolute;left:5px;top:43px;bottom:-31px;width:2px;background:var(--hair)}
+.step.row:last-child::after{display:none}
+.step.row h3{font-size:22px}
+.step.row p{grid-column:1/-1;font-size:16px}
+.step.row .more{justify-self:end;margin:0}
+.step.row.dim{border-color:var(--hair)}
+.step.row.dim::before{background:var(--paper);box-shadow:inset 0 0 0 2px var(--hair)}
+.step.row.dim h3{color:var(--soft)}
 .step{border:2px solid var(--black);border-radius:20px;padding:24px;display:grid;gap:10px;align-content:start}
 .step .n{width:52px;height:52px;border-radius:50%;background:var(--orange);color:var(--black);font-size:21px;font-weight:800;display:flex;align-items:center;justify-content:center}
 .step .dot{width:12px;height:12px;border-radius:50%;background:var(--orange)}
@@ -107,7 +117,7 @@ footer{background:var(--stone)}
 .step.dim .dot{background:var(--hair)}
 .step.dim p{color:var(--soft)}
 .step.dim .more{border-bottom-color:var(--hair)}
-.track-note{margin-top:48px;padding-top:24px;border-top:3px solid var(--black);font-size:21px;font-weight:800;letter-spacing:-.02em;max-width:820px}
+.track-note{margin-top:56px;padding-top:24px;border-top:3px solid var(--black);font-size:21px;font-weight:800;letter-spacing:-.02em}
 .areas{margin-top:18px;font-size:17px;color:var(--muted)}
 .areas b{color:var(--black);font-weight:800}
 .privacy{margin-top:14px;font-size:15.5px;color:var(--soft);max-width:70ch}
@@ -131,16 +141,20 @@ footer{background:var(--stone)}
 .about h2{font-size:clamp(38px,6vw,72px);line-height:.98;font-weight:800;letter-spacing:-.045em;margin:14px 0 28px}
 .about h2 span{font-weight:800;display:block}
 .body p{color:var(--muted);font-size:17px;max-width:62ch} .body p+p{margin-top:16px}
-.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px;padding-top:28px;border-top:3px solid var(--black)}
-.pillar b{display:flex;align-items:center;gap:8px;font-size:16px} .pillar b::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
-.pillar p{color:var(--muted);font-size:14.5px;margin-top:6px}
-.stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:32px}
-.stat b{display:block;font-size:48px;font-weight:800;letter-spacing:-.03em;line-height:1} .stat span{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.work{margin-top:40px;padding-top:26px;border-top:3px solid var(--black)}
+.work ul{list-style:none;margin:18px 0 0;padding:0}
+.work li{padding-block:14px;border-top:1px solid var(--sand);color:var(--muted);font-size:16.5px;max-width:62ch}
+.work li:first-child{border-top:0;padding-top:0}
+.work li b{color:var(--black);font-weight:800}
 /* contact */
 .contact{border-top:0}
 .contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
 .cal{border:2px solid var(--black);border-radius:20px;padding:28px;display:grid;gap:14px}
-.cal h3{font-size:22px;font-weight:800} .cal p{color:var(--muted)}
+.cal h3{font-size:22px;font-weight:800} .cal p{color:var(--muted)} .cal .btn{justify-self:start}
+.facts{margin:36px 0 0;display:grid;gap:18px}
+.facts dt{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.facts dd{margin:4px 0 0;font-size:18px;font-weight:700}
+.facts a{text-decoration:none;font-size:28px;font-weight:800;letter-spacing:-.02em} .facts a:hover{color:var(--orange)}
 .slot{display:block;width:100%;min-height:600px;border:1.5px solid var(--hair);border-radius:14px;background:var(--white)}
 footer{border-top:1px solid var(--hair);padding-block:36px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px 36px;align-items:center;justify-content:space-between}
@@ -149,8 +163,8 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
  nav.main{display:none} .hd .btn{margin-left:auto}
  .hero .wrap,.about .wrap,.contact .wrap,.close .wrap{grid-template-columns:1fr}
  .art{display:none} .familiar{grid-template-columns:1fr;margin-top:48px}
- .who-grid,.pillars{grid-template-columns:1fr}
- .path-start,.tracks{grid-template-columns:1fr} .tracks{margin-top:28px} .track{margin-top:16px}
+ .who-grid{grid-template-columns:1fr}
+ .path-start,.tracks{grid-template-columns:1fr} .tracks{margin-top:28px} .track{margin-top:16px} .track-card{padding:4px 20px}
  .photo{max-width:360px}
  section{padding-block:68px}
 }
@@ -168,9 +182,9 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <section class="hero" id="home"><div class="wrap">
 <div><div class="eb">Custom tech for the Inland Northwest</div>
 <h1>Technology, <span>made simple.</span></h1>
-<p class="lede">Whether you’re a solo operator, a growing business, or an established team looking for extra support, we help you automate the busywork, make sense of your data, and build the right culture around technology. We keep it practical, with customized solutions for you.</p>
-<div class="ctas"><a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a><a class="btn line" href="#who">See How We Help</a></div>
-<p class="reassure">Free one-hour consultation · No pitch, no obligation</p><div class="traits"><span>Local</span><span>Experienced</span><span>Personable</span></div></div>
+<p class="lede">We help Inland Northwest businesses automate the busywork, make sense of their data, and get their people using the tools they already pay for. Practical work, built around how you already run.</p>
+<div class="ctas"><a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a><a class="btn line" href="#path">See How It Works</a></div>
+<p class="reassure">Free one-hour consultation · No pitch, no obligation</p></div>
 <div class="art" aria-hidden="true"><svg class="bigc" viewBox="0 0 320 320" aria-hidden="true"><path d="M256.6 185.9 A100 100 0 1 1 151.3 60.4" fill="none" stroke="#141413" stroke-width="58" stroke-linecap="round"/><circle cx="236.6" cy="95.7" r="30" fill="#D97757"/></svg></div>
 <div class="familiar"><div class="lab">Sound familiar?</div><div><small>Automation</small><b>“I retype the same receipts every week.”</b></div><div><small>Analytics</small><b>“I can’t see my whole business in one place.”</b></div><div><small>AI</small><b>“I don’t know where AI actually helps.”</b></div></div>
 </div></section>
@@ -178,11 +192,11 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <div class="strip"><div class="wrap"><span>Curiosity driven</span><span>People centered</span><span>Thoughtful AI</span><span>Growing together</span></div></div>
 
 <section id="who"><div class="wrap">
-<div class="sec-h"><div class="eb">Who we help</div><h2>Find your <span class="o">starting point.</span></h2><p>Wherever you are, there’s a way in. Pick the description that sounds most like you. The first conversation is always free.</p></div>
+<div class="sec-h"><div class="eb">Who we help</div><h2>Find your <span class="o">starting point.</span></h2><p>Pick the description that sounds most like you. Each one opens the path most people in your spot take.</p></div>
 <div class="who-grid">
-<div class="who"><div class="role">Solo operators &amp; small teams</div><h3>Small Business</h3><p>Are there tasks you don’t like doing or can’t get to, like building or updating a website, managing receipts, or scheduling projects? Or are you just sick of paying for subscriptions you barely use?</p><div class="acts"><a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a><a class="btn line" href="#path" data-persona="small">See your path</a></div></div>
-<div class="who"><div class="role">Scaling teams &amp; operations</div><h3>Growing Company</h3><p>Are you looking to optimize your workflows with technology, get more out of your data, or figure out where AI actually fits in your business?</p><div class="acts"><a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a><a class="btn line" href="#path" data-persona="growing">See your path</a></div></div>
-<div class="who"><div class="role">Established orgs &amp; leadership</div><h3>Enterprise</h3><p>Do you have the tools and the team in place but struggle to get real adoption? Or do you want to build an AI-ready culture that actually sticks?</p><div class="acts"><a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a><a class="btn line" href="#path" data-persona="enterprise">See your path</a></div></div>
+<div class="who"><div class="role">Solo operators &amp; small teams</div><h3>Small Business</h3><p>Are there tasks you don’t like doing or can’t get to, like building or updating a website, managing receipts, or scheduling projects? Or are you just sick of paying for subscriptions you barely use?</p><div class="acts"><a class="btn line" href="#path" data-persona="small">See your path</a></div></div>
+<div class="who"><div class="role">Scaling teams &amp; operations</div><h3>Growing Company</h3><p>Are you looking to optimize your workflows with technology, get more out of your data, or figure out where AI actually fits in your business?</p><div class="acts"><a class="btn line" href="#path" data-persona="growing">See your path</a></div></div>
+<div class="who"><div class="role">Established orgs &amp; leadership</div><h3>Enterprise</h3><p>Do you have the tools and the team in place but struggle to get real adoption? Or do you want to build an AI-ready culture that actually sticks?</p><div class="acts"><a class="btn line" href="#path" data-persona="enterprise">See your path</a></div></div>
 </div></div></section>
 
 <section id="path"><div class="wrap">
@@ -196,11 +210,11 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 </div>
 
 <div id="panel-path" role="tabpanel" aria-labelledby="tab-general" tabindex="0">
-<p class="typical" id="typical">Every step, shown evenly. Almost nobody needs all of them.</p>
+<p class="typical" id="typical">Every step is shown here. Pick a tab to see a typical path.</p>
 <div class="path-start"><div class="step" data-step="consult"><span class="n">1</span><span class="first-lab">Everyone starts here</span><h3>Free Consultation</h3><p data-copy>One hour, free. We look at what you are doing now and find where technology could actually help.</p><a class="more" href="services/free-consultation.html">Learn more<span class="sr"> about free consultation</span></a></div><div class="step" data-step="explain"><span class="n">2</span><h3>Explain</h3><p data-copy>A conversation that makes sense of what is out there. What is worth solving with tech, and what is not.</p><a class="more" href="services/explain.html">Learn more<span class="sr"> about explain</span></a></div></div>
 <div class="tracks">
-<div class="track"><div class="track-lab">Technology</div><div class="step" data-step="assess"><span class="dot" aria-hidden="true"></span><h3>Assess</h3><p data-copy>A clear read on your systems, your data, and where the time is going.</p><a class="more" href="services/assess.html">Learn more<span class="sr"> about assess</span></a></div><div class="arrow" aria-hidden="true">&#8595;</div><div class="step" data-step="plan"><span class="dot" aria-hidden="true"></span><h3>Plan</h3><p data-copy>A strategy and a roadmap. What to do, in what order, and what it takes.</p><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a></div><div class="arrow" aria-hidden="true">&#8595;</div><div class="step" data-step="build"><span class="dot" aria-hidden="true"></span><h3>Build</h3><p data-copy>We build it, put it in place, and hand it off working.</p><a class="more" href="services/build.html">Learn more<span class="sr"> about build</span></a></div><div class="arrow" aria-hidden="true">&#8595;</div><div class="step" data-step="train"><span class="dot" aria-hidden="true"></span><h3>Train</h3><p data-copy>Hands-on sessions, so your team owns it instead of depending on us.</p><a class="more" href="services/train.html">Learn more<span class="sr"> about train</span></a></div><div class="arrow" aria-hidden="true">&#8595;</div><div class="step" data-step="sustain"><span class="dot" aria-hidden="true"></span><h3>Sustain</h3><p data-copy>Check-ins and support, so the thing you paid for keeps getting used.</p><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a></div></div>
-<div class="track"><div class="track-lab">People &amp; Culture</div><div class="step" data-step="evaluate"><span class="dot" aria-hidden="true"></span><h3>Evaluate</h3><p data-copy>A read on how your people actually work, and where technology gets stuck.</p><a class="more" href="services/evaluate.html">Learn more<span class="sr"> about evaluate</span></a></div><div class="arrow" aria-hidden="true">&#8595;</div><div class="step" data-step="culture-plan"><span class="dot" aria-hidden="true"></span><h3>Plan</h3><p data-copy>A plan for the habits and the people, not just the tools.</p><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a></div><div class="arrow" aria-hidden="true">&#8595;</div><div class="step" data-step="implement"><span class="dot" aria-hidden="true"></span><h3>Implement</h3><p data-copy>Workshops, champions, and new habits that hold after we leave.</p><a class="more" href="services/implement.html">Learn more<span class="sr"> about implement</span></a></div><div class="arrow" aria-hidden="true">&#8595;</div><div class="step" data-step="culture-sustain"><span class="dot" aria-hidden="true"></span><h3>Sustain</h3><p data-copy>We stay close while the new way becomes the normal way.</p><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a></div></div>
+<div class="track"><div class="track-lab">Technology</div><div class="track-card"><div class="step row" data-step="assess"><h3>Assess</h3><a class="more" href="services/assess.html">Learn more<span class="sr"> about assess</span></a><p data-copy>A clear read on your systems, your data, and where the time is going.</p></div><div class="step row" data-step="plan"><h3>Plan</h3><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a><p data-copy>A strategy and a roadmap. What to do, in what order, and what it takes.</p></div><div class="step row" data-step="build"><h3>Build</h3><a class="more" href="services/build.html">Learn more<span class="sr"> about build</span></a><p data-copy>We build it, put it in place, and hand it off working.</p></div><div class="step row" data-step="train"><h3>Train</h3><a class="more" href="services/train.html">Learn more<span class="sr"> about train</span></a><p data-copy>Hands-on sessions, so your team owns it instead of depending on us.</p></div><div class="step row" data-step="sustain"><h3>Sustain</h3><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a><p data-copy>Check-ins and support, so the thing you paid for keeps getting used.</p></div></div>
+</div><div class="track"><div class="track-lab">People &amp; Culture</div><div class="track-card"><div class="step row" data-step="evaluate"><h3>Evaluate</h3><a class="more" href="services/evaluate.html">Learn more<span class="sr"> about evaluate</span></a><p data-copy>A read on how your people actually work, and where technology gets stuck.</p></div><div class="step row" data-step="culture-plan"><h3>Plan</h3><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a><p data-copy>A plan for the habits and the people, not just the tools.</p></div><div class="step row" data-step="implement"><h3>Implement</h3><a class="more" href="services/implement.html">Learn more<span class="sr"> about implement</span></a><p data-copy>Workshops, champions, and new habits that hold after we leave.</p></div><div class="step row" data-step="culture-sustain"><h3>Sustain</h3><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a><p data-copy>We stay close while the new way becomes the normal way.</p></div></div></div>
 </div>
 <p class="track-note">Start anywhere, stop anywhere, or skip straight to what you need.</p>
 <p class="areas">We work across three areas: <b>Automation</b> &#183; <b>Analytics</b> &#183; <b>AI</b>.</p>
@@ -216,20 +230,24 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <section class="about" id="about"><div class="wrap">
 <div class="photo-col"><div class="photo"><img src="img/john-correia.jpg" alt="John Correia"><svg class="ic" viewBox="0 0 44 44" width="44" height="44" role="img" aria-label="Inland Custom Tech"><rect x="0.00" y="0.00" width="44.00" height="44.00" rx="9.62" fill="#141413"/><path d="M32.61 25.97 A11.34 11.34 0 1 1 20.67 11.73" fill="none" stroke="#FAF9F6" stroke-width="7.56" stroke-linecap="round"/><circle cx="30.35" cy="15.74" r="4.12" fill="#D97757"/></svg></div><div class="name">John Correia<span>Founder, Inland Custom Tech</span></div></div>
 <div><div class="eb">About</div><h2>Curious by nature. <span>Built to help you grow.</span></h2>
-<div class="body"><p>I started this company because I genuinely love figuring out problems, and technology, AI included, is one of the most interesting ways to solve them. My approach isn’t to show up with a pre-packaged solution. It’s to sit down, understand what you’re dealing with, and explore what could actually help.</p>
-<p>My background sits at the intersection of two things that don’t always go together: the behavioral side of how people learn and adopt technology, and the applied technical skills to actually implement and build tools. Most organizations don’t fail at new technology because of the technology. They fail because the people side isn’t handled well. I know both sides of that equation.</p>
-<p>I work with solo operators, growing companies, nonprofits, and established organizations across Spokane, Coeur d’Alene, and the Inland Northwest. Whether you’re a one-person shop that needs a website built, a team optimizing your operations, or a larger organization working to get real adoption across your people, I’m ready to help.</p>
-<p><b>Selected work.</b> A spatial audio platform that captures sound at live venues and streams it back as something you can listen around in. Dashboards that pull scattered numbers into one picture, including a league-wide attendance study built from two public data feeds. A follow-up tool that drafts with AI and sends nothing until a person approves it. A document tool that strips personal information out before anything reaches an AI, running entirely in your browser with no network calls at all. And the everyday work: websites, trackers, and property listing pages where the facts live in one file so the pages can never disagree.</p></div>
-<div class="stats"><div class="stat"><b>100%</b><span>Custom engagements</span></div><div class="stat"><b>INW</b><span>Spokane · CdA · Region</span></div><div class="stat"><b>Free</b><span>First consultation</span></div></div>
-<div class="pillars"><div class="pillar"><b>Curiosity-driven</b><p>Every engagement starts with listening and exploring your problem.</p></div><div class="pillar"><b>Behavioral + technical</b><p>How people learn and adopt technology, not just the tools themselves.</p></div><div class="pillar"><b>Applied skills</b><p>Hands-on experience building and implementing real solutions for real teams.</p></div></div>
+<div class="body"><p>I started this company because I love figuring out problems, and technology is one of the best ways to solve them. I don’t show up with a packaged answer. I sit down, learn what you’re dealing with, and work out what would actually help.</p>
+<p>My background covers two things that rarely sit together: how people learn and adopt technology, and the hands-on skill to build the tools. Most new technology fails because the people side is handled badly, not because of the technology. I work on both sides.</p>
+<p>I work with solo operators, growing companies, nonprofits, and established organizations across Spokane, Coeur d’Alene, and the Inland Northwest.</p></div>
+<div class="work"><div class="eb">Selected work</div><ul>
+<li><b>Spatial audio platform.</b> Captures sound at live venues and streams it back as something you can listen around in.</li>
+<li><b>Dashboards.</b> Scattered numbers pulled into one picture, including a league-wide attendance study built from two public data feeds.</li>
+<li><b>AI follow-up tool.</b> Drafts replies with AI and sends nothing until a person approves it.</li>
+<li><b>Private document tool.</b> Strips personal information out before anything reaches an AI. Runs entirely in your browser with no network calls.</li>
+<li><b>The everyday work.</b> Websites, trackers, and property listing pages where the facts live in one file, so the pages never disagree.</li>
+</ul></div>
 </div></div></section>
 
 <section class="contact" id="contact"><div class="wrap">
-<div class="sec-h" style="margin:0"><div class="eb">Get started</div><h2>Let’s figure it out <span class="o">together.</span></h2><p>Not sure where technology fits for your business? That’s what the first call is for. It’s free, it’s casual, and there’s no obligation, just a conversation.</p></div>
-<div class="cal"><h3>Book a Free Discovery Call</h3><p>One hour. We’ll listen to what you’re working on, share what we’ve seen work for similar businesses, and give you an honest take on where technology could help, or where it might not be worth your time yet.</p><iframe class="slot" data-cal-embed
+<div class="sec-h" style="margin:0"><div class="eb">Get started</div><h2>Let’s figure it out <span class="o">together.</span></h2><p>Not sure where technology fits for your business? That’s what the first call is for. It’s free, and there’s no obligation.</p><dl class="facts"><div><dt>Call</dt><dd><a href="tel:+15097950112">(509) 795-0112</a></dd></div><div><dt>Serving</dt><dd>Spokane, Coeur d’Alene, and the Inland Northwest</dd></div></dl></div>
+<div class="cal"><h3>Book your free consultation</h3><p>One hour. We’ll listen to what you’re working on, share what we’ve seen work for similar businesses, and give you an honest take on where technology could help, or where it might not be worth your time yet.</p><iframe class="slot" data-cal-embed
   src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3JOeETJo6a8QW0HtjOY-UiLHuj4vQKiX3vWsE5M5s9rSHV8KEQ1zcHW-JZ6Zd-MCYB0Hqxhnu0?gv=true"
   width="100%" height="600" frameborder="0" loading="lazy"
-  title="Book a free discovery call with Inland Custom Tech"></iframe><a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a></div>
+  title="Book a free consultation with Inland Custom Tech"></iframe><a class="btn line" href="#contact" data-schedule>Open the booking page</a></div>
 </div></section>
 </main>
 
@@ -253,7 +271,7 @@ var PATH_ON = {
 };
 
 var PATH_TYPICAL = {
-  general:    'Every step, shown evenly. Almost nobody needs all of them.',
+  general:    'Every step is shown here. Pick a tab to see a typical path.',
   small:      'A small business usually needs <b>Free Consultation, Explain, Build, and Train</b>. The rest stay available.',
   growing:    'A growing company usually needs <b>Free Consultation, Assess, Plan, Build, Train, and Sustain</b>. The rest stay available.',
   enterprise: 'An enterprise usually needs <b>the free consultation plus the whole People &amp; Culture track</b>. The rest stay available.'

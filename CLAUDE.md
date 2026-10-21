@@ -89,7 +89,8 @@ hero paper · [graphite strip] · who stone · path paper ·
 ```
 
 Service pages run their own short rhythm: hero paper · blocks stone · why john paper ·
-example stone · [graphite close] · footer stone.
+example stone · [graphite close] · footer stone. A page with no real example drops the
+example section entirely. Never publish an "example coming soon" placeholder.
 
 Adding a section means taking the next ground in the alternation. Do not add a third
 graphite band.
