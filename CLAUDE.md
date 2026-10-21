@@ -12,7 +12,7 @@ state the work is in and what is waiting on John.
 ## What this repo is
 
 A small static storefront. No build step, no framework, no dependencies. A home page with
-inline CSS, nine service pages sharing one stylesheet, and a short script on each.
+inline CSS, ten service pages sharing one stylesheet, and a short script on each.
 
 ```
 site/          deployable root (Cloudflare Pages serves this directory)

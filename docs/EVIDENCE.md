@@ -31,6 +31,24 @@ specific Gonzaga project, department, course, or deliverable is ASK-JOHN.
 
 ---
 
+## Confirmed by John in chat, 2026-10-21
+
+John stated these directly while reviewing the redesign. They are now PUBLIC-OK in the
+exact wording below, which is what the home page "Areas of expertise" grid uses. Do not
+strengthen them (no "patented", no "groundbreaking", no company name).
+
+- **Interactive audio design:** a high-quality working prototype combining computer
+  vision, computer engineering, audio engineering, and audio design.
+- **Patent development:** "working toward a patent" on that same audio system. Not filed
+  or granted as far as this file knows.
+- **Dissertation:** the behavioral side of problematic social media use, and mitigating it
+  with mindfulness. Consistent with the CV's mindfulness and "dark side of IT" talks.
+- **Training:** from technology basics up to the behavioral side of adoption.
+
+This does **not** settle TODO 1 in full. Moea is still unnamed, the role and the mobile
+app claim are still unconfirmed, and the PENDING JOHN comments on the service pages are
+still open.
+
 ## TODOs for John
 
 These block specific claims the site wants to make.

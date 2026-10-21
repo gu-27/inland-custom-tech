@@ -136,11 +136,12 @@ footer{background:var(--stone)}
 .about h2{font-size:clamp(38px,6vw,72px);line-height:.98;font-weight:800;letter-spacing:-.045em;margin:14px 0 28px}
 .about h2 span{font-weight:800;display:block}
 .body p{color:var(--muted);font-size:17px;max-width:62ch} .body p+p{margin-top:16px}
-.work{margin-top:40px;padding-top:26px;border-top:3px solid var(--black)}
-.work ul{list-style:none;margin:18px 0 0;padding:0}
-.work li{padding-block:14px;border-top:1px solid var(--sand);color:var(--muted);font-size:16.5px;max-width:62ch}
-.work li:first-child{border-top:0;padding-top:0}
-.work li b{color:var(--black);font-weight:800}
+.expertise{grid-column:1/-1;margin-top:24px;padding-top:28px;border-top:3px solid var(--black)}
+.ex-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 32px;margin-top:28px}
+.ex{display:grid;gap:8px;align-content:start}
+.ex h3{display:flex;align-items:baseline;gap:9px;font-size:19px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.ex h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);flex:0 0 8px;transform:translateY(-2px)}
+.ex p{color:var(--muted);font-size:15px;line-height:1.55}
 /* contact */
 .contact{border-top:0}
 .contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
@@ -158,12 +159,12 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
  nav.main{display:none} .hd .btn{margin-left:auto}
  .hero .wrap,.about .wrap,.contact .wrap,.close .wrap{grid-template-columns:1fr}
  .art{display:none} .familiar{grid-template-columns:1fr;margin-top:48px}
- .who-grid{grid-template-columns:1fr}
+ .who-grid{grid-template-columns:1fr} .ex-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .flow{--rail:22px} .nodes{grid-template-columns:1fr;gap:26px} .node+.node::before{content:"\2193";left:18px;top:-27px}
  .photo{max-width:360px}
  section{padding-block:68px}
 }
-@media (max-width:520px){ .strip .wrap{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:10px} .strip span+span::before{display:none} .tabs{grid-template-columns:1fr 1fr} .tab{padding:12px 10px;font-size:15px} .hd .btn{display:none} .chip{max-width:160px;padding:10px 12px} .chip b{font-size:13px} }
+@media (max-width:520px){ .ex-grid{grid-template-columns:1fr} .strip .wrap{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:10px} .strip span+span::before{display:none} .tabs{grid-template-columns:1fr 1fr} .tab{padding:12px 10px;font-size:15px} .hd .btn{display:none} .chip{max-width:160px;padding:10px 12px} .chip b{font-size:13px} }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} .btn,.node{transition:none} .flow.picked .node.on{transform:none}}
 </style>
 
@@ -209,7 +210,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <div class="flow" id="flow">
 <div class="lane"><div class="lane-lab">Everyone starts here</div><div class="nodes"><div class="node" data-step="consult"><h3>Free Consultation</h3><p data-copy>One hour, free. We look at what you are doing now and find where technology could actually help.</p><a class="more" href="services/free-consultation.html">Learn more<span class="sr"> about free consultation</span></a></div><div class="node" data-step="explain"><h3>Explain</h3><p data-copy>A conversation that makes sense of what is out there. What is worth solving with tech, and what is not.</p><a class="more" href="services/explain.html">Learn more<span class="sr"> about explain</span></a></div></div></div>
 <div class="lane"><div class="lane-lab">Technology</div><div class="nodes"><div class="node" data-step="assess"><h3>Assess</h3><p data-copy>A clear read on your systems, your data, and where the time is going.</p><a class="more" href="services/assess.html">Learn more<span class="sr"> about assess</span></a></div><div class="node" data-step="plan"><h3>Plan</h3><p data-copy>A strategy and a roadmap. What to do, in what order, and what it takes.</p><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a></div><div class="node" data-step="build"><h3>Build</h3><p data-copy>We build it, put it in place, and hand it off working.</p><a class="more" href="services/build.html">Learn more<span class="sr"> about build</span></a></div><div class="node" data-step="train"><h3>Train</h3><p data-copy>Hands-on sessions, so your team owns it instead of depending on us.</p><a class="more" href="services/train.html">Learn more<span class="sr"> about train</span></a></div><div class="node" data-step="sustain"><h3>Sustain</h3><p data-copy>Check-ins and support, so the thing you paid for keeps getting used.</p><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a></div></div></div>
-<div class="lane"><div class="lane-lab">People &amp; Culture</div><div class="nodes"><div class="node" data-step="evaluate"><h3>Evaluate</h3><p data-copy>A read on how your people actually work, and where technology gets stuck.</p><a class="more" href="services/evaluate.html">Learn more<span class="sr"> about evaluate</span></a></div><div class="node" data-step="culture-plan"><h3>Plan</h3><p data-copy>A plan for the habits and the people, not just the tools.</p><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a></div><div class="node" data-step="implement"><h3>Implement</h3><p data-copy>Workshops, champions, and new habits that hold after we leave.</p><a class="more" href="services/implement.html">Learn more<span class="sr"> about implement</span></a></div><div class="node" data-step="culture-sustain"><h3>Sustain</h3><p data-copy>We stay close while the new way becomes the normal way.</p><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a></div></div></div>
+<div class="lane"><div class="lane-lab">People &amp; Culture</div><div class="nodes"><div class="node" data-step="evaluate"><h3>Evaluate</h3><p data-copy>A read on how your people actually work, and where technology gets stuck.</p><a class="more" href="services/evaluate.html">Learn more<span class="sr"> about evaluate</span></a></div><div class="node" data-step="culture-plan"><h3>Plan</h3><p data-copy>A plan for the habits and the people, not just the tools.</p><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a></div><div class="node" data-step="culture-design"><h3>Design</h3><p data-copy>The workshops, guides, and champion roles, built and tested before anyone runs them.</p><a class="more" href="services/design.html">Learn more<span class="sr"> about design</span></a></div><div class="node" data-step="implement"><h3>Implement</h3><p data-copy>Workshops, champions, and new habits that hold after we leave.</p><a class="more" href="services/implement.html">Learn more<span class="sr"> about implement</span></a></div><div class="node" data-step="culture-sustain"><h3>Sustain</h3><p data-copy>We stay close while the new way becomes the normal way.</p><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a></div></div></div>
 </div>
 <p class="track-note">Start anywhere, stop anywhere, or skip straight to what you need.</p>
 <p class="areas">We work across three areas: <b>Automation</b> &#183; <b>Analytics</b> &#183; <b>AI</b>.</p>
@@ -228,14 +229,9 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <div class="body"><p>I started this company because I love figuring out problems, and technology is one of the best ways to solve them. I don’t show up with a packaged answer. I sit down, learn what you’re dealing with, and work out what would actually help.</p>
 <p>My background covers two things that rarely sit together: how people learn and adopt technology, and the hands-on skill to build the tools. Most new technology fails because the people side is handled badly, not because of the technology. I work on both sides.</p>
 <p>I work with solo operators, growing companies, nonprofits, and established organizations across Spokane, Coeur d’Alene, and the Inland Northwest.</p></div>
-<div class="work"><div class="eb">Selected work</div><ul>
-<li><b>Spatial audio platform.</b> Captures sound at live venues and streams it back as something you can listen around in.</li>
-<li><b>Dashboards.</b> Scattered numbers pulled into one picture, including a league-wide attendance study built from two public data feeds.</li>
-<li><b>AI follow-up tool.</b> Drafts replies with AI and sends nothing until a person approves it.</li>
-<li><b>Private document tool.</b> Strips personal information out before anything reaches an AI. Runs entirely in your browser with no network calls.</li>
-<li><b>The everyday work.</b> Websites, trackers, and property listing pages where the facts live in one file, so the pages never disagree.</li>
-</ul></div>
-</div></div></section>
+</div>
+<div class="expertise"><div class="eb">Areas of expertise</div><div class="ex-grid"><div class="ex"><h3>Interactive audio design</h3><p>A high-quality working prototype that combines computer vision, computer engineering, audio engineering, and audio design. Also a platform that captures sound at live venues and streams it back as something you can listen around in.</p></div><div class="ex"><h3>Patent development</h3><p>Working toward a patent on that same audio system.</p></div><div class="ex"><h3>Dashboards</h3><p>Scattered numbers pulled into one picture, including a league-wide attendance study built from two public data feeds.</p></div><div class="ex"><h3>Automation</h3><p>Repeat work taken off people’s plates. One tool drafts replies to new inquiries with AI and sends nothing until a person approves it.</p></div><div class="ex"><h3>Custom apps</h3><p>Small apps built for one job. Websites, trackers, and property listing pages where the facts live in one file, so the pages never disagree.</p></div><div class="ex"><h3>Behavior and mindfulness</h3><p>A dissertation on the behavioral side of problematic social media use, and how mindfulness can reduce it. Seven peer-reviewed papers on why people take up technology or work around it.</p></div><div class="ex"><h3>Privacy and security</h3><p>Research on why people follow or ignore security practice, and on the privacy choices people make with fitness technology. Also a tool that strips personal information out of a document before anything reaches an AI.</p></div><div class="ex"><h3>Training</h3><p>From the basics of technology up to the behavioral side of adoption, taught to people who start with no technical background.</p></div></div></div>
+</div></section>
 
 <section class="contact" id="contact"><div class="wrap">
 <div class="sec-h" style="margin:0"><div class="eb">Get started</div><h2>Let’s figure it out <span class="o">together.</span></h2><p>Not sure where technology fits for your business? That’s what the first call is for. It’s free, and there’s no obligation.</p><dl class="facts"><div><dt>Call</dt><dd><a href="tel:+15097950112">(509) 795-0112</a></dd></div><div><dt>Serving</dt><dd>Spokane, Coeur d’Alene, and the Inland Northwest</dd></div></dl></div>
@@ -255,14 +251,14 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
    box's line, turns the steps that persona usually needs orange, and fades the
    rest. Nothing is hidden: every step stays readable on every tab. */
 var PATH_STEPS = ['consult','explain','assess','plan','build','train','sustain',
-                  'evaluate','culture-plan','implement','culture-sustain'];
+                  'evaluate','culture-plan','culture-design','implement','culture-sustain'];
 
 /* Steps each persona typically uses. Free Consultation is in every list. */
 var PATH_ON = {
   general:    PATH_STEPS,
   small:      ['consult','explain','build','train'],
   growing:    ['consult','assess','plan','build','train','sustain'],
-  enterprise: ['consult','evaluate','culture-plan','implement','culture-sustain']
+  enterprise: ['consult','evaluate','culture-plan','culture-design','implement','culture-sustain']
 };
 
 var PATH_TYPICAL = {
@@ -283,6 +279,7 @@ var PATH_COPY = {
     'sustain':'Check-ins and support, so the thing you paid for keeps getting used.',
     'evaluate':'A read on how your people actually work, and where technology gets stuck.',
     'culture-plan':'A plan for the habits and the people, not just the tools.',
+    'culture-design':'The workshops, guides, and champion roles, built and tested before anyone runs them.',
     'implement':'Workshops, champions, and new habits that hold after we leave.',
     'culture-sustain':'We stay close while the new way becomes the normal way.'
   },
@@ -296,6 +293,7 @@ var PATH_COPY = {
     'sustain':'Call when something breaks or changes. No contract required.',
     'evaluate':'This one is really for larger teams. Available if you want it.',
     'culture-plan':'Most small teams skip this. At your size the plan is usually the build.',
+    'culture-design':'Most small teams skip this. At your size, Train covers it.',
     'implement':'Workshops make more sense once there is a team to run them for.',
     'culture-sustain':'Here if you want it later.'
   },
@@ -309,6 +307,7 @@ var PATH_COPY = {
     'sustain':'Regular check-ins. We catch drift before it costs you.',
     'evaluate':'Worth doing when adoption keeps stalling for reasons that are not technical.',
     'culture-plan':'Available when the people side needs a plan of its own.',
+    'culture-design':'Available when the people side needs materials of its own.',
     'implement':'Available when you are ready to change habits, not just tools.',
     'culture-sustain':'Available alongside the technology check-ins.'
   },
@@ -322,6 +321,7 @@ var PATH_COPY = {
     'sustain':'Available alongside the culture check-ins.',
     'evaluate':'A read on how your people actually behave around the tools you already bought.',
     'culture-plan':'A plan for champions, incentives, and the habits that decide whether anything sticks.',
+    'culture-design':'Workshops, guides, and champion roles built around how your people learn.',
     'implement':'Workshops and champions, run with your people rather than at them.',
     'culture-sustain':'We stay with it until the new way is just the way things are done.'
   }

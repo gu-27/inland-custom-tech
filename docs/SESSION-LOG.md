@@ -6,6 +6,25 @@ the next person has to decide. If you are returning cold, read the top entry, th
 
 ---
 
+## 2026-10-21 (last): Design step and Areas of expertise
+
+**State: still on `pathway`, preview redeployed, not merged.**
+
+- People & Culture now has five steps like Technology: Evaluate, Plan, **Design**,
+  Implement, Sustain. New page `site/services/design.html` (no example section).
+  `culture-design` is in `PATH_STEPS`, in Enterprise's `PATH_ON`, and has copy for all
+  four personas.
+- About's "Selected work" list became an **Areas of expertise** grid spanning the full
+  width under the bio: interactive audio design, patent development, dashboards,
+  automation, custom apps, behavior and mindfulness, privacy and security, training.
+  4 columns, 2 under 960px, 1 under 520px.
+- The new claims came from John in chat. They are recorded in EVIDENCE.md under
+  "Confirmed by John in chat" with the exact wording allowed.
+- John was unsure about **Explain**. Recommendation given: keep it, since it serves the
+  "I don't know where AI helps" visitor. Unresolved; his call.
+
+---
+
 ## 2026-10-21 (latest): Your path becomes a tree that lights up
 
 **State: still on `pathway`, preview redeployed, not merged.**
