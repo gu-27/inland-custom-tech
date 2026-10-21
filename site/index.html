@@ -80,44 +80,39 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 /* rhythm: A paper / B stone alternate; graphite only for the strip and closing band */
 .hero{background:var(--paper)} #who{background:var(--stone)} #path{background:var(--paper)} .about{background:var(--stone)} .contact{background:var(--paper)}
 footer{background:var(--stone)}
-.tabs{display:inline-flex;flex-wrap:wrap;gap:6px;padding:6px;border-radius:14px;background:var(--stone);margin-bottom:24px}
-.tab{font:700 15px var(--sans);border:0;background:transparent;color:var(--black);padding:11px 18px;border-radius:10px;cursor:pointer}
+.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:6px;border-radius:14px;background:var(--stone);margin-bottom:24px}
+.tab{font:700 16px var(--sans);border:0;background:transparent;color:var(--black);padding:14px 18px;border-radius:10px;cursor:pointer;text-align:center}
+.tab:hover{background:var(--paper)}
 .tab[aria-selected="true"]{background:var(--black);color:var(--paper)}
-.typical{font-size:18px;font-weight:600;color:var(--muted);max-width:74ch;margin-bottom:44px}
+.typical{font-size:18px;font-weight:600;color:var(--muted);max-width:74ch;margin-bottom:48px}
 .typical b{color:var(--black);font-weight:800}
-.path-start{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:44px}
-.track{display:grid;gap:12px;align-content:start}
-.track-lab{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:4px}
-.track-lab::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange);flex:0 0 9px}
-/* each track is one card holding a timeline: a dot per step on a thin vertical line */
-.track-card{border:2px solid var(--black);border-radius:20px;padding:6px 28px}
-.step.row{position:relative;border:0;border-radius:0;padding:22px 0 22px 34px;grid-template-columns:minmax(0,1fr) auto;column-gap:16px;row-gap:6px;align-items:baseline}
-.step.row+.step.row{border-top:1px solid var(--hair)}
-.step.row::before{content:"";position:absolute;left:0;top:31px;width:12px;height:12px;border-radius:50%;background:var(--orange)}
-.step.row::after{content:"";position:absolute;left:5px;top:43px;bottom:-31px;width:2px;background:var(--hair)}
-.step.row:last-child::after{display:none}
-.step.row h3{font-size:22px}
-.step.row p{grid-column:1/-1;font-size:16px}
-.step.row .more{justify-self:end;margin:0}
-.step.row.dim{border-color:var(--hair)}
-.step.row.dim::before{background:var(--paper);box-shadow:inset 0 0 0 2px var(--hair)}
-.step.row.dim h3{color:var(--soft)}
-.step{border:2px solid var(--black);border-radius:20px;padding:24px;display:grid;gap:10px;align-content:start}
-.step .n{width:52px;height:52px;border-radius:50%;background:var(--orange);color:var(--black);font-size:21px;font-weight:800;display:flex;align-items:center;justify-content:center}
-.step .dot{width:12px;height:12px;border-radius:50%;background:var(--orange)}
-.step .first-lab{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.step h3{font-size:25px;font-weight:800;letter-spacing:-.03em}
-.step p{color:var(--muted);font-size:16.5px}
-.step .more{justify-self:start;margin-top:2px;font-size:14px;font-weight:800;letter-spacing:.03em;text-decoration:none;border-bottom:2px solid var(--orange);padding-bottom:2px}
-.step .more:hover{border-bottom-color:var(--black)}
+/* FLOW: a tree. A black rail on the left joins three lanes: the start (Free
+   Consultation, Explain), then Technology and People & Culture. On General every
+   box is plain gray. Pick a persona and its boxes turn orange and lift; the
+   rest fade to a dashed outline. Copy changes per persona too. */
+.flow{--rail:32px;--tick:62px;position:relative;display:grid;gap:40px;padding-left:var(--rail)}
+.lane{position:relative}
+.lane::before{content:"";position:absolute;left:calc(-1 * var(--rail));top:var(--tick);width:calc(var(--rail) - 8px);height:2px;background:var(--black)}
+.lane::after{content:"";position:absolute;left:calc(-1 * var(--rail));top:0;bottom:-40px;width:2px;background:var(--black)}
+.lane:first-child::after{top:var(--tick)}
+.lane:last-child::after{bottom:auto;height:calc(var(--tick) + 2px)}
+.lane-lab{height:24px;margin-bottom:14px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.lane-lab::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange);flex:0 0 9px}
+.nodes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:30px}
+.node{position:relative;display:grid;gap:8px;align-content:start;padding:18px 18px 20px;border-radius:16px;background:var(--stone);border:2px solid var(--stone);transition:background .25s,border-color .25s,transform .25s,box-shadow .25s}
+.node+.node::before{content:"\2192";position:absolute;left:-25px;top:16px;font-size:18px;font-weight:800;color:var(--black)}
+.node h3{font-size:20px;font-weight:800;letter-spacing:-.025em;line-height:1.15}
+.node p{font-size:14.5px;line-height:1.5;color:var(--muted)}
+.node .more{justify-self:start;margin-top:4px;font-size:13px;font-weight:800;text-decoration:none;border-bottom:2px solid var(--black);padding-bottom:1px}
+.node .more:hover{border-bottom-color:var(--orange)}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.step.dim{border-color:var(--hair)}
-.step.dim .n{background:transparent;border:2px solid var(--hair);color:var(--soft)}
-.step.dim .dot{background:var(--hair)}
-.step.dim p{color:var(--soft)}
-.step.dim .more{border-bottom-color:var(--hair)}
-.track-note{margin-top:56px;padding-top:24px;border-top:3px solid var(--black);font-size:21px;font-weight:800;letter-spacing:-.02em}
+.flow.picked .node{background:var(--paper);border:2px dashed var(--hair)}
+.flow.picked .node h3,.flow.picked .node p{color:var(--soft)}
+.flow.picked .node .more{border-bottom-color:var(--hair)}
+.flow.picked .node.on{background:var(--orange);border:2px solid var(--orange);transform:translateY(-6px);box-shadow:0 14px 30px rgba(20,20,19,.16)}
+.flow.picked .node.on h3,.flow.picked .node.on p{color:var(--black)}
+.flow.picked .node.on .more{border-bottom-color:var(--black)} .flow.picked .node.on .more:hover{border-bottom-color:var(--paper)}
+.track-note{margin-top:64px;padding-top:24px;border-top:3px solid var(--black);font-size:21px;font-weight:800;letter-spacing:-.02em}
 .areas{margin-top:18px;font-size:17px;color:var(--muted)}
 .areas b{color:var(--black);font-weight:800}
 .privacy{margin-top:14px;font-size:15.5px;color:var(--soft);max-width:70ch}
@@ -164,12 +159,12 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
  .hero .wrap,.about .wrap,.contact .wrap,.close .wrap{grid-template-columns:1fr}
  .art{display:none} .familiar{grid-template-columns:1fr;margin-top:48px}
  .who-grid{grid-template-columns:1fr}
- .path-start,.tracks{grid-template-columns:1fr} .tracks{margin-top:28px} .track{margin-top:16px} .track-card{padding:4px 20px}
+ .flow{--rail:22px} .nodes{grid-template-columns:1fr;gap:26px} .node+.node::before{content:"\2193";left:18px;top:-27px}
  .photo{max-width:360px}
  section{padding-block:68px}
 }
-@media (max-width:520px){ .strip .wrap{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:10px} .strip span+span::before{display:none} .tabs{display:grid;grid-template-columns:1fr 1fr;width:100%} .tab{text-align:center} .hd .btn{display:none} .chip{max-width:160px;padding:10px 12px} .chip b{font-size:13px} }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} .btn{transition:none}}
+@media (max-width:520px){ .strip .wrap{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:10px} .strip span+span::before{display:none} .tabs{grid-template-columns:1fr 1fr} .tab{padding:12px 10px;font-size:15px} .hd .btn{display:none} .chip{max-width:160px;padding:10px 12px} .chip b{font-size:13px} }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} .btn,.node{transition:none} .flow.picked .node.on{transform:none}}
 </style>
 
 </head>
@@ -210,11 +205,11 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 </div>
 
 <div id="panel-path" role="tabpanel" aria-labelledby="tab-general" tabindex="0">
-<p class="typical" id="typical">Every step is shown here. Pick a tab to see a typical path.</p>
-<div class="path-start"><div class="step" data-step="consult"><span class="n">1</span><span class="first-lab">Everyone starts here</span><h3>Free Consultation</h3><p data-copy>One hour, free. We look at what you are doing now and find where technology could actually help.</p><a class="more" href="services/free-consultation.html">Learn more<span class="sr"> about free consultation</span></a></div><div class="step" data-step="explain"><span class="n">2</span><h3>Explain</h3><p data-copy>A conversation that makes sense of what is out there. What is worth solving with tech, and what is not.</p><a class="more" href="services/explain.html">Learn more<span class="sr"> about explain</span></a></div></div>
-<div class="tracks">
-<div class="track"><div class="track-lab">Technology</div><div class="track-card"><div class="step row" data-step="assess"><h3>Assess</h3><a class="more" href="services/assess.html">Learn more<span class="sr"> about assess</span></a><p data-copy>A clear read on your systems, your data, and where the time is going.</p></div><div class="step row" data-step="plan"><h3>Plan</h3><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a><p data-copy>A strategy and a roadmap. What to do, in what order, and what it takes.</p></div><div class="step row" data-step="build"><h3>Build</h3><a class="more" href="services/build.html">Learn more<span class="sr"> about build</span></a><p data-copy>We build it, put it in place, and hand it off working.</p></div><div class="step row" data-step="train"><h3>Train</h3><a class="more" href="services/train.html">Learn more<span class="sr"> about train</span></a><p data-copy>Hands-on sessions, so your team owns it instead of depending on us.</p></div><div class="step row" data-step="sustain"><h3>Sustain</h3><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a><p data-copy>Check-ins and support, so the thing you paid for keeps getting used.</p></div></div>
-</div><div class="track"><div class="track-lab">People &amp; Culture</div><div class="track-card"><div class="step row" data-step="evaluate"><h3>Evaluate</h3><a class="more" href="services/evaluate.html">Learn more<span class="sr"> about evaluate</span></a><p data-copy>A read on how your people actually work, and where technology gets stuck.</p></div><div class="step row" data-step="culture-plan"><h3>Plan</h3><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a><p data-copy>A plan for the habits and the people, not just the tools.</p></div><div class="step row" data-step="implement"><h3>Implement</h3><a class="more" href="services/implement.html">Learn more<span class="sr"> about implement</span></a><p data-copy>Workshops, champions, and new habits that hold after we leave.</p></div><div class="step row" data-step="culture-sustain"><h3>Sustain</h3><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a><p data-copy>We stay close while the new way becomes the normal way.</p></div></div></div>
+<p class="typical" id="typical">Every step, in gray. Pick who you are to see the path that usually fits.</p>
+<div class="flow" id="flow">
+<div class="lane"><div class="lane-lab">Everyone starts here</div><div class="nodes"><div class="node" data-step="consult"><h3>Free Consultation</h3><p data-copy>One hour, free. We look at what you are doing now and find where technology could actually help.</p><a class="more" href="services/free-consultation.html">Learn more<span class="sr"> about free consultation</span></a></div><div class="node" data-step="explain"><h3>Explain</h3><p data-copy>A conversation that makes sense of what is out there. What is worth solving with tech, and what is not.</p><a class="more" href="services/explain.html">Learn more<span class="sr"> about explain</span></a></div></div></div>
+<div class="lane"><div class="lane-lab">Technology</div><div class="nodes"><div class="node" data-step="assess"><h3>Assess</h3><p data-copy>A clear read on your systems, your data, and where the time is going.</p><a class="more" href="services/assess.html">Learn more<span class="sr"> about assess</span></a></div><div class="node" data-step="plan"><h3>Plan</h3><p data-copy>A strategy and a roadmap. What to do, in what order, and what it takes.</p><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a></div><div class="node" data-step="build"><h3>Build</h3><p data-copy>We build it, put it in place, and hand it off working.</p><a class="more" href="services/build.html">Learn more<span class="sr"> about build</span></a></div><div class="node" data-step="train"><h3>Train</h3><p data-copy>Hands-on sessions, so your team owns it instead of depending on us.</p><a class="more" href="services/train.html">Learn more<span class="sr"> about train</span></a></div><div class="node" data-step="sustain"><h3>Sustain</h3><p data-copy>Check-ins and support, so the thing you paid for keeps getting used.</p><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a></div></div></div>
+<div class="lane"><div class="lane-lab">People &amp; Culture</div><div class="nodes"><div class="node" data-step="evaluate"><h3>Evaluate</h3><p data-copy>A read on how your people actually work, and where technology gets stuck.</p><a class="more" href="services/evaluate.html">Learn more<span class="sr"> about evaluate</span></a></div><div class="node" data-step="culture-plan"><h3>Plan</h3><p data-copy>A plan for the habits and the people, not just the tools.</p><a class="more" href="services/plan.html">Learn more<span class="sr"> about plan</span></a></div><div class="node" data-step="implement"><h3>Implement</h3><p data-copy>Workshops, champions, and new habits that hold after we leave.</p><a class="more" href="services/implement.html">Learn more<span class="sr"> about implement</span></a></div><div class="node" data-step="culture-sustain"><h3>Sustain</h3><p data-copy>We stay close while the new way becomes the normal way.</p><a class="more" href="services/sustain.html">Learn more<span class="sr"> about sustain</span></a></div></div></div>
 </div>
 <p class="track-note">Start anywhere, stop anywhere, or skip straight to what you need.</p>
 <p class="areas">We work across three areas: <b>Automation</b> &#183; <b>Analytics</b> &#183; <b>AI</b>.</p>
@@ -257,8 +252,8 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <script>
 /* PATH: the persona toggle. General is what the markup ships with, so the
    section is complete and correct with JS off. A persona tab rewrites each
-   card's line and fades the steps that persona does not usually need. Nothing
-   is hidden: every step stays readable on every tab. */
+   box's line, turns the steps that persona usually needs orange, and fades the
+   rest. Nothing is hidden: every step stays readable on every tab. */
 var PATH_STEPS = ['consult','explain','assess','plan','build','train','sustain',
                   'evaluate','culture-plan','implement','culture-sustain'];
 
@@ -271,7 +266,7 @@ var PATH_ON = {
 };
 
 var PATH_TYPICAL = {
-  general:    'Every step is shown here. Pick a tab to see a typical path.',
+  general:    'Every step, in gray. Pick who you are to see the path that usually fits.',
   small:      'A small business usually needs <b>Free Consultation, Explain, Build, and Train</b>. The rest stay available.',
   growing:    'A growing company usually needs <b>Free Consultation, Assess, Plan, Build, Train, and Sustain</b>. The rest stay available.',
   enterprise: 'An enterprise usually needs <b>the free consultation plus the whole People &amp; Culture track</b>. The rest stay available.'
@@ -345,10 +340,12 @@ function setPath(tab){
   if (pathPanel) pathPanel.setAttribute('aria-labelledby', tab.id);
   var typical = document.getElementById('typical');
   if (typical) typical.innerHTML = PATH_TYPICAL[k];
+  var flow = document.getElementById('flow');
+  if (flow) flow.classList.toggle('picked', k !== 'general');
   PATH_STEPS.forEach(function(s){
-    var card = document.querySelector('.step[data-step="' + s + '"]');
+    var card = document.querySelector('.node[data-step="' + s + '"]');
     if (!card) return;
-    card.classList.toggle('dim', on.indexOf(s) === -1);
+    card.classList.toggle('on', k !== 'general' && on.indexOf(s) !== -1);
     var line = card.querySelector('[data-copy]');
     if (line) line.textContent = copy[s];
   });

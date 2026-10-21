@@ -58,7 +58,7 @@ The home page is still one file with inline CSS. The service pages share
 |---|---|---|
 | black | `#141413` | Headings, body text, buttons, logo |
 | graphite | `#262624` | Dark bands only: values strip, closing CTA |
-| orange | `#D97757` | The logo dot, "Custom", primary buttons, key headline words, step numbers and dots |
+| orange | `#D97757` | The logo dot, "Custom", primary buttons, key headline words, dots, highlighted boxes in the Your path flow (black text on orange) |
 | paper | `#FAF9F6` | Main background (A) |
 | stone | `#ECEAE5` | Alternating section background (B) |
 | muted | `#3D3C39` | Body copy |

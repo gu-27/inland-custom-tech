@@ -6,6 +6,26 @@ the next person has to decide. If you are returning cold, read the top entry, th
 
 ---
 
+## 2026-10-21 (latest): Your path becomes a tree that lights up
+
+**State: still on `pathway`, preview redeployed, not merged.**
+
+John wanted the path to read as a process flow: a full-width tab bar with boxes under it
+that are all gray on General and turn orange when a persona is picked. Built that way.
+
+- Tabs now span the full width, four equal segments (2x2 on phones).
+- The flow is a tree: a black rail on the left joins three lanes. "Everyone starts here"
+  (Free Consultation, Explain), then Technology (5 boxes) and People & Culture (4 boxes),
+  with arrows between boxes. On phones each lane stacks and the arrows point down.
+- General: every box is stone gray. A persona tab adds `.picked` to `#flow`: that
+  persona's boxes get `.on` (orange fill, black text, lift and shadow) and the rest
+  fade to a dashed outline. Box copy still changes per persona from `PATH_COPY`.
+- Free Consultation is in every persona's list, so it lights on every persona tab.
+- Reduced motion turns off the lift and the transition.
+- Markup ships the General state, so the section is complete with JS off.
+
+---
+
 ## 2026-10-21 (later): polish pass on the pathway redesign
 
 **State: still on `pathway`, preview redeployed, not merged. Production is unchanged.**
