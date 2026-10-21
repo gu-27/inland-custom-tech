@@ -25,7 +25,7 @@ the next person has to decide. If you are returning cold, read the top entry, th
   second pending. Custom apps now "simple webpages, to small tools, to larger design
   systems." Sound familiar quotes replaced with John's: "I wish I had more time." /
   "We have all this data. How do we actually see it?" / "What the heck is AI, and what
-  isn't?"
+  is it not?"
 - John was unsure about **Explain**. Recommendation given: keep it, since it serves the
   "I don't know where AI helps" visitor. Unresolved; his call.
 
