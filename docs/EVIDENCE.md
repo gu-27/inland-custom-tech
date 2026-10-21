@@ -35,12 +35,13 @@ specific Gonzaga project, department, course, or deliverable is ASK-JOHN.
 
 John stated these directly while reviewing the redesign. They are now PUBLIC-OK in the
 exact wording below, which is what the home page "Areas of expertise" grid uses. Do not
-strengthen them (no "patented", no "groundbreaking", no company name).
+strengthen them (no "groundbreaking", no company name).
 
 - **Interactive audio design:** a high-quality working prototype combining computer
-  vision, computer engineering, audio engineering, and audio design.
-- **Patent development:** "working toward a patent" on that same audio system. Not filed
-  or granted as far as this file knows.
+  vision, computer engineering, audio engineering, audio design, and app development.
+- **Patent development:** John holds a patent on that same audio system and has a
+  second patent pending (corrected by John later the same day). Site wording: "A patent
+  on that same audio system, with a second patent pending."
 - **Dissertation:** the behavioral side of problematic social media use, and mitigating it
   with mindfulness. Consistent with the CV's mindfulness and "dark side of IT" talks.
 - **Training:** from technology basics up to the behavioral side of adoption.

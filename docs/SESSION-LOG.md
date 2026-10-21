@@ -20,6 +20,12 @@ the next person has to decide. If you are returning cold, read the top entry, th
   4 columns, 2 under 960px, 1 under 520px.
 - The new claims came from John in chat. They are recorded in EVIDENCE.md under
   "Confirmed by John in chat" with the exact wording allowed.
+- Follow-up the same day: the grid label is now **Areas of experience** (John's word).
+  App development added to interactive audio. Patent line corrected: one patent held, a
+  second pending. Custom apps now "simple webpages, to small tools, to larger design
+  systems." Sound familiar quotes replaced with John's: "I wish I had more time." /
+  "We have all this data. How do we actually see it?" / "What the heck is AI, and what
+  isn't?"
 - John was unsure about **Explain**. Recommendation given: keep it, since it serves the
   "I don't know where AI helps" visitor. Unresolved; his call.
 
