@@ -6,6 +6,9 @@ Spokane technology consultancy. Build, Consult, Train across Automation, Analyti
 AI. Owner: John Correia. Full brand rules live in [BRAND.md](BRAND.md). This file is the
 short version plus the repo rules.
 
+**Returning cold?** Read [docs/SESSION-LOG.md](docs/SESSION-LOG.md) first. It says what
+state the work is in and what is waiting on John.
+
 ## What this repo is
 
 A small static storefront. No build step, no framework, no dependencies. A home page with

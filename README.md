@@ -21,6 +21,7 @@ Live: https://inland-custom-tech.pages.dev (custom domain inlandcustomtech.com p
 | `docs/DOMAIN-AND-EMAIL.md` | Connecting inlandcustomtech.com and setting up email. |
 | `docs/MIGRATION-PLAN.md` | Plan for moving off inlandnw.ai. Not yet approved. |
 | `docs/EVIDENCE.md` | What John has actually built, and what may be said about it publicly. |
+| `docs/SESSION-LOG.md` | What happened in each working session, and what is still open. |
 | `scripts/connect_domain.py` | Runs the Cloudflare side of the domain and email setup. |
 
 ## Editing
