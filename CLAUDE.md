@@ -91,7 +91,8 @@ cover (hero) · [graphite strip] · who · path · [graphite close] · about · 
 
 Each paper page that has a `data-page` attribute gets a running head: "Inland Custom
 Tech" on the left and the `data-page` text on the right ("02 / 05", "Overview · 2026",
-"Your path"). Adding a home page section means renumbering the page counts. Do not add a
+"Your path"). Adding a home page section means renumbering the page counts and the "In this issue"
+contents list on the cover. Do not add a
 third graphite page.
 
 Service pages use the same pages: hero · blocks · why john · example (only when a real

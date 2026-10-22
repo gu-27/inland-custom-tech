@@ -18,6 +18,12 @@ graphite pages. The paper/stone alternation is gone; CLAUDE.md "Section rhythm" 
 rewritten to match. Small change to revert if John dislikes it: the DOCUMENT block in
 index.html and the matching block in service.css.
 
+Added the same day: an **In this issue** contents list on the cover (`nav.toc`, right
+column under a smaller C mark; under the buttons on phones). Four rows jump to #who,
+#path, #about, #contact, and their page numbers match the running heads. If a section is
+added, update both the `data-page` counts and this list. The global `nav{}` rule leaks
+into `.toc`, so `.toc` resets display, margin, and font on purpose.
+
 ---
 
 ## 2026-10-21 (last): Design step and Areas of expertise

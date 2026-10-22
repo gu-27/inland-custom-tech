@@ -52,7 +52,21 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .o{color:var(--orange)}
 .hero .lede{font-size:20px;color:var(--muted);max-width:44ch}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.art{position:relative;aspect-ratio:1/1;max-width:100%}
+.cover-side{display:grid;gap:36px;align-content:center}
+.art{position:relative;aspect-ratio:1/1;width:200px}
+/* In this issue: a contents list on the cover; page numbers match the running heads */
+.toc{display:block;margin:0;font-size:inherit;font-weight:inherit;border-top:3px solid var(--black);padding-top:16px}
+.toc-lab{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.toc-lab::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li+li{border-top:1px solid var(--hair)}
+.toc a{display:flex;align-items:center;gap:16px;padding:14px 12px;margin-inline:-12px;border-radius:12px;text-decoration:none;transition:background .15s}
+.toc a:hover{background:var(--stone);color:inherit}
+.toc-t{flex:1;display:grid}
+.toc-t b{font-size:18px;font-weight:800;letter-spacing:-.02em}
+.toc-t small{font-size:14px;color:var(--muted)}
+.toc-p{font-size:14px;font-weight:800;letter-spacing:.08em;color:var(--soft)}
+.toc a:hover .toc-p{color:var(--black)}
 .reassure{margin-top:14px;font-size:14px;font-weight:700;color:var(--soft)}
 .familiar{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:72px;padding-block:28px 64px;border-top:3px solid var(--black)}
 .familiar .lab{grid-column:1/-1;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:-8px}
@@ -166,7 +180,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 @media (max-width:960px){
  nav.main{display:none} .hd .btn{margin-left:auto}
  .hero .wrap,.about .wrap,.contact .wrap,.close .wrap{grid-template-columns:1fr}
- .art{display:none} .familiar{grid-template-columns:1fr;margin-top:48px}
+ .art{display:none} .cover-side{margin-top:44px} .familiar{grid-template-columns:1fr;margin-top:48px}
  .who-grid{grid-template-columns:1fr} .ex-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .flow{--rail:22px} .nodes{grid-template-columns:1fr;gap:26px} .node+.node::before{content:"\2193";left:18px;top:-27px}
  .photo{max-width:360px}
@@ -189,7 +203,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <p class="lede">We help Inland Northwest businesses automate the busywork, make sense of their data, and get their people using the tools they already pay for. Practical work, built around how you already run.</p>
 <div class="ctas"><a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a><a class="btn line" href="#path">See How It Works</a></div>
 <p class="reassure">Free one-hour consultation · No pitch, no obligation</p></div>
-<div class="art" aria-hidden="true"><svg class="bigc" viewBox="0 0 320 320" aria-hidden="true"><path d="M256.6 185.9 A100 100 0 1 1 151.3 60.4" fill="none" stroke="#141413" stroke-width="58" stroke-linecap="round"/><circle cx="236.6" cy="95.7" r="30" fill="#D97757"/></svg></div>
+<div class="cover-side"><div class="art" aria-hidden="true"><svg class="bigc" viewBox="0 0 320 320" aria-hidden="true"><path d="M256.6 185.9 A100 100 0 1 1 151.3 60.4" fill="none" stroke="#141413" stroke-width="58" stroke-linecap="round"/><circle cx="236.6" cy="95.7" r="30" fill="#D97757"/></svg></div><nav class="toc" aria-label="In this issue"><div class="toc-lab">In this issue</div><ol><li><a href="#who"><span class="toc-t"><b>Who we help</b><small>Find your starting point</small></span><span class="toc-p">02</span></a></li><li><a href="#path"><span class="toc-t"><b>Your path</b><small>The steps, by who you are</small></span><span class="toc-p">03</span></a></li><li><a href="#about"><span class="toc-t"><b>About John</b><small>Areas of experience</small></span><span class="toc-p">04</span></a></li><li><a href="#contact"><span class="toc-t"><b>Get started</b><small>Book a free consultation</small></span><span class="toc-p">05</span></a></li></ol></nav></div>
 <div class="familiar"><div class="lab">Sound familiar?</div><div><small>Automation</small><b>“I wish I had more time.”</b></div><div><small>Analytics</small><b>“We have all this data. How do we actually see it?”</b></div><div><small>AI</small><b>“What the heck is AI, and what is it not?”</b></div></div>
 </div></section>
 
