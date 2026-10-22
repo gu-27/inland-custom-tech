@@ -6,6 +6,22 @@ the next person has to decide. If you are returning cold, read the top entry, th
 
 ---
 
+## 2026-10-22: shipped to production
+
+**State: LIVE. `pathway` merged into `main` (fast-forward at `881d16e`) and deployed to
+production at <https://inland-custom-tech.pages.dev>.** John approved it.
+
+At John's request the preview link was removed: all eight `pathway` preview deployments
+were deleted with `wrangler pages deployment delete`, so pathway.inland-custom-tech.pages.dev
+and every per-deploy hash URL now return 404. The git branch `pathway` still exists and
+is fully merged.
+
+Still open, unchanged: the startup line and PENDING JOHN comments on the service pages,
+Dependable HVAC, naming pro teams, naming client sites, and whether to keep Explain.
+inlandcustomtech.com is still not registered.
+
+---
+
 ## 2026-10-22: nudged toward a document
 
 **State: still on `pathway`, preview redeployed, not merged.**
