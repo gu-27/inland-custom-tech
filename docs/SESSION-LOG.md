@@ -6,6 +6,20 @@ the next person has to decide. If you are returning cold, read the top entry, th
 
 ---
 
+## 2026-10-22: nudged toward a document
+
+**State: still on `pathway`, preview redeployed, not merged.**
+
+John asked for it to feel "more like a document" so it does not read as a webpage. He
+likes the rounded edges. Every section on the home page and the service pages is now a
+rounded paper page on a stone desk, with running heads ("Inland Custom Tech" left, page
+number or "Overview · 2026" or "Your path" right). The strip and close are rounded
+graphite pages. The paper/stone alternation is gone; CLAUDE.md "Section rhythm" is
+rewritten to match. Small change to revert if John dislikes it: the DOCUMENT block in
+index.html and the matching block in service.css.
+
+---
+
 ## 2026-10-21 (last): Design step and Areas of expertise
 
 **State: still on `pathway`, preview redeployed, not merged.**

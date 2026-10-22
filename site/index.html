@@ -21,7 +21,7 @@
 --sans:Manrope,"Segoe UI",system-ui,sans-serif;--max:1160px;color-scheme:light}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--black);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--stone);color:var(--black);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.03em;color:var(--black)}
 p{margin:0} a{color:inherit}
@@ -78,7 +78,15 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .who.feat{background:var(--graphite);border-color:var(--graphite)} .who.feat h3{color:var(--paper)} .who.feat .role{color:var(--orange)} .who.feat p{color:#D6D3CC} .who.feat .btn.line{border-color:var(--paper);color:var(--paper)} .who.feat .btn.line:hover{background:var(--paper);color:var(--black)}
 /* your path */
 /* rhythm: A paper / B stone alternate; graphite only for the strip and closing band */
-.hero{background:var(--paper)} #who{background:var(--stone)} #path{background:var(--paper)} .about{background:var(--stone)} .contact{background:var(--paper)}
+/* DOCUMENT: every section is a rounded page on a stone desk, like sheets of a printed
+   overview. Pages are all paper; graphite stays for the strip and the closing page.
+   Each page carries a running head: the name on the left, data-page on the right. */
+main{max-width:1320px;margin:0 auto;padding:16px 16px 0;display:grid;gap:16px}
+main>section,main>.strip,main>.close{border-radius:28px;overflow:hidden}
+main>section{background:var(--paper);border:1px solid var(--hair);position:relative}
+main>section[data-page]::before,main>section[data-page]::after{position:absolute;top:26px;font:800 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+main>section[data-page]::before{content:"Inland Custom Tech";left:max(20px,calc((100% - 1120px) / 2))}
+main>section[data-page]::after{content:attr(data-page);right:max(20px,calc((100% - 1120px) / 2))}
 footer{background:var(--stone)}
 .tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:6px;border-radius:14px;background:var(--stone);margin-bottom:24px}
 .tab{font:700 16px var(--sans);border:0;background:transparent;color:var(--black);padding:14px 18px;border-radius:10px;cursor:pointer;text-align:center}
@@ -152,7 +160,7 @@ footer{background:var(--stone)}
 .facts dd{margin:4px 0 0;font-size:18px;font-weight:700}
 .facts a{text-decoration:none;font-size:28px;font-weight:800;letter-spacing:-.02em} .facts a:hover{color:var(--orange)}
 .slot{display:block;width:100%;min-height:600px;border:1.5px solid var(--hair);border-radius:14px;background:var(--white)}
-footer{border-top:1px solid var(--hair);padding-block:36px;font-size:14px;color:var(--muted)}
+footer{padding-block:40px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px 36px;align-items:center;justify-content:space-between}
 footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 @media (max-width:960px){
@@ -162,7 +170,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
  .who-grid{grid-template-columns:1fr} .ex-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .flow{--rail:22px} .nodes{grid-template-columns:1fr;gap:26px} .node+.node::before{content:"\2193";left:18px;top:-27px}
  .photo{max-width:360px}
- section{padding-block:68px}
+ section{padding-block:68px} main{padding:8px 8px 0;gap:8px} main>section,main>.strip,main>.close{border-radius:20px} main>section[data-page]::before,main>section[data-page]::after{top:20px}
 }
 @media (max-width:520px){ .ex-grid{grid-template-columns:1fr} .strip .wrap{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:10px} .strip span+span::before{display:none} .tabs{grid-template-columns:1fr 1fr} .tab{padding:12px 10px;font-size:15px} .hd .btn{display:none} .chip{max-width:160px;padding:10px 12px} .chip b{font-size:13px} }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} .btn,.node{transition:none} .flow.picked .node.on{transform:none}}
@@ -175,7 +183,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a></div></header>
 
 <main>
-<section class="hero" id="home"><div class="wrap">
+<section class="hero" id="home" data-page="Overview · 2026"><div class="wrap">
 <div><div class="eb">Custom tech for the Inland Northwest</div>
 <h1>Technology, <span>made simple.</span></h1>
 <p class="lede">We help Inland Northwest businesses automate the busywork, make sense of their data, and get their people using the tools they already pay for. Practical work, built around how you already run.</p>
@@ -187,7 +195,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 
 <div class="strip"><div class="wrap"><span>Curiosity driven</span><span>People centered</span><span>Thoughtful AI</span><span>Growing together</span></div></div>
 
-<section id="who"><div class="wrap">
+<section id="who" data-page="02 / 05"><div class="wrap">
 <div class="sec-h"><div class="eb">Who we help</div><h2>Find your <span class="o">starting point.</span></h2><p>Pick the description that sounds most like you. Each one opens the path most people in your spot take.</p></div>
 <div class="who-grid">
 <div class="who"><div class="role">Solo operators &amp; small teams</div><h3>Small Business</h3><p>Are there tasks you don’t like doing or can’t get to, like building or updating a website, managing receipts, or scheduling projects? Or are you just sick of paying for subscriptions you barely use?</p><div class="acts"><a class="btn line" href="#path" data-persona="small">See your path</a></div></div>
@@ -195,7 +203,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <div class="who"><div class="role">Established orgs &amp; leadership</div><h3>Enterprise</h3><p>Do you have the tools and the team in place but struggle to get real adoption? Or do you want to build an AI-ready culture that actually sticks?</p><div class="acts"><a class="btn line" href="#path" data-persona="enterprise">See your path</a></div></div>
 </div></div></section>
 
-<section id="path"><div class="wrap">
+<section id="path" data-page="03 / 05"><div class="wrap">
 <div class="sec-h"><div class="eb">Your path</div><h2>Everyone starts <span class="o">with a conversation.</span></h2><p>After that we go where you need to go. There are two tracks: the technology itself, and the people who have to use it. Most of the work we do touches only part of this.</p></div>
 
 <div class="tabs" role="tablist" aria-label="Show the path for">
@@ -223,7 +231,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <div class="acts"><div class="phone"><small>Call</small>(509) 795-0112</div><a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a></div>
 </div></div>
 
-<section class="about" id="about"><div class="wrap">
+<section class="about" id="about" data-page="04 / 05"><div class="wrap">
 <div class="photo-col"><div class="photo"><img src="img/john-correia.jpg" alt="John Correia"><svg class="ic" viewBox="0 0 44 44" width="44" height="44" role="img" aria-label="Inland Custom Tech"><rect x="0.00" y="0.00" width="44.00" height="44.00" rx="9.62" fill="#141413"/><path d="M32.61 25.97 A11.34 11.34 0 1 1 20.67 11.73" fill="none" stroke="#FAF9F6" stroke-width="7.56" stroke-linecap="round"/><circle cx="30.35" cy="15.74" r="4.12" fill="#D97757"/></svg></div><div class="name">John Correia<span>Founder, Inland Custom Tech</span></div></div>
 <div><div class="eb">About</div><h2>Curious by nature. <span>Built to help you grow.</span></h2>
 <div class="body"><p>I started this company because I love figuring out problems, and technology is one of the best ways to solve them. I don’t show up with a packaged answer. I sit down, learn what you’re dealing with, and work out what would actually help.</p>
@@ -233,7 +241,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <div class="expertise"><div class="eb">Areas of experience</div><div class="ex-grid"><div class="ex"><h3>Interactive audio design</h3><p>A high-quality working prototype that combines computer vision, computer engineering, audio engineering, audio design, and app development. Also a platform that captures sound at live venues and streams it back as something you can listen around in.</p></div><div class="ex"><h3>Patents</h3><p>A patent on that same audio system, with a second patent pending.</p></div><div class="ex"><h3>Dashboards</h3><p>Scattered numbers pulled into one picture, including a league-wide attendance study built from two public data feeds.</p></div><div class="ex"><h3>Automation</h3><p>Repeat work taken off people’s plates. One tool drafts replies to new inquiries with AI and sends nothing until a person approves it.</p></div><div class="ex"><h3>Custom apps</h3><p>From simple webpages, to small tools that solve one problem, to larger design systems. Each one built for the job in front of it.</p></div><div class="ex"><h3>Behavior and mindfulness</h3><p>A dissertation on the behavioral side of problematic social media use, and how mindfulness can reduce it. Seven peer-reviewed papers on why people take up technology or work around it.</p></div><div class="ex"><h3>Privacy and security</h3><p>Research on why people follow or ignore security practice, and on the privacy choices people make with fitness technology. Also a tool that strips personal information out of a document before anything reaches an AI.</p></div><div class="ex"><h3>Training</h3><p>From the basics of technology up to the behavioral side of adoption, taught to people who start with no technical background.</p></div></div></div>
 </div></section>
 
-<section class="contact" id="contact"><div class="wrap">
+<section class="contact" id="contact" data-page="05 / 05"><div class="wrap">
 <div class="sec-h" style="margin:0"><div class="eb">Get started</div><h2>Let’s figure it out <span class="o">together.</span></h2><p>Not sure where technology fits for your business? That’s what the first call is for. It’s free, and there’s no obligation.</p><dl class="facts"><div><dt>Call</dt><dd><a href="tel:+15097950112">(509) 795-0112</a></dd></div><div><dt>Serving</dt><dd>Spokane, Coeur d’Alene, and the Inland Northwest</dd></div></dl></div>
 <div class="cal"><h3>Book your free consultation</h3><p>One hour. We’ll listen to what you’re working on, share what we’ve seen work for similar businesses, and give you an honest take on where technology could help, or where it might not be worth your time yet.</p><iframe class="slot" data-cal-embed
   src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3JOeETJo6a8QW0HtjOY-UiLHuj4vQKiX3vWsE5M5s9rSHV8KEQ1zcHW-JZ6Zd-MCYB0Hqxhnu0?gv=true"

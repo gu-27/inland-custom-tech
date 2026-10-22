@@ -1,11 +1,11 @@
 /* Service pages. Same tokens and components as site/index.html, which stays the
-   reference implementation. Rhythm here: hero paper, blocks stone, why paper,
-   example stone (when there is a real example), one graphite close, footer stone. */
+   reference implementation. Every section is a rounded paper page on a stone
+   desk, with one graphite close. The example page appears only when there is a real example. */
 :root{--black:#141413;--graphite:#262624;--orange:#D97757;--stone:#ECEAE5;--paper:#FAF9F6;--white:#FFFFFF;--muted:#3D3C39;--soft:#6B6A65;--hair:#E3E0D9;
 --sans:Manrope,"Segoe UI",system-ui,sans-serif;--max:1160px;color-scheme:light}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--black);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--stone);color:var(--black);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.03em;color:var(--black)}
 p{margin:0} a{color:inherit}
@@ -34,8 +34,14 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .s-hero .lede{font-size:21px;color:var(--muted);max-width:52ch}
 .s-hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .reassure{margin-top:14px;font-size:14px;font-weight:700;color:var(--soft)}
+/* document: each section is a rounded paper page on a stone desk, same as the home page */
+main{max-width:1320px;margin:0 auto;padding:16px 16px 0;display:grid;gap:16px}
+main>section,main>.close{border-radius:28px;overflow:hidden}
+main>section{background:var(--paper);border:1px solid var(--hair);position:relative}
+main>section[data-page]::before,main>section[data-page]::after{position:absolute;top:26px;font:800 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+main>section[data-page]::before{content:"Inland Custom Tech";left:max(20px,calc((100% - 1120px) / 2))}
+main>section[data-page]::after{content:attr(data-page);right:max(20px,calc((100% - 1120px) / 2))}
 /* blocks */
-.blocks{background:var(--stone)}
 .block{display:grid;grid-template-columns:260px minmax(0,1fr);gap:32px;padding-block:34px;border-top:1px solid var(--hair)}
 .block:first-child{border-top:0;padding-top:0}
 .block h2{font-size:clamp(26px,3.4vw,38px);line-height:1.02;font-weight:800;letter-spacing:-.04em}
@@ -50,7 +56,6 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .why h2{font-size:clamp(34px,5vw,60px);line-height:.98;font-weight:800;letter-spacing:-.045em;margin:14px 0 24px}
 .why p{color:var(--muted);font-size:17.5px;max-width:62ch} .why p+p{margin-top:14px}
 /* example */
-.example{background:var(--stone)}
 .example .card{border:2px solid var(--black);border-radius:20px;padding:34px;max-width:820px}
 .example h2{font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.04em;margin-bottom:16px}
 .example p{color:var(--muted);font-size:18px}
@@ -65,7 +70,7 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .close .phone{font-size:34px;font-weight:800;letter-spacing:-.02em;user-select:all;color:var(--paper)}
 .close .phone small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--orange)}
 /* footer */
-footer{background:var(--stone);border-top:1px solid var(--hair);padding-block:36px;font-size:14px;color:var(--muted)}
+footer{padding-block:40px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px 36px;align-items:center;justify-content:space-between}
 footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 @media (max-width:960px){
@@ -73,7 +78,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
  .block{grid-template-columns:1fr;gap:12px}
  .why .wrap,.close .wrap{grid-template-columns:1fr}
  .photo{max-width:320px}
- section{padding-block:60px}
+ section{padding-block:60px} main{padding:8px 8px 0;gap:8px} main>section,main>.close{border-radius:20px} main>section[data-page]::before,main>section[data-page]::after{top:20px}
 }
 @media (max-width:520px){ .hd .btn{display:none} .example .card{padding:26px} }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} .btn{transition:none}}

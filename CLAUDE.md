@@ -80,20 +80,22 @@ Primary buttons are orange fill with black text, never white text.
 
 ## Section rhythm
 
-Alternate paper (A) and stone (B) down the page. Graphite is punctuation, used twice:
-the values strip and the closing CTA band. Current order:
+The site reads like a printed document. Every section is a rounded page (28px radius,
+20px on phones) sitting on a stone desk (`body` background), with a 16px gap between
+pages. Pages are paper. Graphite is punctuation, used twice: the values strip and the
+closing CTA page. Home page order:
 
 ```
-hero paper · [graphite strip] · who stone · path paper ·
-[graphite close] · about stone · contact paper · footer stone
+cover (hero) · [graphite strip] · who · path · [graphite close] · about · contact · footer on the desk
 ```
 
-Service pages run their own short rhythm: hero paper · blocks stone · why john paper ·
-example stone · [graphite close] · footer stone. A page with no real example drops the
-example section entirely. Never publish an "example coming soon" placeholder.
+Each paper page that has a `data-page` attribute gets a running head: "Inland Custom
+Tech" on the left and the `data-page` text on the right ("02 / 05", "Overview · 2026",
+"Your path"). Adding a home page section means renumbering the page counts. Do not add a
+third graphite page.
 
-Adding a section means taking the next ground in the alternation. Do not add a third
-graphite band.
+Service pages use the same pages: hero · blocks · why john · example (only when a real
+example exists, never a "coming soon" placeholder) · [graphite close] · footer.
 
 ## Components
 
