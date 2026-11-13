@@ -239,3 +239,10 @@ On `range-spectrum`, sandbox only:
 - BRAND.md and CLAUDE.md updated for the document pages, hero lanes, diagrams, and tool-mark rules.
 
 Waiting on John: approve the kits wording; name his dashboard tool for the row; OK the Claude line on the live site.
+
+## 2026-11-12 (night): live on inlandcustomtech.com
+
+- John bought inlandcustomtech.com in Cloudflare. Attached apex and www to the Pages project from the dashboard.
+- PR #1 (INTENT.md) and PR #2 (the sandbox work plus the triage UI pass) merged to main.
+- Deployed main to production by dashboard upload (zip of `site/`). inlandcustomtech.com serves the new site.
+- Still to do: www → apex redirect rule; Email Routing for john@inlandcustomtech.com (destination inbox to confirm with John); Gmail "Send mail as".

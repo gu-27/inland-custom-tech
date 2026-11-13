@@ -32,7 +32,7 @@ draws_on:
 - `gu-27/inland-nw-ai` and inlandnw.ai are untouched from this repo. The rename migration is a separate approved plan.
 - The "Your path" structure: free consultation first, then the Technology track (assess, plan, build, train, sustain) and the People & Culture track (evaluate, plan, design, implement, sustain). Whether "Explain" stays is John's open question, not an audit's.
 - The section rhythm: paper pages on a stone desk, graphite used exactly twice on the home page.
-- Production is live at inland-custom-tech.pages.dev (shipped 2026-10-22). Never deploy to production without John saying so. The leftover `pathway` branch is fully merged; delete it or ignore it, don't build on it.
+- Production is live at inlandcustomtech.com and inland-custom-tech.pages.dev (refresh shipped 2026-11-12). Never deploy to production without John saying so. The leftover `pathway` branch is fully merged; delete it or ignore it, don't build on it.
 
 ## Area map
 
@@ -48,7 +48,7 @@ draws_on:
 
 - `docs/EVIDENCE.md` lists four People & Culture steps; the site has five (Design added 2026-10-21).
 - Four claims are waiting on John (startup line, Dependable HVAC, pro teams, client sites). Each service page carries a `PENDING JOHN` comment at the spot.
-- ~~`inlandcustomtech.com` is not registered.~~ Registered 2026-11-12 in John's Cloudflare account; not yet attached to the Pages project.
+- ~~`inlandcustomtech.com` is not registered.~~ Registered 2026-11-12 in John's Cloudflare account and attached to the Pages project (apex and www). Production deploy of PR #2 went out the same night by dashboard upload.
 - The home page is one file with inline CSS; the service pages share `service.css`. Two places to change a style. Since 2026-11-12 both read their values from `site/tokens.css` (a copy of `gu-27/knowledge/foundations/tokens/ict.css`), so values live in one place; the rules are still in two.
 - `claude-skills/inwai-brand.md` in another repo still describes the old Inland NW AI brand and lists prices. Not this repo's file, but a model reading both could be misled.
 
