@@ -224,3 +224,18 @@ Do not merge or deploy to production without John saying so.
 `inlandcustomtech.com` is still not registered. The Phase 2 migration in
 [MIGRATION-PLAN.md](MIGRATION-PLAN.md) is still planned and still not approved. Nothing
 in this session touched `gu-27/inland-nw-ai` or inlandnw.ai.
+
+## 2026-11-12 (evening): queue from the voice session
+
+On `range-spectrum`, sandbox only:
+
+- Hero is Option D: headline left, three lanes (Automation, Analytics, AI) right. "+18%" sample removed.
+- Your path copy now scales by persona (personal, business, team, organization automation and training).
+- New page 06 "Built with": Claude block, "Experience with Copilot and ChatGPT. Deep implementation with Claude.",
+  one-color tool row, three kits (Knowledge Kit, Startup Kit, Automation Starter), three sample builds drawn as
+  house-style diagrams (follow-up assistant, anonymizer, program dashboard; all PUBLIC-OK in EVIDENCE.md).
+- Tool marks: simple-icons 16.37 paths in soft gray for GitHub, Cloudflare, n8n, GitHub Copilot; Claude in orange.
+  Names in type for ChatGPT, Gemini, Microsoft 365, Google Workspace, Zapier (brand rules or no clean mono mark).
+- BRAND.md and CLAUDE.md updated for the document pages, hero lanes, diagrams, and tool-mark rules.
+
+Waiting on John: approve the kits wording; name his dashboard tool for the row; OK the Claude line on the live site.

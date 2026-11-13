@@ -3,6 +3,11 @@
 Spokane technology consultancy serving the Inland Northwest. Build, Consult, Train across Automation, Analytics, and AI.
 Voice: warm, plain, jargon-free. A capable neighbor, not a faceless tech firm. Lead with the customer's problem.
 
+## Positioning
+- Claude-first, not Claude-only: "Experience with Copilot and ChatGPT. Deep implementation with Claude." Keep this low on the page; the top stays simple and human.
+- Services scale with the client: personal, small business, team, organization (e.g. personal automation through enterprise automation).
+- Packaged offers: Knowledge Kit, Startup Kit, Automation Starter. No prices on the site.
+
 ## Name and taglines
 - Name: **Inland Custom Tech** (domain: inlandcustomtech.com). Formerly Inland NW AI (inlandnw.ai).
 - Primary tagline / hero: **Technology, made simple.** ("made simple." is the emphasized half.)
@@ -22,7 +27,7 @@ Voice: warm, plain, jargon-free. A capable neighbor, not a faceless tech firm. L
 | Token | Hex | Use |
 |---|---|---|
 | black | `#141413` | Logo, business card front, headings, body text |
-| graphite | `#262624` | Dark "punctuation" bands only (values strip, closing CTA band), featured price card |
+| graphite | `#262624` | Dark "punctuation" bands only (values strip, closing CTA page) |
 | orange | `#D97757` | The dot, "Custom", primary buttons (black text on orange), key words in headlines, step numbers, small dots |
 | paper (off-white) | `#FAF9F6` | Main background (A) |
 | stone | `#ECEAE5` | Alternating section background (B) |
@@ -31,7 +36,7 @@ Voice: warm, plain, jargon-free. A capable neighbor, not a faceless tech firm. L
 | hairline | `#E3E0D9` | Thin borders |
 
 Rules:
-- **Section rhythm:** alternate paper (A) and stone (B). Use graphite only for one or two "stop here" moments. No tan, no green, no tinted backgrounds.
+- **Section rhythm:** the site reads like a printed document. Each section is a rounded paper page (28px radius, 20px on phones) on a stone desk, 16px apart, with a running head ("Inland Custom Tech" left, page number right). Graphite is used twice only: the values strip and the closing CTA. No tan, no green, no tinted backgrounds.
 - Orange text only at large sizes (headlines ~28px+). Small orange text fails contrast on light backgrounds.
 - No gradients, no textures, no robot/brain/circuit imagery. AI lives in the services, not the visuals.
 
@@ -43,6 +48,9 @@ Rules:
 ## Components (see `site/index.html` for the reference implementation)
 - Buttons: primary = orange fill, black text, 12px radius; secondary = 2px black outline.
 - Cards: 2px black border, 20px radius, no fill on light backgrounds.
+- Hero: headline and buttons on the left, three lanes on the right (Automation, Analytics, AI). Each lane is a black-outlined card with a small diagram on a stone panel: black strokes, soft-gray dashed lines for manual or optional steps, orange for the outcome.
+- Diagrams: drawn in the palette only. Solid black = the path that works; dashed soft gray = the old or optional way; one orange element = the result. The open C stands in for "your knowledge" in AI diagrams, never a brain.
+- Third-party tool marks ("Built with" section): one color only, soft gray `#6B6A65`, with Claude set apart in orange. Use official marks from the company or a vetted source; where a brand's rules forbid recoloring (Google, Microsoft, OpenAI), show the name in type instead. Never redraw a logo. Say "Built with", never "Powered by".
 - Business card: front black with large reverse logo + "Technology, made simple."; back off-white with name, title line, 3px rule, phone/email/web/region. See `print/`.
 
 ## Contact facts
