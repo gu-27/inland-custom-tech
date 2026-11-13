@@ -48,8 +48,8 @@ draws_on:
 
 - `docs/EVIDENCE.md` lists four People & Culture steps; the site has five (Design added 2026-10-21).
 - Four claims are waiting on John (startup line, Dependable HVAC, pro teams, client sites). Each service page carries a `PENDING JOHN` comment at the spot.
-- `inlandcustomtech.com` is not registered. Contact facts in BRAND.md name it anyway.
-- The home page is one file with inline CSS; the service pages share `service.css`. Two places to change a style.
+- ~~`inlandcustomtech.com` is not registered.~~ Registered 2026-11-12 in John's Cloudflare account; not yet attached to the Pages project.
+- The home page is one file with inline CSS; the service pages share `service.css`. Two places to change a style. Since 2026-11-12 both read their values from `site/tokens.css` (a copy of `gu-27/knowledge/foundations/tokens/ict.css`), so values live in one place; the rules are still in two.
 - `claude-skills/inwai-brand.md` in another repo still describes the old Inland NW AI brand and lists prices. Not this repo's file, but a model reading both could be misled.
 
 ## Audit log
@@ -57,3 +57,4 @@ draws_on:
 | Date | Model | Scope | Outcome |
 |---|---|---|---|
 | 2026-11-12 | claude-opus-5-5 (subagent) | triage | 4 UI items and 1 deployment item would benefit; responsive, accessibility and fonts fine. See `gu-27/knowledge/audit/pilots/inland-custom-tech/2026-11-12-triage.md` |
+| 2026-11-12 | claude-opus-5-5 | ui | On `range-spectrum`, not yet a PR: `site/tokens.css` added from foundations and linked on all 11 pages; local `:root` values removed (`--hair`→`--rule`, `--sans`→`--font-body`, `--max`→`--wide` 1100px); off-palette `#D6D3CC`, `--sand`, `--white` removed; orange text under 28px removed (nav hover, closing-band labels); dead CSS removed; service closing band and section padding matched to the home page. |
