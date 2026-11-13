@@ -83,9 +83,9 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;padding-block:30px;font-size:17px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
 .strip span{display:flex;align-items:center;gap:10px} .strip span+span::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange);margin-right:24px}
 /* who */
-.who-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.who-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .who{border:2px solid var(--black);border-radius:20px;padding:30px;display:flex;flex-direction:column;gap:14px}
-.who h3{font-size:32px;font-weight:800;letter-spacing:-.035em}
+.who h3{font-size:30px;font-weight:800;letter-spacing:-.035em}
 .who .role{font-size:14px;font-weight:700;color:var(--muted)}
 .who p{color:var(--muted)}
 .who .acts{margin-top:auto;display:grid;gap:10px;padding-top:12px}
@@ -102,7 +102,7 @@ main>section[data-page]::before,main>section[data-page]::after{position:absolute
 main>section[data-page]::before{content:"Inland Custom Tech";left:max(20px,calc((100% - 1120px) / 2))}
 main>section[data-page]::after{content:attr(data-page);right:max(20px,calc((100% - 1120px) / 2))}
 footer{background:var(--stone)}
-.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:6px;border-radius:14px;background:var(--stone);margin-bottom:24px}
+.tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;padding:6px;border-radius:14px;background:var(--stone);margin-bottom:24px}
 .tab{font:700 16px var(--sans);border:0;background:transparent;color:var(--black);padding:14px 18px;border-radius:10px;cursor:pointer;text-align:center}
 .tab:hover{background:var(--paper)}
 .tab[aria-selected="true"]{background:var(--black);color:var(--paper)}
@@ -217,12 +217,12 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
  nav.main{display:none} .hd .btn{margin-left:auto}
  .hero .wrap,.about .wrap,.contact .wrap,.close .wrap{grid-template-columns:1fr}
  .art{display:none} .cover-side{margin-top:44px} .familiar{grid-template-columns:1fr;margin-top:48px}
- .who-grid{grid-template-columns:1fr} .ex-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .who-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .ex-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .flow{--rail:22px} .nodes{grid-template-columns:1fr;gap:26px} .node+.node::before{content:"\2193";left:18px;top:-27px}
  .photo{max-width:360px}
  section{padding-block:68px} main{padding:8px 8px 0;gap:8px} main>section,main>.strip,main>.close{border-radius:20px} main>section[data-page]::before,main>section[data-page]::after{top:20px}
 }
-@media (max-width:520px){ .ex-grid{grid-template-columns:1fr} .strip .wrap{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:10px} .strip span+span::before{display:none} .tabs{grid-template-columns:1fr 1fr} .tab{padding:12px 10px;font-size:15px} .hd .btn{display:none} .chip{max-width:160px;padding:10px 12px} .chip b{font-size:13px} }
+@media (max-width:520px){ .who-grid{grid-template-columns:1fr} .tabs .tab:first-child{grid-column:1/-1} .ex-grid{grid-template-columns:1fr} .strip .wrap{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:10px} .strip span+span::before{display:none} .tabs{grid-template-columns:1fr 1fr} .tab{padding:12px 10px;font-size:15px} .hd .btn{display:none} .chip{max-width:160px;padding:10px 12px} .chip b{font-size:13px} }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} .btn,.node{transition:none} .flow.picked .node.on{transform:none}}
 </style>
 
@@ -248,6 +248,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <section id="who" data-page="02 / 06"><div class="wrap">
 <div class="sec-h"><div class="eb">Who we help</div><h2>Find your <span class="o">starting point.</span></h2><p>Pick the description that sounds most like you. Each one opens the path most people in your spot take.</p></div>
 <div class="who-grid">
+<div class="who"><div class="role">Individuals &amp; the tech-curious</div><h3>Personal</h3><p>Curious about AI but not sure where to start? Want your notes, research, and ideas in one place an AI can actually use? Or just want a healthier relationship with the tech you use every day?</p><div class="acts"><a class="btn line" href="#path" data-persona="personal">See your path</a></div></div>
 <div class="who"><div class="role">Solo operators &amp; small teams</div><h3>Small Business</h3><p>Are there tasks you don’t like doing or can’t get to, like building or updating a website, managing receipts, or scheduling projects? Or are you just sick of paying for subscriptions you barely use?</p><div class="acts"><a class="btn line" href="#path" data-persona="small">See your path</a></div></div>
 <div class="who"><div class="role">Scaling teams &amp; operations</div><h3>Growing Company</h3><p>Are you looking to optimize your workflows with technology, get more out of your data, or figure out where AI actually fits in your business?</p><div class="acts"><a class="btn line" href="#path" data-persona="growing">See your path</a></div></div>
 <div class="who"><div class="role">Established orgs &amp; leadership</div><h3>Enterprise</h3><p>Do you have the tools and the team in place but struggle to get real adoption? Or do you want to build an AI-ready culture that actually sticks?</p><div class="acts"><a class="btn line" href="#path" data-persona="enterprise">See your path</a></div></div>
@@ -270,6 +271,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 
 <div class="tabs" role="tablist" aria-label="Show the path for">
 <button type="button" class="tab" id="tab-general" role="tab" aria-selected="true" aria-controls="panel-path" data-k="general">General</button>
+<button type="button" class="tab" id="tab-personal" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-path" data-k="personal">Personal</button>
 <button type="button" class="tab" id="tab-small" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-path" data-k="small">Small Business</button>
 <button type="button" class="tab" id="tab-growing" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-path" data-k="growing">Growing Company</button>
 <button type="button" class="tab" id="tab-enterprise" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-path" data-k="enterprise">Enterprise</button>
@@ -326,6 +328,7 @@ var PATH_STEPS = ['consult','explain','assess','plan','build','train','sustain',
 /* Steps each persona typically uses. Free Consultation is in every list. */
 var PATH_ON = {
   general:    PATH_STEPS,
+  personal:   ['consult','explain','build','train'],
   small:      ['consult','explain','build','train'],
   growing:    ['consult','assess','plan','build','train','sustain'],
   enterprise: ['consult','evaluate','culture-plan','culture-design','implement','culture-sustain']
@@ -333,6 +336,7 @@ var PATH_ON = {
 
 var PATH_TYPICAL = {
   general:    'Every step, in gray. Pick who you are to see the path that usually fits.',
+  personal:   'For one person, the usual path is <b>Free Consultation, Explain, Build, and Train</b>. The rest stay available.',
   small:      'A small business usually needs <b>Free Consultation, Explain, Build, and Train</b>. The rest stay available.',
   growing:    'A growing company usually needs <b>Free Consultation, Assess, Plan, Build, Train, and Sustain</b>. The rest stay available.',
   enterprise: 'An enterprise usually needs <b>the free consultation plus the whole People &amp; Culture track</b>. The rest stay available.'
@@ -352,6 +356,20 @@ var PATH_COPY = {
     'culture-design':'The workshops, guides, and champion roles, built and tested before anyone runs them.',
     'implement':'Workshops, champions, and new habits that hold after we leave.',
     'culture-sustain':'We stay close while the new way becomes the normal way.'
+  },
+  personal: {
+    'consult':'One hour, free. Bring your questions, even the ones that feel basic.',
+    'explain':'Plain talk about what AI is, what it is not, and what is worth your time.',
+    'assess':'A quick look at the apps and accounts you already have, and what you could drop.',
+    'plan':'Usually a short list of next steps, not a document.',
+    'build':'An AI knowledge repository: your notes, research, and ideas in one place an AI can draw on.',
+    'train':'We set it up together and practice until you can use it on your own.',
+    'sustain':'Check in when you want to add to it or try something new.',
+    'evaluate':'Built for teams. For one person, Explain covers it.',
+    'culture-plan':'Built for teams. Not usually needed for one person.',
+    'culture-design':'Built for teams. Not usually needed for one person.',
+    'implement':'For you this is a habit, not a workshop. Train covers it.',
+    'culture-sustain':'Here if you want help keeping healthy tech habits.'
   },
   small: {
     'consult':'One hour, free. Bring the thing that eats your week and we will look at it together.',
