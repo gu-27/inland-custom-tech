@@ -253,4 +253,6 @@ Waiting on John: approve the kits wording; name his dashboard tool for the row; 
 - inlandcustomtech.com and www moved from the old direct-upload project to it. A short outage while certificates reissued, approved by John.
 - www → apex Redirect Rule on the zone (301, query string kept).
 - Old project `inland-custom-tech` left as a frozen backup at inland-custom-tech.pages.dev. Delete after a clean week.
-- Still to do: Email Routing for john@inlandcustomtech.com (destination inbox to confirm), Gmail "Send mail as".
+- Domains Active with SSL on the new project.
+- Email Routing on: john@inlandcustomtech.com forwards to John's Gmail; MX, SPF and DKIM records added. Catch-all left disabled.
+- Still to do: Gmail "Send mail as" (John, needs a Google app password); delete the old Pages project after a clean week.
