@@ -1,0 +1,13 @@
+/* Inland Custom Tech token set · gu-27/knowledge/foundations · synced, do not hand-edit in sites
+   Closed palette (BRAND.md): no new colors, no gradients, no tints. */
+:root{
+  --bg:#ECEAE5; --surface:#FAF9F6; --ink:#141413; --muted:#3D3C39; --soft:#6B6A65; --rule:#E3E0D9;
+  --black:#141413; --graphite:#262624; --orange:#D97757; --paper:#FAF9F6; --stone:#ECEAE5;
+  --accent:var(--orange); --accent-2:var(--graphite);
+  --font-display:"Manrope",system-ui,sans-serif;
+  --font-body:"Manrope",system-ui,sans-serif;
+  --radius:20px; --radius-sm:12px; --radius-page:28px;
+  --space-1:.25rem; --space-2:.5rem; --space-3:1rem; --space-4:1.5rem; --space-5:2.5rem; --space-6:4rem;
+  --wide:1100px;
+}
+/* rules: orange text only at 28px and up · primary buttons orange fill with black text · graphite used at most twice per page */

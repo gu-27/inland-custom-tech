@@ -15,34 +15,34 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
 <style>
 /* Layout: one continuous off-white page, no alternating grounds. The open C and orange dot are the thread: hero mark, section dots, step numbers, the orange values strip and closing band. Black for type and buttons. Committed light look. */
-:root{--black:#141413;--graphite:#262624;--orange:#D97757;--stone:#ECEAE5;--sand:#DFDDD6;--paper:#FAF9F6;--white:#FFFFFF;--muted:#3D3C39;--soft:#6B6A65;--hair:#E3E0D9;
---sans:Manrope,"Segoe UI",system-ui,sans-serif;--max:1160px;color-scheme:light}
+:root{color-scheme:light} /* values come from tokens.css (gu-27/knowledge/foundations/tokens/ict.css) */
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--stone);color:var(--black);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+body{margin:0;background:var(--stone);color:var(--black);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--wide);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.03em;color:var(--black)}
 p{margin:0} a{color:inherit}
 :focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:6px}
 section{padding-block:96px;scroll-margin-top:72px}
 .eb{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
-.eb::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange)}
+.eb::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange);flex:0 0 9px}
 .sec-h{display:grid;gap:16px;margin-bottom:56px;border-top:3px solid var(--black);padding-top:26px}
 .sec-h h2{max-width:16ch;font-size:clamp(38px,6vw,72px);line-height:.98;font-weight:800;letter-spacing:-.045em}
 .sec-h h2 span{font-weight:800}
 .sec-h p{color:var(--muted);font-size:19px;max-width:62ch}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:800 16px/20px var(--sans);border-radius:12px;padding:18px 28px;text-decoration:none;border:1.5px solid transparent;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:800 16px/20px var(--font-body);border-radius:12px;padding:18px 28px;text-decoration:none;border:1.5px solid transparent;white-space:nowrap;cursor:pointer;transition:background .15s,color .15s}
 .btn.go{background:var(--orange);color:var(--black)} .btn.go:hover{background:var(--black);color:var(--paper)}
 .btn.line{border-width:2px;border-color:var(--black);color:var(--black);background:transparent} .btn.line:hover{background:var(--black);color:var(--paper)}
 /* header */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(250,249,246,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(250,249,246,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
 .hd{display:flex;align-items:center;gap:24px;padding-block:14px}
 .logo{height:38px;width:auto;display:block}
 nav{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:15px}
-nav a{text-decoration:none} nav a:hover{color:var(--orange)}
+nav a{text-decoration:none;text-underline-offset:4px} nav a:hover{text-decoration:underline;text-decoration-color:var(--orange);text-decoration-thickness:2px}
 .hd .btn{padding:11px 18px;font-size:14px}
 /* hero */
 .hero{padding-block:72px;overflow:hidden}
@@ -53,10 +53,6 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .hero .lede{font-size:20px;color:var(--muted);max-width:44ch}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .reassure{margin-top:14px;font-size:14px;font-weight:700;color:var(--soft)}
-.chip{position:absolute;background:var(--white);border:1px solid var(--hair);border-radius:14px;padding:12px 14px;box-shadow:0 8px 24px rgba(20,20,19,.08);max-width:200px}
-.chip small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.chip b{display:block;font-size:15px;line-height:1.35;margin-top:3px;letter-spacing:-.01em}
-.c1{left:0;top:0} .c2{right:0;top:0} .c3{left:50%;bottom:0;transform:translateX(-50%);white-space:nowrap;max-width:none}
 /* values strip */
 .strip{background:var(--graphite);color:var(--paper)}
 .strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;padding-block:30px;font-size:17px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
@@ -68,21 +64,18 @@ nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .who .role{font-size:14px;font-weight:700;color:var(--muted)}
 .who p{color:var(--muted)}
 .who .acts{margin-top:auto;display:grid;gap:10px;padding-top:12px}
-.who.feat{background:var(--graphite);border-color:var(--graphite)} .who.feat h3{color:var(--paper)} .who.feat .role{color:var(--orange)} .who.feat p{color:#D6D3CC} .who.feat .btn.line{border-color:var(--paper);color:var(--paper)} .who.feat .btn.line:hover{background:var(--paper);color:var(--black)}
 /* your path */
-/* rhythm: A paper / B stone alternate; graphite only for the strip and closing band */
 /* DOCUMENT: every section is a rounded page on a stone desk, like sheets of a printed
    overview. Pages are all paper; graphite stays for the strip and the closing page.
    Each page carries a running head: the name on the left, data-page on the right. */
 main{max-width:1320px;margin:0 auto;padding:16px 16px 0;display:grid;gap:16px}
 main>section,main>.strip,main>.close{border-radius:28px;overflow:hidden}
-main>section{background:var(--paper);border:1px solid var(--hair);position:relative}
-main>section[data-page]::before,main>section[data-page]::after{position:absolute;top:26px;font:800 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+main>section{background:var(--paper);border:1px solid var(--rule);position:relative}
+main>section[data-page]::before,main>section[data-page]::after{position:absolute;top:26px;font:800 11px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
 main>section[data-page]::before{content:"Inland Custom Tech";left:max(20px,calc((100% - 1120px) / 2))}
 main>section[data-page]::after{content:attr(data-page);right:max(20px,calc((100% - 1120px) / 2))}
-footer{background:var(--stone)}
 .tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;padding:6px;border-radius:14px;background:var(--stone);margin-bottom:24px}
-.tab{font:700 16px var(--sans);border:0;background:transparent;color:var(--black);padding:14px 18px;border-radius:10px;cursor:pointer;text-align:center}
+.tab{font:700 16px var(--font-body);border:0;background:transparent;color:var(--black);padding:14px 18px;border-radius:10px;cursor:pointer;text-align:center}
 .tab:hover{background:var(--paper)}
 .tab[aria-selected="true"]{background:var(--black);color:var(--paper)}
 .typical{font-size:18px;font-weight:600;color:var(--muted);max-width:74ch;margin-bottom:48px}
@@ -107,9 +100,9 @@ footer{background:var(--stone)}
 .node .more{justify-self:start;margin-top:4px;font-size:13px;font-weight:800;text-decoration:none;border-bottom:2px solid var(--black);padding-bottom:1px}
 .node .more:hover{border-bottom-color:var(--orange)}
 .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.flow.picked .node{background:var(--paper);border:2px dashed var(--hair)}
+.flow.picked .node{background:var(--paper);border:2px dashed var(--rule)}
 .flow.picked .node h3,.flow.picked .node p{color:var(--soft)}
-.flow.picked .node .more{border-bottom-color:var(--hair)}
+.flow.picked .node .more{border-bottom-color:var(--rule)}
 .flow.picked .node.on{background:var(--orange);border:2px solid var(--orange);transform:translateY(-6px);box-shadow:0 14px 30px rgba(20,20,19,.16)}
 .flow.picked .node.on h3,.flow.picked .node.on p{color:var(--black)}
 .flow.picked .node.on .more{border-bottom-color:var(--black)} .flow.picked .node.on .more:hover{border-bottom-color:var(--paper)}
@@ -137,7 +130,7 @@ main>section.range[data-page]::before,main>section.range[data-page]::after{color
 .pin[aria-pressed="true"]::before{background:var(--paper);transform:scale(1.45)}
 .spec input[type=range]{position:absolute;left:0;right:0;top:14px;width:100%;height:28px;margin:0;opacity:0;cursor:grab;z-index:2}
 .spec-labels{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:10px}
-.spec-labels button{font:800 15px/1.25 var(--sans);letter-spacing:-.01em;text-align:center;border:0;background:transparent;color:var(--black);cursor:pointer;padding:6px 4px;border-radius:8px}
+.spec-labels button{font:800 15px/1.25 var(--font-body);letter-spacing:-.01em;text-align:center;border:0;background:transparent;color:var(--black);cursor:pointer;padding:6px 4px;border-radius:8px}
 .spec-labels button:first-child{text-align:left} .spec-labels button:last-child{text-align:right}
 .spec-labels button[aria-pressed="true"]{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
 .spec-card{margin-top:36px;background:var(--paper);border-radius:20px;padding:34px 36px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:36px;min-height:220px}
@@ -155,7 +148,7 @@ main>section.range[data-page]::before,main>section.range[data-page]::after{color
 @media (prefers-reduced-motion:reduce){ .spec-fill,.pin::before{transition:none} }
 /* closing band */
 .close{background:var(--graphite);color:var(--paper);padding-block:128px}
-.close h2{color:var(--paper)} .close .tag{color:var(--orange)} .close p{color:#D6D3CC} .close h2 span{color:var(--orange)} .close .phone{color:var(--paper)} .close .phone small{color:var(--orange)}
+.close h2{color:var(--paper)} .close .tag{color:var(--paper)} .close p{color:var(--rule)} .close h2 span{color:var(--orange)} .close .phone{color:var(--paper)} .close .phone small{color:var(--rule)}
 .close .wrap{display:grid;grid-template-columns:1.4fr .6fr;gap:40px;align-items:center}
 .close .tag{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
 .close h2{font-size:clamp(46px,8vw,108px);line-height:.92;font-weight:800;letter-spacing:-.055em;margin:16px 0 24px}
@@ -180,7 +173,6 @@ main>section.range[data-page]::before,main>section.range[data-page]::after{color
 .ex h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);flex:0 0 8px;transform:translateY(-2px)}
 .ex p{color:var(--muted);font-size:15px;line-height:1.55}
 /* contact */
-.contact{border-top:0}
 .contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
 .cal{border:2px solid var(--black);border-radius:20px;padding:28px;display:grid;gap:14px}
 .cal h3{font-size:22px;font-weight:800} .cal p{color:var(--muted)} .cal .btn{justify-self:start}
@@ -188,8 +180,8 @@ main>section.range[data-page]::before,main>section.range[data-page]::after{color
 .facts dt{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
 .facts dd{margin:4px 0 0;font-size:18px;font-weight:700}
 .facts a{text-decoration:none;font-size:28px;font-weight:800;letter-spacing:-.02em} .facts a:hover{color:var(--orange)}
-.slot{display:block;width:100%;min-height:600px;border:1.5px solid var(--hair);border-radius:14px;background:var(--white)}
-footer{padding-block:40px;font-size:14px;color:var(--muted)}
+.slot{display:block;width:100%;min-height:600px;border:1.5px solid var(--rule);border-radius:14px;background:var(--paper)}
+footer{background:var(--stone);padding-block:40px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px 36px;align-items:center;justify-content:space-between}
 footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 /* Hero lanes: Automation, Analytics, AI */
@@ -261,7 +253,7 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 .app .viz{margin-bottom:6px}
 .try{justify-self:start;margin-top:4px;font-size:14px;font-weight:800;color:var(--black);text-decoration:underline;text-underline-offset:3px}
 .cl{flex-wrap:wrap}
-.cl-make{flex:1 0 100%;border-top:1px solid var(--hair);padding-top:18px;margin-top:2px}
+.cl-make{flex:1 0 100%;border-top:1px solid var(--rule);padding-top:18px;margin-top:2px}
 .cl-lab{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-bottom:12px}
 .cl-make ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 14px}
 .cl-make li{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700}
