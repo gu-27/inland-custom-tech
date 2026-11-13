@@ -45,35 +45,14 @@ nav{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:15px}
 nav a{text-decoration:none} nav a:hover{color:var(--orange)}
 .hd .btn{padding:11px 18px;font-size:14px}
 /* hero */
-.hero{padding-block:72px 0;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:32px;align-items:center}
-.hero h1{font-size:clamp(56px,9.6vw,128px);line-height:.92;font-weight:800;letter-spacing:-.055em;margin:22px 0 30px}
+.hero{padding-block:72px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.hero h1{font-size:clamp(52px,7vw,96px);line-height:.92;font-weight:800;letter-spacing:-.055em;margin:22px 0 30px}
 .hero h1 span{display:block;font-weight:400;color:var(--orange)}
 .o{color:var(--orange)}
 .hero .lede{font-size:20px;color:var(--muted);max-width:44ch}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.cover-side{display:grid;gap:36px;align-content:center}
-.art{position:relative;aspect-ratio:1/1;width:200px}
-/* In this issue: a contents list on the cover; page numbers match the running heads */
-.toc{display:block;margin:0;font-size:inherit;font-weight:inherit;border-top:3px solid var(--black);padding-top:16px}
-.toc-lab{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.toc-lab::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange)}
-.toc ol{list-style:none;margin:0;padding:0}
-.toc li+li{border-top:1px solid var(--hair)}
-.toc a{display:flex;align-items:center;gap:16px;padding:14px 12px;margin-inline:-12px;border-radius:12px;text-decoration:none;transition:background .15s}
-.toc a:hover{background:var(--stone);color:inherit}
-.toc-t{flex:1;display:grid}
-.toc-t b{font-size:18px;font-weight:800;letter-spacing:-.02em}
-.toc-t small{font-size:14px;color:var(--muted)}
-.toc-p{font-size:14px;font-weight:800;letter-spacing:.08em;color:var(--soft)}
-.toc a:hover .toc-p{color:var(--black)}
 .reassure{margin-top:14px;font-size:14px;font-weight:700;color:var(--soft)}
-.familiar{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:72px;padding-block:28px 64px;border-top:3px solid var(--black)}
-.familiar .lab{grid-column:1/-1;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:-8px}
-.familiar div small{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
-.familiar div small::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
-.familiar div b{display:block;font-size:clamp(22px,2.4vw,30px);line-height:1.15;letter-spacing:-.03em;margin-top:8px}
-.bigc{position:absolute;left:0;top:0;width:100%;height:100%}
 .chip{position:absolute;background:var(--white);border:1px solid var(--hair);border-radius:14px;padding:12px 14px;box-shadow:0 8px 24px rgba(20,20,19,.08);max-width:200px}
 .chip small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .chip b{display:block;font-size:15px;line-height:1.35;margin-top:3px;letter-spacing:-.01em}
@@ -213,10 +192,55 @@ main>section.range[data-page]::before,main>section.range[data-page]::after{color
 footer{padding-block:40px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px 36px;align-items:center;justify-content:space-between}
 footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
+/* Hero lanes: Automation, Analytics, AI */
+.lanes{display:grid;gap:14px}
+.ln{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:18px;align-items:center;border:2px solid var(--black);border-radius:20px;padding:18px 20px;background:var(--paper)}
+.ln small{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.ln small::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.ln b{display:block;margin-top:6px;font-size:19px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.ln p{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.45}
+.viz{background:var(--stone);border-radius:14px;padding:12px;font-size:12px}
+.ana .bars{display:flex;align-items:flex-end;gap:6px;height:64px}
+.ana .bars span{flex:1;background:var(--black);border-radius:4px 4px 0 0}
+.ana .bars span.hi{background:var(--orange)}
+.ana .cap{margin-top:8px;font-weight:600} .ana .cap b{font-weight:800}
+.ln{grid-template-columns:minmax(0,1fr) 200px;gap:16px;padding:12px 14px 12px 18px;border-radius:18px}
+.lanes{gap:10px}
+.ln b{font-size:17px;margin-top:4px}
+.ln p{font-size:13.5px;margin-top:3px}
+.ln .viz.ana{padding:10px}
+.ln .ana .bars{height:46px}
+.ln .ana .cap{margin-top:5px}
+.viz.dia{padding:10px 8px}
+.dia svg{display:block;width:100%;height:auto}
+.dia .wire{fill:none;stroke:#141413;stroke-width:2;stroke-dasharray:4 4}
+.dia .l-node rect{fill:#FAF9F6;stroke:#141413;stroke-width:2}
+.dia .ic{fill:none;stroke:#141413;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dia .done{fill:#D97757}
+.dia .ck{fill:none;stroke:#141413;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.dia .pulse{fill:#D97757}
+.dia .t{font:700 9.5px Manrope,sans-serif;fill:#141413;text-anchor:middle}
+.dia .t.b{font-weight:800}
+.dia .t.s{font-size:7.5px;font-weight:800}
+.dia .doc rect{fill:#FAF9F6;stroke:#141413;stroke-width:2}
+.dia .hub{fill:#141413}
+.dia .arrow{fill:none;stroke:#141413;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dia .ans rect:first-child{fill:#FAF9F6;stroke:#141413;stroke-width:2}
+.dia .ln2{stroke:#6B6A65;stroke-width:3;stroke-linecap:round}
+.dia .cite{fill:#D97757}
+.dia .hard{fill:none;stroke:#141413;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.dia .hardhead{fill:none;stroke:#141413;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.dia .l-chip{fill:#D97757}
+.dia .man rect{fill:#FAF9F6;stroke:#6B6A65;stroke-width:1.5;stroke-dasharray:3 3}
+.dia .man .t{fill:#6B6A65}
+.dia .soft{fill:none;stroke:#6B6A65;stroke-width:1.5;stroke-dasharray:3 3}
+.dia .softhead{fill:none;stroke:#6B6A65;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@media (prefers-reduced-motion:reduce){ .dia .pulse{display:none} }
+@media (max-width:960px){ .lanes{margin-top:8px} }
+@media (max-width:560px){ .ln{grid-template-columns:1fr} }
 @media (max-width:960px){
  nav.main{display:none} .hd .btn{margin-left:auto}
  .hero .wrap,.about .wrap,.contact .wrap,.close .wrap{grid-template-columns:1fr}
- .art{display:none} .cover-side{margin-top:44px} .familiar{grid-template-columns:1fr;margin-top:48px}
  .who-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .ex-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .flow{--rail:22px} .nodes{grid-template-columns:1fr;gap:26px} .node+.node::before{content:"\2193";left:18px;top:-27px}
  .photo{max-width:360px}
@@ -236,11 +260,37 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 <section class="hero" id="home" data-page="Overview · 2026"><div class="wrap">
 <div><div class="eb">Custom tech for the Inland Northwest</div>
 <h1>Technology, <span>made simple.</span></h1>
-<p class="lede">We help Inland Northwest businesses automate the busywork, make sense of their data, and get their people using the tools they already pay for. Practical work, built around how you already run.</p>
+<p class="lede">We help Inland Northwest people and businesses take the busywork off their plate, see their numbers clearly, and use AI where it actually helps.</p>
 <div class="ctas"><a class="btn go" href="#contact" data-schedule>Schedule Free Consultation</a><a class="btn line" href="#path">See How It Works</a></div>
 <p class="reassure">Free one-hour consultation · No pitch, no obligation</p></div>
-<div class="cover-side"><div class="art" aria-hidden="true"><svg class="bigc" viewBox="0 0 320 320" aria-hidden="true"><path d="M256.6 185.9 A100 100 0 1 1 151.3 60.4" fill="none" stroke="#141413" stroke-width="58" stroke-linecap="round"/><circle cx="236.6" cy="95.7" r="30" fill="#D97757"/></svg></div><nav class="toc" aria-label="In this issue"><div class="toc-lab">In this issue</div><ol><li><a href="#who"><span class="toc-t"><b>Who we help</b><small>Find your starting point</small></span><span class="toc-p">02</span></a></li><li><a href="#range"><span class="toc-t"><b>My range</b><small>People to technology</small></span><span class="toc-p">03</span></a></li><li><a href="#path"><span class="toc-t"><b>Your path</b><small>The steps, by who you are</small></span><span class="toc-p">04</span></a></li><li><a href="#about"><span class="toc-t"><b>About John</b><small>Areas of experience</small></span><span class="toc-p">05</span></a></li><li><a href="#contact"><span class="toc-t"><b>Get started</b><small>Book a free consultation</small></span><span class="toc-p">06</span></a></li></ol></nav></div>
-<div class="familiar"><div class="lab">Sound familiar?</div><div><small>Automation</small><b>“I wish I had more time.”</b></div><div><small>Analytics</small><b>“We have all this data. How do we actually see it?”</b></div><div><small>AI</small><b>“What the heck is AI, and what is it not?”</b></div></div>
+<div class="lanes">
+<div class="ln"><div><small>Automation</small><b>Stop doing it by hand</b><p>Receipts, invoices, and reminders that handle themselves.</p></div><div class="viz dia"><svg viewBox="0 0 260 132" role="img" aria-label="A receipt can go through three steps by hand: open it, retype it, file it. The automated line skips all three and goes straight to done.">
+<path d="M24 52 V26 Q24 16 34 16 H222 Q232 16 232 26 V50" class="hard"/><path d="M226 44l6 7 6-7" class="hardhead"/>
+<g class="l-node"><rect x="4" y="54" width="40" height="40" rx="10"/><path d="M13 65h22v18H13z M13 65l11 9 11-9" class="ic"/></g>
+<g class="man"><rect x="60" y="59" width="40" height="30" rx="8"/><text x="80" y="78" class="t">Open</text></g>
+<g class="man"><rect x="114" y="59" width="40" height="30" rx="8"/><text x="134" y="78" class="t">Retype</text></g>
+<g class="man"><rect x="168" y="59" width="40" height="30" rx="8"/><text x="188" y="78" class="t">File</text></g>
+<path d="M44 74 H56 M100 74 H110 M154 74 H164 M208 74 H210" class="soft"/>
+<path d="M53 70l4 4-4 4 M107 70l4 4-4 4 M161 70l4 4-4 4" class="softhead"/>
+<circle cx="232" cy="74" r="20" class="done"/><path d="M223 74l6 6 12-12" class="ck"/>
+<text x="24" y="110" class="t">Receipt</text><text x="134" y="110" class="t">By hand, every week</text><text x="232" y="110" class="t b">Done</text>
+<circle r="5" class="pulse"><animateMotion dur="2.2s" repeatCount="indefinite" path="M24 52 V26 Q24 16 34 16 H222 Q232 16 232 26 V50"/></circle>
+<rect x="97" y="7" width="66" height="18" rx="9" class="l-chip"/><text x="130" y="19.5" class="t b">Automated</text>
+</svg></div></div>
+<div class="ln"><div><small>Analytics</small><b>See it on one page</b><p>Scattered numbers pulled into one clear picture.</p></div><div class="viz ana"><div class="bars"><span style="height:38%"></span><span style="height:52%"></span><span style="height:46%"></span><span style="height:70%"></span><span class="hi" style="height:88%"></span></div><div class="cap"><b>+18%</b> this quarter, on one page</div></div></div>
+<div class="ln"><div><small>AI</small><b>A brain for what you know</b><p>Your notes, research, and files in one place, so AI answers from your knowledge, with sources.</p></div><div class="viz dia"><svg viewBox="0 0 260 120" role="img" aria-label="Your notes, research, and files go into one knowledge repository, and you get answers back with sources.">
+<g class="doc"><rect x="4" y="8" width="66" height="26" rx="7"/><text x="37" y="25" class="t">Notes</text></g>
+<g class="doc"><rect x="4" y="47" width="66" height="26" rx="7"/><text x="37" y="64" class="t">Research</text></g>
+<g class="doc"><rect x="4" y="86" width="66" height="26" rx="7"/><text x="37" y="103" class="t">Files</text></g>
+<path d="M70 21 C92 21 92 60 106 60 M70 60 H106 M70 99 C92 99 92 60 106 60" class="wire"/>
+<rect x="106" y="34" width="52" height="52" rx="13" class="hub"/>
+<path d="M141.6 66.5 A12.5 12.5 0 1 1 128.5 50.8" fill="none" stroke="#FAF9F6" stroke-width="7" stroke-linecap="round"/><circle cx="139.1" cy="55.3" r="3.8" fill="#D97757"/>
+<text x="132" y="100" class="t b">Your knowledge</text>
+<path d="M158 60 H176" class="wire"/><path d="M171 55l6 5-6 5" class="arrow"/>
+<g class="ans"><rect x="180" y="30" width="78" height="60" rx="10"/><path d="M190 46h50 M190 56h58 M190 66h40" class="ln2"/><rect x="190" y="74" width="34" height="11" rx="5" class="cite"/><text x="207" y="82.5" class="t s">Sources</text></g>
+<circle r="4" class="pulse"><animateMotion dur="2.4s" repeatCount="indefinite" path="M70 60 H106"/></circle>
+</svg></div></div>
+</div>
 </div></section>
 
 <div class="strip"><div class="wrap"><span>Curiosity driven</span><span>People centered</span><span>Thoughtful AI</span><span>Growing together</span></div></div>
