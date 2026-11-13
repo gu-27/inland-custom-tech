@@ -128,11 +128,16 @@ Booking: https://calendar.app.google/bfwvT6jSwvPMqio67
 
 ## Deploy
 
-Cloudflare Pages project `inland-custom-tech`, serving `site/`.
+Everything goes through GitHub. Cloudflare Pages project `inlandcustomtech` is connected to
+`gu-27/inland-custom-tech`: production branch `main`, no build command, output directory
+`site`. Serves https://inlandcustomtech.com (www redirects to the apex with a zone
+Redirect Rule) and https://inlandcustomtech.pages.dev.
 
-```
-wrangler pages deploy site --project-name=inland-custom-tech
-```
+- Merge to `main` and it deploys. There is no manual deploy step.
+- Any other branch gets its own preview URL automatically. Check it before merging.
+- Do not run `wrangler pages deploy` by hand; that bypasses GitHub.
+- The old direct-upload project `inland-custom-tech` (inland-custom-tech.pages.dev) is a
+  frozen backup from 2026-11-12. Delete it once the new project has run clean for a week.
 
 Check a change at a real phone width before shipping. Headless Chrome on macOS ignores
 `--window-size`, so screenshotting at 390 captures a 485px layout and looks broken when

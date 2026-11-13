@@ -246,3 +246,11 @@ Waiting on John: approve the kits wording; name his dashboard tool for the row; 
 - PR #1 (INTENT.md) and PR #2 (the sandbox work plus the triage UI pass) merged to main.
 - Deployed main to production by dashboard upload (zip of `site/`). inlandcustomtech.com serves the new site.
 - Still to do: www → apex redirect rule; Email Routing for john@inlandcustomtech.com (destination inbox to confirm with John); Gmail "Send mail as".
+
+## 2026-11-12 (late): deploys go through GitHub
+
+- New Cloudflare Pages project `inlandcustomtech`, connected to `gu-27/inland-custom-tech`. Production branch `main`, output `site`, no build.
+- inlandcustomtech.com and www moved from the old direct-upload project to it. A short outage while certificates reissued, approved by John.
+- www → apex Redirect Rule on the zone (301, query string kept).
+- Old project `inland-custom-tech` left as a frozen backup at inland-custom-tech.pages.dev. Delete after a clean week.
+- Still to do: Email Routing for john@inlandcustomtech.com (destination inbox to confirm), Gmail "Send mail as".

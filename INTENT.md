@@ -32,7 +32,7 @@ draws_on:
 - `gu-27/inland-nw-ai` and inlandnw.ai are untouched from this repo. The rename migration is a separate approved plan.
 - The "Your path" structure: free consultation first, then the Technology track (assess, plan, build, train, sustain) and the People & Culture track (evaluate, plan, design, implement, sustain). Whether "Explain" stays is John's open question, not an audit's.
 - The section rhythm: paper pages on a stone desk, graphite used exactly twice on the home page.
-- Production is live at inlandcustomtech.com and inland-custom-tech.pages.dev (refresh shipped 2026-11-12). Never deploy to production without John saying so. The leftover `pathway` branch is fully merged; delete it or ignore it, don't build on it.
+- Production is live at inlandcustomtech.com (refresh shipped 2026-11-12). Production deploys only by merging to `main`. Never deploy to production without John saying so. The leftover `pathway` branch is fully merged; delete it or ignore it, don't build on it.
 
 ## Area map
 
@@ -42,7 +42,7 @@ draws_on:
 | Content | Copy on 11 pages, `docs/EVIDENCE.md` | **hands off** | Every sentence about John is evidence-gated and several are waiting on his answers. Copy changes are his. |
 | Data | `site/js/site.js` (booking URLs), `docs/EVIDENCE.md` | **hands off** | Two sources of truth that CLAUDE.md protects. |
 | Auth | none | n/a | Public site, no gates. |
-| Deployment | Cloudflare Pages direct upload from `site/` via `wrangler pages deploy`. No `_headers` or `_redirects` exist. | **refactor**, with a plan | Direct upload means a commit doesn't deploy, and the SESSION-LOG records a quirk with `.html` redirects. A pass could wire git-connected deploys, but only with a written plan and John's go, since the production URL is live. |
+| Deployment | Cloudflare Pages project `inlandcustomtech`, Git-connected to this repo: `main` is production, other branches get preview URLs, output `site/`, no build. www → apex by a zone Redirect Rule. No `_headers` or `_redirects` exist. | **refactor**, with a plan | Git-connected since 2026-11-12 (John's call). Remaining scope: optional `_headers`, the `.html` redirect quirk, and deleting the old direct-upload project. |
 
 ## Known debt
 
@@ -58,3 +58,4 @@ draws_on:
 |---|---|---|---|
 | 2026-11-12 | claude-opus-5-5 (subagent) | triage | 4 UI items and 1 deployment item would benefit; responsive, accessibility and fonts fine. See `gu-27/knowledge/audit/pilots/inland-custom-tech/2026-11-12-triage.md` |
 | 2026-11-12 | claude-opus-5-5 | ui | On `range-spectrum`, not yet a PR: `site/tokens.css` added from foundations and linked on all 11 pages; local `:root` values removed (`--hair`→`--rule`, `--sans`→`--font-body`, `--max`→`--wide` 1100px); off-palette `#D6D3CC`, `--sand`, `--white` removed; orange text under 28px removed (nav hover, closing-band labels); dead CSS removed; service closing band and section padding matched to the home page. |
+| 2026-11-12 | claude-opus-5-5 | architecture | Deploys moved to GitHub: new Pages project `inlandcustomtech` connected to `gu-27/inland-custom-tech` (main = production, branch previews); domain and www moved off the old direct-upload project `inland-custom-tech`, which stays as a frozen backup. |
