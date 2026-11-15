@@ -256,3 +256,8 @@ Waiting on John: approve the kits wording; name his dashboard tool for the row; 
 - Domains Active with SSL on the new project.
 - Email Routing on: john@inlandcustomtech.com forwards to John's Gmail; MX, SPF and DKIM records added. Catch-all left disabled.
 - Still to do: Gmail "Send mail as" (John, needs a Google app password); delete the old Pages project after a clean week.
+
+## 2026-11-15: Where it helps is live
+
+- PR #3 merged: page 05 / 08 "Where it helps", six departments (Marketing, Sales & Clients, Finance & Accounting, Operations, People & HR, Strategy & Leadership), four ways each. Finance notes that the accountant keeps the books.
+- Waiting on John: cut or reword any card that does not sound like him.
