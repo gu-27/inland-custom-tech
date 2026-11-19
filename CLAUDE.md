@@ -17,6 +17,7 @@ inline CSS, ten service pages sharing one stylesheet, and a short script on each
 ```
 site/          deployable root (Cloudflare Pages serves this directory)
   index.html   the home page
+  projects.html  Projects: one card per real build, each with an animated diagram
   js/site.js   booking URLs + the wiring that applies them. Loaded by every page
   services/    one page per step of "Your path", plus service.css
   img/         favicons, og-image, headshot, logo SVG
