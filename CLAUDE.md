@@ -87,7 +87,7 @@ pages. Pages are paper. Graphite is punctuation, used twice: the values strip an
 closing CTA page. Home page order:
 
 ```
-cover (hero) · [graphite strip, verbs link out] · who · projects · [graphite close] · about · contact · footer on the desk
+cover (hero, four lanes) · [graphite strip, verbs link out] · customize your view (+ orange more-details bar) · about · [graphite close with booking] · footer on the desk
 
 Deep pages (own files): path.html (range, experience, your path), help.html (where it helps), built-with.html, projects.html.
 ```

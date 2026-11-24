@@ -71,6 +71,54 @@
 .coming{border:2px dashed var(--rule);border-radius:20px;padding:24px 28px;color:var(--soft);font-size:16px}
 @media (max-width:960px){.pcard{padding:22px}.pcard .intro{grid-template-columns:1fr}.pcard ol{grid-template-columns:1fr}.stage{padding:12px}}
 </style>
+<style>
+.viz{background:var(--stone);border-radius:14px;padding:12px;font-size:12px}
+.viz.dia{padding:10px 8px}
+.dia svg{display:block;width:100%;height:auto}
+.dia .wire{fill:none;stroke:#141413;stroke-width:2;stroke-dasharray:4 4}
+.dia .l-node rect{fill:#FAF9F6;stroke:#141413;stroke-width:2}
+.dia .ic{fill:none;stroke:#141413;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dia .done{fill:#D97757}
+.dia .ck{fill:none;stroke:#141413;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.dia .pulse{fill:#D97757}
+.dia .t{font:700 9.5px Manrope,sans-serif;fill:#141413;text-anchor:middle}
+.dia .t.b{font-weight:800}
+.dia .t.s{font-size:7.5px;font-weight:800}
+.dia .doc rect{fill:#FAF9F6;stroke:#141413;stroke-width:2}
+.dia .hub{fill:#141413}
+.dia .arrow{fill:none;stroke:#141413;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dia .ans rect:first-child{fill:#FAF9F6;stroke:#141413;stroke-width:2}
+.dia .ln2{stroke:#6B6A65;stroke-width:3;stroke-linecap:round}
+.dia .cite{fill:#D97757}
+.dia .hard{fill:none;stroke:#141413;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.dia .hardhead{fill:none;stroke:#141413;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.dia .l-chip{fill:#D97757}
+.dia .pill rect{fill:#141413}
+.dia .pill .t{fill:#FAF9F6;font-size:9px}
+.dia .join{fill:none;stroke:#141413;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dia .man rect{fill:#FAF9F6;stroke:#6B6A65;stroke-width:1.5;stroke-dasharray:3 3}
+.dia .man .t{fill:#6B6A65}
+.dia .soft{fill:none;stroke:#6B6A65;stroke-width:1.5;stroke-dasharray:3 3}
+.dia .softhead{fill:none;stroke:#6B6A65;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.dia .tl{font:700 8.6px Manrope,sans-serif;fill:#141413}
+.dia .orbit{fill:none;stroke:#6B6A65;stroke-width:1.5;stroke-dasharray:3 4}
+.dia .spoke{stroke:#141413;stroke-width:1.5;stroke-dasharray:2 3}
+.dia .spin{transform-box:view-box;transform-origin:128px 62px;animation:orbit 16s linear infinite}
+.dia .co{fill:#FAF9F6;font-size:8.5px;font-weight:800}
+.dia .chip{fill:#FAF9F6;stroke:#141413;stroke-width:1.5}
+.dia .spin2{transform-box:view-box;transform-origin:86px 60px;animation:orbit 24s linear infinite}
+.dia .spin2 .cr{transform-box:fill-box;transform-origin:center;animation:orbit 24s linear infinite reverse}
+.apps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.app{border:2px solid var(--black);border-radius:20px;padding:22px 22px 24px;display:grid;gap:8px;align-content:start}
+.app h3{font-size:21px;font-weight:800;letter-spacing:-.025em;line-height:1.2}
+.app p{font-size:15px;color:var(--muted);line-height:1.5}
+.app .viz{margin-bottom:6px}
+.try{justify-self:start;margin-top:4px;font-size:14px;font-weight:800;color:var(--black);text-decoration:underline;text-underline-offset:3px}
+.pmore .ph{font-size:clamp(32px,4.4vw,54px);font-weight:800;letter-spacing:-.045em;line-height:1;margin:14px 0 28px}
+.pmore .viz{background:var(--stone);border-radius:14px;padding:10px 8px}
+.pmore .viz svg{display:block;width:100%;height:auto}
+@media(max-width:860px){.apps{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header><div class="wrap hd"><a href="index.html" aria-label="Inland Custom Tech home"><img class="logo" src="img/ict-logo.svg" alt="Inland Custom Tech" width="228" height="40"></a>
@@ -244,6 +292,34 @@
 
 <p class="coming">More on the way: video editing, websites, AI 101 training. Each gets added here once it ships.</p>
 
+</div></section>
+
+<section class="pmore" data-page="Smaller builds"><div class="wrap">
+<div class="eb">Smaller builds</div><h2 class="ph">More things I have built.</h2>
+<div class="apps">
+<div class="app"><div class="viz dia"><svg viewBox="0 0 260 96" role="img" aria-label="A new inquiry becomes an AI draft, a person approves it, then it sends.">
+<g class="l-node"><rect x="4" y="30" width="48" height="36" rx="9"/></g><path d="M14 42h28 M14 50h28 M14 58h18" class="ln2"/>
+<path d="M56 48 H72" class="wire"/><path d="M68 44l5 4-5 4" class="arrow"/>
+<g class="l-node"><rect x="76" y="30" width="48" height="36" rx="9"/></g><text x="100" y="52" class="t b">Draft</text>
+<path d="M128 48 H144" class="wire"/><path d="M140 44l5 4-5 4" class="arrow"/>
+<circle cx="168" cy="48" r="20" class="done"/><path d="M159 48l6 6 12-12" class="ck"/>
+<path d="M192 48 H208" class="wire"/><path d="M204 44l5 4-5 4" class="arrow"/>
+<g class="l-node"><rect x="212" y="30" width="44" height="36" rx="9"/></g><text x="234" y="52" class="t b">Sent</text>
+<text x="28" y="86" class="t">Inquiry</text><text x="100" y="86" class="t">AI drafts</text><text x="168" y="86" class="t b">You approve</text><text x="234" y="86" class="t">Sends</text>
+</svg></div><h3>Follow-up assistant</h3><p>A new inquiry comes in and AI drafts the reply. Nothing sends until a person approves it.</p></div>
+<div class="app"><div class="viz dia"><svg viewBox="0 0 260 96" role="img" aria-label="A document with names blacked out before it goes to an AI, all on your own computer.">
+<g class="l-node"><rect x="70" y="4" width="120" height="60" rx="10"/></g>
+<rect x="84" y="20" width="30" height="8" rx="3" class="hub"/><path d="M120 24h56" class="ln2"/>
+<path d="M84 38h40" class="ln2"/><rect x="130" y="34" width="34" height="8" rx="3" class="hub"/>
+<path d="M84 52h22" class="ln2"/><rect x="112" y="48" width="26" height="8" rx="3" class="hub"/><path d="M144 52h32" class="ln2"/>
+<rect x="66" y="72" width="128" height="20" rx="10" class="l-chip"/><text x="130" y="85.5" class="t b">Stays on your computer</text>
+</svg></div><h3>Anonymizer</h3><p>Strips names and personal details out of a document before it goes to an AI, then puts them back. It never touches the internet.</p><a class="try" href="https://gu-27.github.io/anonymizer/" target="_blank" rel="noopener">Try it</a></div>
+<div class="app"><div class="viz dia"><svg viewBox="0 0 260 96" role="img" aria-label="A dashboard with a bar chart and a sorted list.">
+<g class="l-node"><rect x="4" y="6" width="252" height="84" rx="10"/></g>
+<rect x="18" y="56" width="16" height="22" rx="3" class="hub"/><rect x="40" y="42" width="16" height="36" rx="3" class="hub"/><rect x="62" y="48" width="16" height="30" rx="3" class="hub"/><rect x="84" y="28" width="16" height="50" rx="3" class="cite"/><rect x="106" y="38" width="16" height="40" rx="3" class="hub"/>
+<path d="M140 22h96 M140 38h80 M140 54h90 M140 70h64" class="ln2"/>
+</svg></div><h3>Program dashboard</h3><p>Thirty-five degree programs on one interactive page, with a map, comparisons, and a sortable directory.</p><a class="try" href="https://gu-27.github.io/sports_analytics_dashboard/" target="_blank" rel="noopener">Try it</a></div>
+</div>
 </div></section>
 
 <div class="close"><div class="wrap">

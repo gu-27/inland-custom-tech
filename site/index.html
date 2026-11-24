@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-<script>if(/[?&]ai=b\b/.test(location.search))document.documentElement.classList.add("ai-b-on")</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Inland Custom Tech · Technology, made simple.</title>
@@ -151,16 +150,22 @@ main>section.range[data-page]::before,main>section.range[data-page]::after{color
 /* closing band */
 .close{background:var(--graphite);color:var(--paper);padding-block:128px}
 .close h2{color:var(--paper)} .close .tag{color:var(--paper)} .close p{color:var(--rule)} .close h2 span{color:var(--orange)} .close .phone{color:var(--paper)} .close .phone small{color:var(--rule)}
-.close .wrap{display:grid;grid-template-columns:1.4fr .6fr;gap:40px;align-items:center}
+.close .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.close .cal{background:var(--paper);color:var(--black);border:0}
+.close .cal h3{color:var(--black)}
+.close .phone{margin-top:28px}
+.close .phone a{color:inherit;text-decoration:none}
+.close .serve{margin-top:10px;font-size:15px}
+#contact .slot{height:520px}
 .close .tag{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-.close h2{font-size:clamp(46px,8vw,108px);line-height:.92;font-weight:800;letter-spacing:-.055em;margin:16px 0 24px}
+.close h2{font-size:clamp(42px,5.6vw,80px);line-height:.92;font-weight:800;letter-spacing:-.055em;margin:16px 0 24px}
 .close h2 span{font-weight:400}
 .close p{font-size:20px;max-width:46ch;font-weight:500}
 .close .acts{display:grid;gap:12px;justify-items:start}
 .close .phone{font-size:38px;font-weight:800;letter-spacing:-.02em;user-select:all}
 .close .phone small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800}
 /* about */
-.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.about .wrap{display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:center}
 .photo{position:relative}
 .photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;border-radius:24px}
 .photo .ic{position:absolute;right:-14px;bottom:-14px;width:72px;height:72px;filter:drop-shadow(0 6px 16px rgba(20,20,19,.2))}
@@ -200,12 +205,15 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 .ana .cap{margin-top:8px;font-weight:600} .ana .cap b{font-weight:800}
 .ln{grid-template-columns:minmax(0,1fr) 172px;gap:14px;padding:10px 12px 10px 18px;border-radius:18px}
 .ln .viz.dia{padding:6px}
-.lanes{gap:10px}
+.lanes{gap:10px;grid-auto-rows:1fr}
+.ln .viz{height:100px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}
+.ln .viz.dia svg{max-height:100%;width:auto;max-width:100%;margin:auto}
 .ln b{font-size:17px;margin-top:4px}
 .ln p{font-size:13.5px;margin-top:3px}
 .ln .viz.ana{padding:10px}
-.ln .ana .bars{height:46px}
-.ln .ana .cap{margin-top:5px}
+.ln .ana .bars{height:52px}
+.ln .ana .cap{margin-top:8px;font-size:10.5px;white-space:nowrap;letter-spacing:-.01em}
+.ln .ana .cap b{display:inline;font-size:10.5px;margin:0;letter-spacing:-.01em}
 .viz.dia{padding:10px 8px}
 .dia svg{display:block;width:100%;height:auto}
 .dia .wire{fill:none;stroke:#141413;stroke-width:2;stroke-dasharray:4 4}
@@ -233,17 +241,15 @@ footer nav{margin:0;font-size:14px;gap:22px;flex-wrap:wrap}
 .dia .man .t{fill:#6B6A65}
 .dia .soft{fill:none;stroke:#6B6A65;stroke-width:1.5;stroke-dasharray:3 3}
 .dia .softhead{fill:none;stroke:#6B6A65;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.dia .tl{font:700 9px Manrope,sans-serif;fill:#141413}
+.dia .tl{font:700 8.2px Manrope,sans-serif;fill:#141413}
 .dia .orbit{fill:none;stroke:#6B6A65;stroke-width:1.5;stroke-dasharray:3 4}
 .dia .spoke{stroke:#141413;stroke-width:1.5;stroke-dasharray:2 3}
 .dia .spin{transform-box:view-box;transform-origin:128px 62px;animation:orbit 16s linear infinite}
 @keyframes orbit{to{transform:rotate(360deg)}}
-.dia .co{fill:#FAF9F6;font-size:8.5px;font-weight:800}
+.dia .co{fill:#FAF9F6;font-size:8px;font-weight:800}
 .dia .chip{fill:#FAF9F6;stroke:#141413;stroke-width:1.5}
-.dia .spin2{transform-box:view-box;transform-origin:86px 60px;animation:orbit 24s linear infinite}
+.dia .spin2{transform-box:view-box;transform-origin:82px 60px;animation:orbit 24s linear infinite}
 .dia .spin2 .cr{transform-box:fill-box;transform-origin:center;animation:orbit 24s linear infinite reverse}
-.dia svg.ai-b{display:none}
-html.ai-b-on .dia svg.ai-a{display:none} html.ai-b-on .dia svg.ai-b{display:block}
 
 @media (prefers-reduced-motion:reduce){ .dia .pulse{display:none} .dia .spin{animation:none} .dia .spin2,.dia .spin2 .cr{animation:none} }
 @media (max-width:960px){ .lanes{margin-top:8px} }
@@ -308,7 +314,7 @@ html.ai-b-on .dia svg.ai-a{display:none} html.ai-b-on .dia svg.ai-b{display:bloc
  .hero .wrap,.about .wrap,.contact .wrap,.close .wrap{grid-template-columns:1fr}
  .who-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .ex-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .flow{--rail:22px} .nodes{grid-template-columns:1fr;gap:26px} .node+.node::before{content:"\2193";left:18px;top:-27px}
- .photo{max-width:360px}
+ .photo{max-width:220px}
  section{padding-block:68px} main{padding:8px 8px 0;gap:8px} main>section,main>.strip,main>.close{border-radius:20px} main>section[data-page]::before,main>section[data-page]::after{top:20px}
 }
 @media (max-width:520px){ .who-grid{grid-template-columns:1fr} .tabs .tab:first-child{grid-column:1/-1} .ex-grid{grid-template-columns:1fr} .strip .wrap{display:grid;grid-template-columns:1fr;justify-items:center;gap:10px}
@@ -319,14 +325,20 @@ html.ai-b-on .dia svg.ai-a{display:none} html.ai-b-on .dia svg.ai-b{display:bloc
 <style>.strip span a{color:inherit;text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}.strip span a:hover,.strip span a:focus-visible{border-bottom-color:var(--orange)}.more-row{margin-top:28px;display:flex;justify-content:center}</style>
 <style>
 .vcards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:8px}
-.vcard{all:unset;box-sizing:border-box;cursor:pointer;background:var(--black,#141413);color:var(--paper,#FAF9F6);border-radius:20px;padding:22px 22px 20px;min-height:150px;display:flex;flex-direction:column;gap:6px;position:relative;transition:transform .15s,background .15s}
-.vcard small{padding-right:24px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
-.vcard b{font-size:clamp(22px,2.2vw,28px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-top:auto}
-.vcard .arr{position:absolute;top:18px;right:20px;font-size:18px;opacity:.6}
+.vcard{all:unset;box-sizing:border-box;cursor:pointer;background:var(--black,#141413);color:var(--paper,#FAF9F6);border-radius:20px;padding:24px 18px 18px;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;transition:transform .15s,background .15s}
+.vcard b{font-size:clamp(20px,2vw,26px);font-weight:800;letter-spacing:-.03em;line-height:1.08;text-wrap:balance}
+.vcard small{font-size:14px;font-weight:500;line-height:1.35;opacity:.75;text-wrap:balance;max-width:18ch}
+.vcard .arr{font-size:16px;opacity:.6;margin-top:4px}
 .vcard:hover{transform:translateY(-2px)}
 .vcard:focus-visible{outline:3px solid var(--orange,#D97757);outline-offset:3px}
 .vcard[aria-selected="true"]{background:var(--orange,#D97757);color:var(--black,#141413)}
 .vcard[aria-selected="true"] small,.vcard[aria-selected="true"] .arr{opacity:1}
+.more-bar{margin-top:24px;background:var(--orange,#D97757);color:var(--black,#141413);border-radius:18px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.more-bar p{margin:0;font-size:17px;line-height:1.4}
+.more-bar b{font-weight:800}
+.more-acts{display:flex;gap:10px;flex-wrap:wrap}
+.btn.dark{background:var(--black,#141413);color:var(--paper,#FAF9F6);border:2px solid var(--black,#141413)}
+.btn.dark-line{background:transparent;color:var(--black,#141413);border:2px solid var(--black,#141413)}
 .vall{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:14px;padding:14px;border:2px solid var(--black,#141413);border-radius:14px;font-weight:800;color:var(--black,#141413);text-decoration:none}
 .vall:hover{background:var(--black,#141413);color:var(--paper,#FAF9F6)}
 .vpanel{margin-top:28px;border:2px solid var(--black,#141413);border-radius:20px;padding:clamp(22px,3vw,40px)}
@@ -346,7 +358,7 @@ html.ai-b-on .dia svg.ai-a{display:none} html.ai-b-on .dia svg.ai-b{display:bloc
 .vstep .vfine{margin:12px 0 0;font-size:14px;font-weight:600;color:var(--soft,#6B6A65)}
 .vcols>*{min-width:0}.vpanel{min-width:0;overflow-wrap:break-word}
 @media(max-width:860px){.vcards{grid-template-columns:repeat(2,minmax(0,1fr))}.vcols{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:420px){.vcard{min-height:120px;padding:18px}}
+@media(max-width:420px){.vcard{min-height:124px;padding:18px 12px}}
 </style>
 </head>
 <body>
@@ -358,7 +370,7 @@ html.ai-b-on .dia svg.ai-a{display:none} html.ai-b-on .dia svg.ai-b{display:bloc
 <section class="hero" id="home"><div class="wrap">
 <div><div class="eb">Custom tech for the Inland Northwest</div>
 <h1>Technology, <span>made simple.</span></h1>
-<p class="lede">I help Inland Northwest people and businesses spend less time on repetitive tasks, see their numbers clearly, and use AI where it actually helps.</p>
+<p class="lede">I help Inland Northwest people and businesses improve their ability to engage wisely with existing and new technologies.</p>
 <div class="ctas"><a class="btn go" href="#contact" data-schedule>Book your free consultation</a><a class="btn line" href="path.html">See How It Works</a></div>
 <p class="reassure">Free 30-minute consultation · No pitch, no obligation</p></div>
 <div class="lanes">
@@ -376,31 +388,15 @@ html.ai-b-on .dia svg.ai-a{display:none} html.ai-b-on .dia svg.ai-b{display:bloc
 <rect x="97" y="7" width="66" height="18" rx="9" class="l-chip"/><text x="130" y="19.5" class="t b">Automated</text>
 </svg></div></div>
 <div class="ln"><div><small>Analytics</small><b>See it on one page</b><p>Scattered numbers pulled into one clear picture.</p></div><div class="viz ana"><div class="bars"><span style="height:38%"></span><span style="height:52%"></span><span style="height:46%"></span><span style="height:70%"></span><span class="hi" style="height:88%"></span></div><div class="cap"><b>Sales, hours, costs.</b> One page.</div></div></div>
-<div class="ln"><div><small>AI</small><b>Your knowledge, connected</b><p>Notes, meetings, and past work in one place, so AI helps you produce better work, with sources.</p></div><div class="viz dia"><svg class="ai-a" viewBox="0 0 260 120" role="img" aria-label="Notes, meetings, and past work flow into your company's connected knowledge, and better work comes out: emails, proposals, and answers.">
-<g class="doc"><rect x="2" y="10" width="60" height="24" rx="7"/><text x="32" y="26" class="t">Notes</text></g>
-<g class="doc"><rect x="2" y="48" width="60" height="24" rx="7"/><text x="32" y="64" class="t">Meetings</text></g>
-<g class="doc"><rect x="2" y="86" width="60" height="24" rx="7"/><text x="32" y="102" class="t">Past work</text></g>
-<path id="aiw1" d="M62 22 C82 22 86 62 100 62" class="wire"/><path id="aiw2" d="M62 60 C80 60 86 62 100 62" class="wire"/><path id="aiw3" d="M62 98 C82 98 86 62 100 62" class="wire"/>
-<circle cx="128" cy="62" r="34" class="orbit"/>
-<g class="spin"><circle cx="128" cy="28" r="4.5" class="hub"/><circle cx="162" cy="62" r="4.5" class="hub"/><circle cx="128" cy="96" r="4.5" class="hub"/><circle cx="94" cy="62" r="4.5" class="hub"/><circle cx="152" cy="38" r="3.5" class="cite"/><circle cx="104" cy="86" r="3.5" class="cite"/></g>
-<path d="M128 62 L128 28 M128 62 L162 62 M128 62 L128 96 M128 62 L94 62" class="spoke"/>
-<rect x="100" y="48" width="56" height="28" rx="8" class="hub"/><text x="128" y="60.5" class="t co">Your</text><text x="128" y="70.5" class="t co">company</text>
-<path d="M166 62 H178" class="wire"/><path d="M174 58l5 4-5 4" class="arrow"/>
-<g class="ans"><rect x="182" y="26" width="76" height="72" rx="10"/></g>
-<text x="190" y="44" class="tl">Emails</text><text x="190" y="60" class="tl">Proposals</text><text x="190" y="76" class="tl">Answers</text>
-<rect x="190" y="82" width="60" height="12" rx="6" class="cite"/><text x="220" y="90.8" class="t s">Better work</text>
-<circle r="3.5" class="pulse"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"><mpath href="#aiw1"/></animateMotion></circle>
-<circle r="3.5" class="pulse"><animateMotion dur="2.4s" repeatCount="indefinite" begin="-0.8s"><mpath href="#aiw2"/></animateMotion></circle>
-<circle r="3.5" class="pulse"><animateMotion dur="2.4s" repeatCount="indefinite" begin="-1.6s"><mpath href="#aiw3"/></animateMotion></circle>
-</svg>
-<svg class="ai-b" viewBox="0 0 260 120" role="img" aria-label="Notes, meetings, emails, files, and past work revolve around your company, and better work comes out: emails, proposals, and answers.">
-<circle cx="86" cy="60" r="46" class="orbit"/>
-<rect x="58" y="46" width="56" height="28" rx="8" class="hub"/><text x="86" y="58.5" class="t co">Your</text><text x="86" y="68.5" class="t co">company</text>
-<path id="aib" d="M114 60 H176" class="wire"/><g class="spin2"><g class="cr"><rect x="68.5" y="6.0" width="35.0" height="16" rx="8" class="chip"/><text x="86.0" y="16.8" class="t s">Notes</text></g><g class="cr"><rect x="105.3" y="37.8" width="48.8" height="16" rx="8" class="chip"/><text x="129.7" y="48.6" class="t s">Meetings</text></g><g class="cr"><rect x="93.2" y="89.2" width="39.6" height="16" rx="8" class="chip"/><text x="113.0" y="100.0" class="t s">Emails</text></g><g class="cr"><rect x="41.5" y="89.2" width="35.0" height="16" rx="8" class="chip"/><text x="59.0" y="100.0" class="t s">Files</text></g><g class="cr"><rect x="15.6" y="37.8" width="53.4" height="16" rx="8" class="chip"/><text x="42.3" y="48.6" class="t s">Past work</text></g></g>
-<path d="M172 56l5 4-5 4" class="arrow"/>
-<g class="ans"><rect x="182" y="26" width="76" height="72" rx="10"/></g>
-<text x="190" y="44" class="tl">Emails</text><text x="190" y="60" class="tl">Proposals</text><text x="190" y="76" class="tl">Answers</text>
-<rect x="190" y="82" width="60" height="12" rx="6" class="cite"/><text x="220" y="90.8" class="t s">Better work</text>
+<div class="ln"><div><small>AI</small><b>Your knowledge, connected</b><p>Meetings, past work, and your own thinking in one place, so AI helps you work better.</p></div><div class="viz dia"><svg viewBox="0 0 260 120" role="img" aria-label="Meetings, past work, and thoughts revolve around your company. What comes out: efficiency, better thinking, and new opportunities.">
+<circle cx="82" cy="60" r="50" class="orbit"/>
+<path id="aib" d="M106 60 H160" class="wire"/>
+<rect x="58" y="47" width="48" height="26" rx="8" class="hub"/><text x="82" y="58" class="t co">Your</text><text x="82" y="67.5" class="t co">company</text>
+<g class="spin2"><g class="cr"><rect x="56.6" y="2.0" width="50.8" height="16" rx="8" class="chip"/><text x="82.0" y="12.8" class="t s">Meetings</text></g><g class="cr"><rect x="97.6" y="77.0" width="55.4" height="16" rx="8" class="chip"/><text x="125.3" y="87.8" class="t s">Past work</text></g><g class="cr"><rect x="13.3" y="77.0" width="50.8" height="16" rx="8" class="chip"/><text x="38.7" y="87.8" class="t s">Thoughts</text></g><circle cx="125.3" cy="35.0" r="3.5" class="cite"/><circle cx="82.0" cy="110.0" r="3.5" class="cite"/><circle cx="38.7" cy="35.0" r="3.5" class="cite"/></g><path d="M156 56l5 4-5 4" class="arrow"/>
+<g class="ans"><rect x="164" y="26" width="94" height="68" rx="10"/></g>
+<circle cx="173" cy="42" r="3" class="cite"/><text x="180" y="45" class="tl">Efficiency</text>
+<circle cx="173" cy="60" r="3" class="cite"/><text x="180" y="63" class="tl">Better thinking</text>
+<circle cx="173" cy="78" r="3" class="cite"/><text x="180" y="81" class="tl">New opportunities</text>
 <circle r="3.5" class="pulse"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#aib"/></animateMotion></circle>
 </svg></div></div>
 <div class="ln"><div><small>Adoption</small><b>Tools people keep using</b><p>Training and culture, so new tools get picked up, used well, and kept.</p></div><div class="viz dia"><svg viewBox="0 0 260 120" role="img" aria-label="Existing tools, new tools, and learning come together through Inland Custom Tech, and adoption, use, and culture rise.">
@@ -426,72 +422,37 @@ html.ai-b-on .dia svg.ai-a{display:none} html.ai-b-on .dia svg.ai-b{display:bloc
 
 <div class="strip"><div class="wrap"><span><a href="services/free-consultation.html">We consult.</a></span><span><a href="projects.html">We build.</a></span><span><a href="services/train.html">We teach.</a></span><span><a href="path.html">We grow together.</a></span><p>Local, personable, and built around your problems and your opportunities.</p></div></div>
 
-<section id="who" data-page="02 / 05"><div class="wrap">
+<section id="who" data-page="02 / 03"><div class="wrap">
 <div class="sec-h"><div class="eb">Customize your view</div><h2>Where are you starting? <span class="o">Customize your view.</span></h2><p>Pick the one that sounds most like you.</p></div>
-<div class="vcards" role="tablist" aria-label="Customize your view"><button type="button" class="vcard" id="v-personal" role="tab" aria-selected="false" aria-controls="vp-personal" tabindex="0"><small>You and your family</small><b>Personal</b><span class="arr" aria-hidden="true">&#8595;</span></button><button type="button" class="vcard" id="v-small" role="tab" aria-selected="false" aria-controls="vp-small" tabindex="-1"><small>A few people, a lot to do</small><b>Small organization</b><span class="arr" aria-hidden="true">&#8595;</span></button><button type="button" class="vcard" id="v-mid" role="tab" aria-selected="false" aria-controls="vp-mid" tabindex="-1"><small>Teams, managers, a growing tool list</small><b>Mid-size organization</b><span class="arr" aria-hidden="true">&#8595;</span></button><button type="button" class="vcard" id="v-enterprise" role="tab" aria-selected="false" aria-controls="vp-enterprise" tabindex="-1"><small>Large teams, real investment</small><b>Enterprise</b><span class="arr" aria-hidden="true">&#8595;</span></button></div>
-<a class="vall" href="path.html">See all <span aria-hidden="true">&#8594;</span></a>
+<div class="vcards" role="tablist" aria-label="Customize your view"><button type="button" class="vcard" id="v-personal" role="tab" aria-selected="false" aria-controls="vp-personal" tabindex="0"><b>Personal</b><small>You and your family</small><span class="arr" aria-hidden="true">&#8595;</span></button><button type="button" class="vcard" id="v-small" role="tab" aria-selected="false" aria-controls="vp-small" tabindex="-1"><b>Small organization</b><small>A few people, a lot to do</small><span class="arr" aria-hidden="true">&#8595;</span></button><button type="button" class="vcard" id="v-mid" role="tab" aria-selected="false" aria-controls="vp-mid" tabindex="-1"><b>Mid-size organization</b><small>Teams and a growing tool list</small><span class="arr" aria-hidden="true">&#8595;</span></button><button type="button" class="vcard" id="v-enterprise" role="tab" aria-selected="false" aria-controls="vp-enterprise" tabindex="-1"><b>Enterprise</b><small>Large teams, real investment</small><span class="arr" aria-hidden="true">&#8595;</span></button></div>
 <div class="vpanels"><div class="vpanel" id="vp-personal" role="tabpanel" aria-labelledby="v-personal"><div class="vk">Personal</div><h3>There&#8217;s an app for that. <span>And if there isn&#8217;t, or it doesn&#8217;t fit, let&#8217;s build yours.</span></h3>
 <div class="vcols"><div><div class="vlab">Why I can help</div><ul><li>I build custom apps, from small personal tools to working prototypes.</li><li>My research is on problematic social media use and how to reduce it.</li><li>You own what we build together. No monthly fees, and your data stays with you.</li></ul></div>
 <div class="vstep"><div class="vlab">A good first step</div><p>Set up a family planner your kids build themselves, or a tool for one thing you do every week.</p><a class="btn go" href="https://calendar.app.google/bfwvT6jSwvPMqio67" data-schedule>Book your free consultation</a><p class="vfine">Reach out to customize yours.</p></div></div></div><div class="vpanel" id="vp-small" role="tabpanel" aria-labelledby="v-small"><div class="vk">Small organization</div><h3>Always playing catch-up? <span>Let&#8217;s free up time and work on what&#8217;s next.</span></h3>
-<div class="vcols"><div><div class="vlab">Why I can help</div><ul><li>I have built my own startups: working prototypes, websites, and brands.</li><li>Websites and rebranding, done together with the tools that run behind them.</li><li>Automation for the tasks that eat your week, so the team gets that time back.</li></ul></div>
+<div class="vcols"><div><div class="vlab">Why I can help</div><ul><li>I have built my own startups, including the websites and brands behind them.</li><li>Automation for the tasks that eat your week, so the team gets that time back.</li><li>Your numbers pulled onto one page, so you can see what is working.</li></ul></div>
 <div class="vstep"><div class="vlab">A good first step</div><p>A website refresh, or setting up your three most repetitive tasks to run on their own.</p><a class="btn go" href="https://calendar.app.google/bfwvT6jSwvPMqio67" data-schedule>Book your free consultation</a><p class="vfine">Reach out to customize yours.</p></div></div></div><div class="vpanel" id="vp-mid" role="tabpanel" aria-labelledby="v-mid"><div class="vk">Mid-size organization</div><h3>Big technology decisions ahead? <span>Let&#8217;s plan it and train your team for it.</span></h3>
 <div class="vcols"><div><div class="vlab">Why I can help</div><ul><li>I train people to use technology confidently, starting from no technical background.</li><li>A clear read on the tools you already pay for, and a plan for what comes next.</li><li>Hands-on sessions built around your tools and your work, not a generic course.</li></ul></div>
 <div class="vstep"><div class="vlab">A good first step</div><p>A training session for your team on the tools you already have.</p><a class="btn go" href="https://calendar.app.google/bfwvT6jSwvPMqio67" data-schedule>Book your free consultation</a><p class="vfine">Reach out to customize yours.</p></div></div></div><div class="vpanel" id="vp-enterprise" role="tabpanel" aria-labelledby="v-enterprise"><div class="vk">Enterprise</div><h3>Investing in technology? <span>Let&#8217;s build a culture that maximizes it.</span></h3>
 <div class="vcols"><div><div class="vlab">Why I can help</div><ul><li>Seven peer-reviewed papers on why people take up technology or work around it.</li><li>I work with your team to build the technology culture you envision.</li><li>Adoption is where most investments are won or lost, long before anyone picks a tool.</li></ul></div>
 <div class="vstep"><div class="vlab">A good first step</div><p>An adoption check: where people are embracing your tools, and where they are working around them.</p><a class="btn go" href="https://calendar.app.google/bfwvT6jSwvPMqio67" data-schedule>Book your free consultation</a><p class="vfine">Reach out to customize yours.</p></div></div></div></div>
+<div class="more-bar"><p><b>Want more details?</b> How I work, what I have built, and where I can help.</p><div class="more-acts"><a class="btn dark" href="path.html">How I work</a><a class="btn dark-line" href="projects.html">Projects</a></div></div>
 </div></section>
-<section class="built" id="projects" data-page="03 / 05"><div class="wrap">
-<div class="sec-h"><div class="eb">Projects</div><h2>Things I have built. <span class="o">Shown how they work.</span></h2><p>A few builds, drawn the way they run. Each one started with one person&#8217;s problem.</p></div>
-<div class="apps">
-<div class="app"><div class="viz dia"><svg viewBox="0 0 260 96" role="img" aria-label="A new inquiry becomes an AI draft, a person approves it, then it sends.">
-<g class="l-node"><rect x="4" y="30" width="48" height="36" rx="9"/></g><path d="M14 42h28 M14 50h28 M14 58h18" class="ln2"/>
-<path d="M56 48 H72" class="wire"/><path d="M68 44l5 4-5 4" class="arrow"/>
-<g class="l-node"><rect x="76" y="30" width="48" height="36" rx="9"/></g><text x="100" y="52" class="t b">Draft</text>
-<path d="M128 48 H144" class="wire"/><path d="M140 44l5 4-5 4" class="arrow"/>
-<circle cx="168" cy="48" r="20" class="done"/><path d="M159 48l6 6 12-12" class="ck"/>
-<path d="M192 48 H208" class="wire"/><path d="M204 44l5 4-5 4" class="arrow"/>
-<g class="l-node"><rect x="212" y="30" width="44" height="36" rx="9"/></g><text x="234" y="52" class="t b">Sent</text>
-<text x="28" y="86" class="t">Inquiry</text><text x="100" y="86" class="t">AI drafts</text><text x="168" y="86" class="t b">You approve</text><text x="234" y="86" class="t">Sends</text>
-</svg></div><h3>Follow-up assistant</h3><p>A new inquiry comes in and AI drafts the reply. Nothing sends until a person approves it.</p></div>
-<div class="app"><div class="viz dia"><svg viewBox="0 0 260 96" role="img" aria-label="A document with names blacked out before it goes to an AI, all on your own computer.">
-<g class="l-node"><rect x="70" y="4" width="120" height="60" rx="10"/></g>
-<rect x="84" y="20" width="30" height="8" rx="3" class="hub"/><path d="M120 24h56" class="ln2"/>
-<path d="M84 38h40" class="ln2"/><rect x="130" y="34" width="34" height="8" rx="3" class="hub"/>
-<path d="M84 52h22" class="ln2"/><rect x="112" y="48" width="26" height="8" rx="3" class="hub"/><path d="M144 52h32" class="ln2"/>
-<rect x="66" y="72" width="128" height="20" rx="10" class="l-chip"/><text x="130" y="85.5" class="t b">Stays on your computer</text>
-</svg></div><h3>Anonymizer</h3><p>Strips names and personal details out of a document before it goes to an AI, then puts them back. It never touches the internet.</p><a class="try" href="https://gu-27.github.io/anonymizer/" target="_blank" rel="noopener">Try it</a></div>
-<div class="app"><div class="viz dia"><svg viewBox="0 0 260 96" role="img" aria-label="A dashboard with a bar chart and a sorted list.">
-<g class="l-node"><rect x="4" y="6" width="252" height="84" rx="10"/></g>
-<rect x="18" y="56" width="16" height="22" rx="3" class="hub"/><rect x="40" y="42" width="16" height="36" rx="3" class="hub"/><rect x="62" y="48" width="16" height="30" rx="3" class="hub"/><rect x="84" y="28" width="16" height="50" rx="3" class="cite"/><rect x="106" y="38" width="16" height="40" rx="3" class="hub"/>
-<path d="M140 22h96 M140 38h80 M140 54h90 M140 70h64" class="ln2"/>
-</svg></div><h3>Program dashboard</h3><p>Thirty-five degree programs on one interactive page, with a map, comparisons, and a sortable directory.</p><a class="try" href="https://gu-27.github.io/sports_analytics_dashboard/" target="_blank" rel="noopener">Try it</a></div>
-</div>
-<div class="acts more-row"><a class="btn line" href="projects.html">See all projects</a></div>
-</div></section>
-
-<div class="close" id="free-consult"><div class="wrap">
-<div><div class="tag">Free · No commitment</div><h2>What could your tech <span>do for you?</span></h2><p>Book your free consultation. We’ll look at your systems and operations together to find where technology can help your bottom line. No pitch, no obligation. Or just give us a call.</p></div>
-<div class="acts"><div class="phone"><small>Call</small>(509) 795-0112</div><a class="btn go" href="#contact" data-schedule>Book your free consultation</a></div>
-</div></div>
-
-<section class="about" id="about" data-page="04 / 05"><div class="wrap">
+<section class="about" id="about" data-page="03 / 03"><div class="wrap">
 <div class="photo-col"><div class="photo"><img src="img/john-correia.jpg" alt="John Correia"><svg class="ic" viewBox="0 0 44 44" width="44" height="44" role="img" aria-label="Inland Custom Tech"><rect x="0.00" y="0.00" width="44.00" height="44.00" rx="9.62" fill="#141413"/><path d="M32.61 25.97 A11.34 11.34 0 1 1 20.67 11.73" fill="none" stroke="#FAF9F6" stroke-width="7.56" stroke-linecap="round"/><circle cx="30.35" cy="15.74" r="4.12" fill="#D97757"/></svg></div><div class="name">John Correia<span>Founder, Inland Custom Tech</span></div></div>
 <div><div class="eb">About</div><h2>Curious by nature. <span>Built to help you grow.</span></h2>
-<div class="body"><p>I started this company because I love figuring out problems, and technology is one of the best ways to solve them. I don’t show up with a packaged answer. I sit down, learn what you’re dealing with, and work out what would actually help.</p>
-<p>My background covers two things that rarely sit together: how people learn and adopt technology, and the hands-on skill to build the tools. Most new technology fails because the people side is handled badly, not because of the technology. I work on both sides.</p>
-<p>I have experience with Copilot and ChatGPT, and deep implementation with Claude.</p>
-<p>I work with solo operators, growing companies, nonprofits, and established organizations across Spokane, Coeur d’Alene, and the Inland Northwest.</p></div>
+<div class="body"><p>I love figuring out problems, and technology is one of the best ways to solve them. I don&#8217;t show up with a packaged answer. I learn what you&#8217;re dealing with and work out what would actually help.</p>
+<p>My background covers two things that rarely sit together: how people learn and adopt technology, and the hands-on skill to build the tools. I work on both sides, across Spokane, Coeur d&#8217;Alene, and the Inland Northwest.</p></div>
 </div>
 
 </div></section>
 
-<section class="contact" id="contact" data-page="05 / 05"><div class="wrap">
-<div class="sec-h" style="margin:0"><div class="eb">Get started</div><h2>Let’s figure it out <span class="o">together.</span></h2><p>Not sure where technology fits for your business? That’s what the first call is for. It’s free, and there’s no obligation.</p><dl class="facts"><div><dt>Call</dt><dd><a href="tel:+15097950112">(509) 795-0112</a></dd></div><div><dt>Serving</dt><dd>Spokane, Coeur d’Alene, and the Inland Northwest</dd></div></dl></div>
-<div class="cal"><h3>Book your free consultation</h3><p>Thirty minutes. I’ll listen to what you’re working on, share what I’ve seen work for similar businesses, and give you an honest take on where technology could help, or where it might not be worth your time yet.</p><iframe class="slot" data-cal-embed
+<div class="close" id="contact"><div class="wrap">
+<div><div class="tag">Free · No commitment</div><h2>What could your tech <span>do for you?</span></h2><p>Book a free 30-minute consultation. We&#8217;ll look at what you&#8217;re working on and find where technology could help. No pitch, no obligation.</p>
+<div class="phone"><small>Or call</small><a href="tel:+15097950112">(509) 795-0112</a></div><p class="serve">Spokane, Coeur d&#8217;Alene, and the Inland Northwest</p></div>
+<div class="cal"><h3>Book your free consultation</h3><iframe class="slot" data-cal-embed
   src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3JOeETJo6a8QW0HtjOY-UiLHuj4vQKiX3vWsE5M5s9rSHV8KEQ1zcHW-JZ6Zd-MCYB0Hqxhnu0?gv=true"
   width="100%" height="600" frameborder="0" loading="lazy"
-  title="Book a free consultation with Inland Custom Tech"></iframe><a class="btn line" href="#contact" data-schedule>Open the booking page</a></div>
-</div></section>
+  title="Book a free consultation with Inland Custom Tech"></iframe><a class="btn go" href="https://calendar.app.google/bfwvT6jSwvPMqio67" data-schedule>Open the booking page</a></div>
+</div></div>
 </main>
 
 <footer><div class="wrap"><svg class="logo" viewBox="0 0 228 40" width="228" height="40" role="img" aria-label="Inland Custom Tech"><rect x="0.00" y="0.00" width="40.00" height="40.00" rx="8.75" fill="#141413"/><path d="M29.65 23.61 A10.31 10.31 0 1 1 18.79 10.66" fill="none" stroke="#FAF9F6" stroke-width="6.88" stroke-linecap="round"/><circle cx="27.59" cy="14.31" r="3.75" fill="#D97757"/><path d="M53.504 26.768V13.232000000000003H54.8858V26.768Z M64.8498 26.768V21.5886Q64.8498 20.742600000000003 64.69 20.0329Q64.5302 19.3232 64.17769999999999 18.7921Q63.825199999999995 18.261000000000003 63.265899999999995 17.969600000000003Q62.706599999999995 17.678200000000004 61.907599999999995 17.678200000000004Q61.1744 17.678200000000004 60.6151 17.932000000000002Q60.0558 18.1858 59.6751 18.6605Q59.294399999999996 19.1352 59.096999999999994 19.812Q58.8996 20.4888 58.8996 21.3536L57.922 21.1374Q57.922 19.577 58.4672 18.5148Q59.0124 17.452600000000004 59.971199999999996 16.907400000000003Q60.93 16.3622 62.1708 16.3622Q63.0826 16.3622 63.7641 16.6442Q64.4456 16.9262 64.9203 17.4056Q65.395 17.885 65.68639999999999 18.500700000000002Q65.9778 19.116400000000002 66.1094 19.8073Q66.241 20.4982 66.241 21.184400000000004V26.768ZM57.5084 26.768V16.616H58.7586V19.116400000000002H58.8996V26.768Z M68.685 26.768V12.950000000000003H70.0668V26.768Z M75.60340000000001 27.05Q74.45660000000001 27.05 73.68110000000001 26.636400000000002Q72.9056 26.2228 72.5202 25.5366Q72.1348 24.8504 72.1348 24.042Q72.1348 23.2148 72.4685 22.627299999999998Q72.8022 22.0398 73.3803 21.663800000000002Q73.9584 21.2878 74.7198 21.090400000000002Q75.4906 20.9024 76.4259 20.756700000000002Q77.3612 20.611 78.2589 20.502900000000004Q79.1566 20.394800000000004 79.8334 20.291400000000003L79.3446 20.592200000000002Q79.3728 19.0882 78.7618 18.364400000000003Q78.1508 17.640600000000003 76.6374 17.640600000000003Q75.59400000000001 17.640600000000003 74.8749 18.110600000000005Q74.1558 18.580600000000004 73.8644 19.5958L72.5202 19.201Q72.86800000000001 17.838 73.92080000000001 17.086000000000002Q74.9736 16.334000000000003 76.6562 16.334000000000003Q78.0474 16.334000000000003 79.02029999999999 16.855700000000002Q79.9932 17.3774 80.3974 18.364400000000003Q80.5854 18.806200000000004 80.6418 19.351400000000005Q80.6982 19.896600000000003 80.6982 20.4606V26.768H79.4668V24.2206L79.824 24.371000000000002Q79.307 25.6776 78.2166 26.3638Q77.1262 27.05 75.60340000000001 27.05ZM75.7632 25.8562Q76.73140000000001 25.8562 77.4552 25.5084Q78.179 25.160600000000002 78.6208 24.5543Q79.0626 23.948 79.1942 23.186600000000002Q79.307 22.6978 79.3164 22.110300000000002Q79.3258 21.5228 79.3258 21.2314L79.8522 21.504Q79.1472 21.598000000000003 78.3247 21.692Q77.5022 21.786 76.7079 21.9082Q75.9136 22.0304 75.2744 22.1996Q74.842 22.321800000000003 74.43780000000001 22.542700000000004Q74.0336 22.7636 73.77510000000001 23.130200000000002Q73.5166 23.4968 73.5166 24.042Q73.5166 24.483800000000002 73.7375 24.8974Q73.9584 25.311 74.4519 25.5836Q74.9454 25.8562 75.7632 25.8562Z M90.2862 26.768V21.5886Q90.2862 20.742600000000003 90.12639999999999 20.0329Q89.9666 19.3232 89.61410000000001 18.7921Q89.2616 18.261000000000003 88.70230000000001 17.969600000000003Q88.143 17.678200000000004 87.344 17.678200000000004Q86.6108 17.678200000000004 86.0515 17.932000000000002Q85.4922 18.1858 85.1115 18.6605Q84.7308 19.1352 84.5334 19.812Q84.336 20.4888 84.336 21.3536L83.3584 21.1374Q83.3584 19.577 83.9036 18.5148Q84.44879999999999 17.452600000000004 85.4076 16.907400000000003Q86.3664 16.3622 87.60719999999999 16.3622Q88.51899999999999 16.3622 89.20049999999999 16.6442Q89.88199999999999 16.9262 90.35669999999999 17.4056Q90.8314 17.885 91.1228 18.500700000000002Q91.4142 19.116400000000002 91.54579999999999 19.8073Q91.67739999999999 20.4982 91.67739999999999 21.184400000000004V26.768ZM82.9448 26.768V16.616H84.195V19.116400000000002H84.336V26.768Z M97.87199999999999 27.05Q96.45259999999999 27.05 95.4468 26.3403Q94.44099999999999 25.6306 93.90519999999998 24.418Q93.36939999999998 23.2054 93.36939999999998 21.6826Q93.36939999999998 20.169200000000004 93.9005 18.9566Q94.43159999999999 17.744 95.428 17.039Q96.42439999999999 16.334000000000003 97.81559999999999 16.334000000000003Q99.24439999999998 16.334000000000003 100.22199999999998 17.029600000000002Q101.19959999999999 17.7252 101.70249999999999 18.933100000000003Q102.20539999999998 20.141000000000002 102.20539999999998 21.6826Q102.20539999999998 23.196 101.70719999999999 24.4133Q101.20899999999999 25.6306 100.24079999999998 26.3403Q99.27259999999998 27.05 97.87199999999999 27.05ZM98.01299999999999 25.7622Q99.094 25.7622 99.79899999999999 25.2358Q100.50399999999999 24.709400000000002 100.8518 23.783500000000004Q101.19959999999999 22.8576 101.19959999999999 21.6826Q101.19959999999999 20.4888 100.8518 19.5723Q100.50399999999999 18.6558 99.80369999999999 18.1388Q99.1034 17.6218 98.04119999999999 17.6218Q96.95079999999999 17.6218 96.23639999999999 18.157600000000002Q95.52199999999999 18.693400000000004 95.1789 19.614600000000003Q94.83579999999999 20.535800000000002 94.83579999999999 21.6826Q94.83579999999999 22.838800000000003 95.1883 23.7647Q95.54079999999999 24.6906 96.24579999999999 25.226399999999998Q96.95079999999999 25.7622 98.01299999999999 25.7622ZM101.19959999999999 26.768V19.1258H101.04919999999998V13.232000000000003H102.44039999999998V26.768Z" fill="#141413"/><path d="M114.26559999999998 27.05Q112.23519999999999 27.05 110.76409999999998 26.166400000000003Q109.29299999999998 25.2828 108.49869999999999 23.694200000000002Q107.70439999999998 22.105600000000003 107.70439999999998 20.0Q107.70439999999998 17.894400000000005 108.49869999999999 16.305800000000005Q109.29299999999998 14.717200000000002 110.76409999999998 13.833600000000002Q112.23519999999999 12.950000000000003 114.26559999999998 12.950000000000003Q116.59679999999999 12.950000000000003 118.18069999999999 14.106200000000003Q119.76459999999999 15.262400000000003 120.41319999999999 17.236400000000003L117.83759999999998 17.9508Q117.46159999999999 16.7194 116.56859999999999 16.0379Q115.67559999999999 15.356400000000002 114.26559999999998 15.356400000000002Q112.97779999999999 15.356400000000002 112.11769999999999 15.9298Q111.25759999999998 16.5032 110.82519999999998 17.5466Q110.39279999999998 18.590000000000003 110.39279999999998 20.0Q110.39279999999998 21.41 110.82519999999998 22.453400000000002Q111.25759999999998 23.4968 112.11769999999999 24.0702Q112.97779999999999 24.6436 114.26559999999998 24.6436Q115.67559999999999 24.6436 116.56859999999999 23.9574Q117.46159999999999 23.2712 117.83759999999998 22.049200000000003L120.41319999999999 22.7636Q119.76459999999999 24.7376 118.18069999999999 25.8938Q116.59679999999999 27.05 114.26559999999998 27.05Z M126.07199999999997 27.0688Q124.87819999999998 27.0688 124.12619999999998 26.6646Q123.37419999999999 26.2604 122.95589999999999 25.64Q122.53759999999998 25.0196 122.35899999999998 24.3475Q122.18039999999998 23.6754 122.14279999999998 23.120800000000003Q122.10519999999998 22.566200000000002 122.10519999999998 22.3124V16.616H124.69959999999998V21.41Q124.69959999999998 21.757800000000003 124.73719999999997 22.298300000000005Q124.77479999999998 22.838800000000003 124.97219999999999 23.384Q125.16959999999997 23.9292 125.61609999999997 24.2958Q126.06259999999997 24.6624 126.88039999999998 24.6624Q127.20939999999999 24.6624 127.58539999999999 24.559Q127.96139999999998 24.4556 128.29039999999998 24.1595Q128.61939999999998 23.863400000000002 128.83089999999999 23.2853Q129.0424 22.7072 129.0424 21.767200000000003L130.50879999999998 22.4628Q130.50879999999998 23.666 130.01999999999998 24.7188Q129.53119999999998 25.7716 128.54889999999997 26.4202Q127.56659999999998 27.0688 126.07199999999997 27.0688ZM129.36199999999997 26.768V23.402800000000003H129.0424V16.616H131.618V26.768Z M138.0288 27.05Q136.11119999999997 27.05 134.93149999999997 26.180500000000002Q133.75179999999997 25.311 133.498 23.7224L136.11119999999997 23.3276Q136.271 24.042 136.8209 24.4462Q137.37079999999997 24.8504 138.21679999999998 24.8504Q138.9124 24.8504 139.28839999999997 24.582500000000003Q139.66439999999997 24.314600000000002 139.66439999999997 23.8352Q139.66439999999997 23.5344 139.51399999999998 23.351100000000002Q139.3636 23.1678 138.84189999999998 22.9892Q138.32019999999997 22.8106 137.22039999999998 22.5192Q135.97959999999998 22.1996 135.23699999999997 21.8048Q134.49439999999998 21.41 134.16539999999998 20.860100000000003Q133.83639999999997 20.310200000000002 133.83639999999997 19.53Q133.83639999999997 18.552400000000002 134.33459999999997 17.8333Q134.8328 17.114200000000004 135.73989999999998 16.724100000000004Q136.647 16.334000000000003 137.87839999999997 16.334000000000003Q139.07219999999998 16.334000000000003 139.99339999999998 16.7006Q140.91459999999998 17.0672 141.48329999999999 17.744Q142.052 18.4208 142.18359999999998 19.342000000000002L139.57039999999998 19.812Q139.50459999999998 19.248 139.08159999999998 18.919000000000004Q138.65859999999998 18.590000000000003 137.93479999999997 18.5336Q137.22979999999998 18.486600000000003 136.8021 18.721600000000002Q136.37439999999998 18.9566 136.37439999999998 19.398400000000002Q136.37439999999998 19.6616 136.55769999999998 19.840200000000003Q136.74099999999999 20.018800000000002 137.3191 20.2068Q137.89719999999997 20.394800000000004 139.08159999999998 20.695600000000002Q140.2378 20.9964 140.9381 21.3959Q141.6384 21.7954 141.95799999999997 22.3547Q142.27759999999998 22.914 142.27759999999998 23.7036Q142.27759999999998 25.264 141.14959999999996 26.157Q140.02159999999998 27.05 138.0288 27.05Z M150.24879999999996 26.768Q149.19599999999997 26.9654 148.1855 26.9419Q147.17499999999998 26.918400000000002 146.3807 26.5847Q145.58639999999997 26.251 145.17279999999997 25.5084Q144.79679999999996 24.812800000000003 144.77799999999996 24.093700000000002Q144.75919999999996 23.3746 144.75919999999996 22.4628V13.796000000000003H147.31599999999997V22.3124Q147.31599999999997 22.904600000000002 147.33009999999996 23.3793Q147.34419999999997 23.854 147.52279999999996 24.136000000000003Q147.86119999999997 24.6718 148.60379999999998 24.7188Q149.34639999999996 24.765800000000002 150.24879999999996 24.6436ZM143.02959999999996 18.590000000000003V16.616H150.24879999999996V18.590000000000003Z M156.88519999999997 27.05Q155.35299999999998 27.05 154.1968 26.3638Q153.04059999999998 25.6776 152.39669999999998 24.469700000000003Q151.75279999999998 23.2618 151.75279999999998 21.692Q151.75279999999998 20.1034 152.4108 18.895500000000002Q153.06879999999998 17.687600000000003 154.22499999999997 17.010800000000003Q155.38119999999998 16.334000000000003 156.88519999999997 16.334000000000003Q158.41739999999996 16.334000000000003 159.57829999999996 17.020200000000003Q160.73919999999998 17.706400000000002 161.38779999999997 18.914300000000004Q162.03639999999996 20.122200000000003 162.03639999999996 21.692Q162.03639999999996 23.2712 161.38309999999996 24.479100000000003Q160.72979999999995 25.687 159.56889999999996 26.3685Q158.40799999999996 27.05 156.88519999999997 27.05ZM156.88519999999997 24.6624Q158.11659999999998 24.6624 158.72289999999998 23.8305Q159.32919999999996 22.9986 159.32919999999996 21.692Q159.32919999999996 20.3384 158.71349999999995 19.53Q158.09779999999998 18.721600000000002 156.88519999999997 18.721600000000002Q156.04859999999996 18.721600000000002 155.51279999999997 19.0976Q154.97699999999998 19.4736 154.71849999999998 20.141000000000002Q154.45999999999998 20.808400000000002 154.45999999999998 21.692Q154.45999999999998 23.055 155.07569999999998 23.8587Q155.69139999999996 24.6624 156.88519999999997 24.6624Z M176.13639999999998 26.768V20.7708Q176.13639999999998 19.765 175.6617 19.2057Q175.18699999999998 18.6464 174.35039999999998 18.6464Q173.81459999999998 18.6464 173.41979999999998 18.8955Q173.02499999999998 19.1446 172.80409999999998 19.5911Q172.58319999999998 20.0376 172.58319999999998 20.620400000000004L171.5116 19.906000000000002Q171.5116 18.8626 172.00509999999997 18.0636Q172.49859999999998 17.2646 173.33049999999997 16.8181Q174.1624 16.3716 175.17759999999998 16.3716Q176.9166 16.3716 177.80489999999998 17.4009Q178.6932 18.4302 178.6932 20.094V26.768ZM163.89759999999998 26.768V16.616H166.15359999999998V19.9812H166.4732V26.768ZM170.02639999999997 26.768V20.7708Q170.02639999999997 19.765 169.55169999999998 19.2057Q169.07699999999997 18.6464 168.24039999999997 18.6464Q167.4414 18.6464 166.95729999999998 19.1963Q166.4732 19.7462 166.4732 20.620400000000004L165.40159999999997 19.8684Q165.40159999999997 18.872 165.89979999999997 18.0824Q166.39799999999997 17.2928 167.23929999999996 16.8322Q168.08059999999998 16.3716 169.12399999999997 16.3716Q170.31779999999998 16.3716 171.08389999999997 16.8792Q171.84999999999997 17.3868 172.21659999999997 18.2328Q172.58319999999998 19.0788 172.58319999999998 20.094V26.768Z" fill="#D97757"/><path d="M188.1214 26.768V14.557400000000003H183.39319999999998V13.232000000000003H194.23139999999998V14.557400000000003H189.5032V26.768Z M199.84319999999997 27.05Q198.35799999999998 27.05 197.27229999999997 26.392000000000003Q196.18659999999997 25.734 195.58499999999998 24.540200000000002Q194.9834 23.346400000000003 194.9834 21.739Q194.9834 20.075200000000002 195.57559999999998 18.8626Q196.16779999999997 17.650000000000002 197.24409999999997 16.992000000000004Q198.32039999999998 16.334000000000003 199.78679999999997 16.334000000000003Q201.2908 16.334000000000003 202.35299999999998 17.024900000000002Q203.41519999999997 17.7158 203.9604 19.003600000000002Q204.5056 20.291400000000003 204.4586 22.0774H203.04859999999996V21.5886Q203.01099999999997 19.614600000000003 202.19789999999998 18.608800000000002Q201.38479999999998 17.603 199.82439999999997 17.603Q198.1888 17.603 197.3193 18.665200000000002Q196.44979999999998 19.727400000000003 196.44979999999998 21.692Q196.44979999999998 23.6096 197.3193 24.6671Q198.1888 25.724600000000002 199.78679999999997 25.724600000000002Q200.8772 25.724600000000002 201.69029999999998 25.221700000000002Q202.50339999999997 24.7188 202.97339999999997 23.7694L204.26119999999997 24.2676Q203.65959999999998 25.593 202.4893 26.3215Q201.319 27.05 199.84319999999997 27.05ZM195.96099999999998 22.0774V20.921200000000002H203.71599999999998V22.0774Z M210.55919999999998 27.05Q209.027 27.05 207.96479999999997 26.3638Q206.90259999999998 25.6776 206.35269999999997 24.469700000000003Q205.8028 23.2618 205.784 21.692Q205.8028 20.094 206.36679999999998 18.886100000000003Q206.93079999999998 17.678200000000004 207.993 17.006100000000004Q209.05519999999999 16.334000000000003 210.56859999999998 16.334000000000003Q212.1102 16.334000000000003 213.2523 17.086000000000002Q214.3944 17.838 214.8174 19.1446L213.4638 19.577Q213.1066 18.665200000000002 212.3311 18.162300000000002Q211.55559999999997 17.6594 210.55919999999998 17.6594Q209.4406 17.6594 208.7074 18.1717Q207.9742 18.684 207.617 19.595800000000004Q207.25979999999998 20.507600000000004 207.25039999999998 21.692Q207.26919999999998 23.5156 208.0964 24.6201Q208.9236 25.724600000000002 210.55919999999998 25.724600000000002Q211.59319999999997 25.724600000000002 212.32169999999996 25.249900000000004Q213.0502 24.7752 213.4262 23.863400000000002L214.8174 24.277Q214.25339999999997 25.6306 213.16299999999998 26.3403Q212.0726 27.05 210.55919999999998 27.05Z M223.8978 26.768V21.5886Q223.8978 20.742600000000003 223.738 20.0329Q223.57819999999998 19.3232 223.2257 18.7921Q222.8732 18.261000000000003 222.3139 17.969600000000003Q221.75459999999998 17.678200000000004 220.9556 17.678200000000004Q220.2224 17.678200000000004 219.6631 17.932000000000002Q219.1038 18.1858 218.7231 18.6605Q218.3424 19.1352 218.14499999999998 19.812Q217.9476 20.4888 217.9476 21.3536L216.97 21.1374Q216.97 19.577 217.5152 18.5148Q218.0604 17.452600000000004 219.01919999999998 16.907400000000003Q219.97799999999998 16.3622 221.2188 16.3622Q222.1306 16.3622 222.8121 16.6442Q223.4936 16.9262 223.9683 17.4056Q224.44299999999998 17.885 224.7344 18.500700000000002Q225.0258 19.116400000000002 225.1574 19.8073Q225.289 20.4982 225.289 21.184400000000004V26.768ZM216.5564 26.768V13.232000000000003H217.8066V20.874200000000002H217.9476V26.768Z" fill="#141413"/></svg><nav aria-label="Footer"><a href="path.html">Your Path</a><a href="help.html">Where It Helps</a><a href="projects.html">Projects</a><a href="built-with.html">Built With</a><a href="#about">About</a><a href="#contact">Contact</a><a href="privacy.html">Privacy</a></nav><span>© 2026 Inland Custom Tech · Spokane &amp; Coeur d’Alene · Inland Northwest</span></div></footer>
