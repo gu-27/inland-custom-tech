@@ -89,7 +89,7 @@ closing CTA page. Home page order:
 ```
 cover (hero, four lanes) · [graphite strip, verbs link out] · customize your view (+ orange more-details bar) · about · [graphite close with booking] · footer on the desk
 
-Deep pages (own files): path.html (range, experience, your path), help.html (where it helps), built-with.html, projects.html.
+Deep pages (own files): how.html (tools, talks, transformation), about.html, path.html (what I do: TTT band, range, experience, your path), help.html (where it helps), built-with.html, projects.html. Header nav: How I Help, Projects, About, plus the booking button.
 ```
 
 Each paper page that has a `data-page` attribute gets a running head: "Inland Custom
