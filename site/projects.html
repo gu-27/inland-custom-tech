@@ -77,6 +77,12 @@
 .p1{animation-delay:.3s}.p2{animation-delay:.6s}.p3{animation-delay:.9s}.p4{animation-delay:1.2s}.p5{animation-delay:1.5s}.p6{animation-delay:1.8s}
 @keyframes pop{0%,8%{transform:scale(0);opacity:0}20%,88%{transform:scale(1);opacity:1}100%{transform:scale(0);opacity:0}}
 @media (prefers-reduced-motion:reduce){.bob,.pop{animation:none}}
+.tbc{gap:30px}
+.tbc-head .for{max-width:68ch;margin-top:4px}
+.tbc-part{display:grid;gap:22px;border-top:2px solid var(--black);padding-top:26px}
+.tbc-part .intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 40px;align-items:end}
+.tbc-part h3{font-size:clamp(24px,2.8vw,32px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin:12px 0 6px}
+@media(max-width:860px){.tbc-part .intro{grid-template-columns:1fr}}
 </style>
 <style>
 .viz{background:var(--stone);border-radius:14px;padding:12px;font-size:12px}
@@ -144,45 +150,40 @@
 
 <article class="pcard" aria-labelledby="p-mkt">
 <div class="intro"><div><div class="tagrow"><span class="status">In progress &#183; Marketing</span></div>
-<h2 id="p-mkt">A marketing engine</h2></div>
+<h2 id="p-mkt">A marketing pipeline</h2></div>
 <p class="for">For a student-led organization with a lot to say and a small team saying it. The goal: post with a plan, not just to stay busy.</p></div>
-<figure class="stage" aria-label="Diagram: one strategy feeds an idea board with four columns. An idea card moves across Ideas, Vetted, Developed and Calendar, then goes out to Reels, Stories, Pinned posts and LinkedIn.">
+<figure class="stage" aria-label="Diagram: a strategy (brand, audiences, core message, channels) holds a plan (goals, calendar, roles, measures), which holds the campaigns and the tools, like the idea board. Out comes faster, better marketing.">
 <svg viewBox="0 0 520 300">
-<rect x="186" y="12" width="148" height="50" rx="12" class="ink"/>
-<text x="260" y="33" text-anchor="middle" class="tw">ONE STRATEGY</text>
-<text x="260" y="50" text-anchor="middle" class="tw" style="font-weight:600">Audiences &#183; one message</text>
-<path d="M260 62 V82" class="ln flow"/>
-<g>
-<rect x="16" y="86" width="96" height="120" rx="10" class="col"/><text x="64" y="104" text-anchor="middle" class="ts">IDEAS</text>
-<rect x="120" y="86" width="96" height="120" rx="10" class="col"/><text x="168" y="104" text-anchor="middle" class="ts">VETTED</text>
-<rect x="224" y="86" width="96" height="120" rx="10" class="col"/><text x="272" y="104" text-anchor="middle" class="ts">DEVELOPED</text>
-<rect x="328" y="86" width="96" height="120" rx="10" class="col"/><text x="376" y="104" text-anchor="middle" class="ts">CALENDAR</text>
-<rect x="26" y="140" width="76" height="22" rx="6" class="box"/><rect x="26" y="168" width="76" height="22" rx="6" class="box"/>
-<rect x="130" y="150" width="76" height="22" rx="6" class="box"/>
-<rect x="234" y="160" width="76" height="22" rx="6" class="box"/>
-<rect x="338" y="150" width="76" height="22" rx="6" class="box"/><rect x="338" y="176" width="76" height="22" rx="6" class="box"/>
-<g class="idea k"><rect x="26" y="114" width="76" height="22" rx="6" class="org"/><text x="64" y="129" text-anchor="middle" class="t" style="font-size:10px">New idea</text></g>
-<text x="64" y="222" text-anchor="middle" class="ts">anyone adds</text><text x="168" y="222" text-anchor="middle" class="ts">one approves</text>
-</g>
-<path d="M424 146 H446" class="ln flow"/>
-<g>
-<rect x="448" y="88" width="62" height="26" rx="13" class="box"/><text x="479" y="105" text-anchor="middle" class="t" style="font-size:10px">Reels</text>
-<rect x="448" y="120" width="62" height="26" rx="13" class="box"/><text x="479" y="137" text-anchor="middle" class="t" style="font-size:10px">Stories</text>
-<rect x="448" y="152" width="62" height="26" rx="13" class="box"/><text x="479" y="169" text-anchor="middle" class="t" style="font-size:10px">Pinned</text>
-<rect x="448" y="184" width="62" height="26" rx="13" class="box"/><text x="479" y="201" text-anchor="middle" class="t" style="font-size:10px">LinkedIn</text>
-<circle cx="510" cy="101" r="7" class="org ping"/>
-</g>
-<path d="M60 250 H460" class="dash"/>
-<text x="60" y="276" class="ts">Reach new people</text>
-<text x="460" y="276" text-anchor="end" class="ts">Hold the story</text>
-<circle cx="60" cy="250" r="6" class="org"/><circle cx="460" cy="250" r="6" class="ink"/>
+<rect x="6" y="10" width="408" height="252" rx="18" class="col"/>
+<text x="24" y="36" class="ts">STRATEGY</text>
+<g><rect x="22" y="52" width="104" height="26" rx="13" class="ink"/><text x="74" y="69" text-anchor="middle" class="tw" style="font-size:10px">Brand</text></g>
+<g><rect x="22" y="88" width="104" height="26" rx="13" class="ink"/><text x="74" y="105" text-anchor="middle" class="tw" style="font-size:10px">Audiences</text></g>
+<g><rect x="22" y="124" width="104" height="26" rx="13" class="ink"/><text x="74" y="141" text-anchor="middle" class="tw" style="font-size:10px">Core message</text></g>
+<g><rect x="22" y="160" width="104" height="26" rx="13" class="ink"/><text x="74" y="177" text-anchor="middle" class="tw" style="font-size:10px">Channels</text></g>
+<rect x="142" y="30" width="258" height="218" rx="16" class="box"/>
+<text x="158" y="54" class="ts">PLAN</text>
+<g><rect x="156" y="66" width="86" height="24" rx="12" class="col"/><text x="199" y="82" text-anchor="middle" class="t" style="font-size:10px">Goals</text></g>
+<g><rect x="156" y="98" width="86" height="24" rx="12" class="col"/><text x="199" y="114" text-anchor="middle" class="t" style="font-size:10px">Calendar</text></g>
+<g><rect x="156" y="130" width="86" height="24" rx="12" class="col"/><text x="199" y="146" text-anchor="middle" class="t" style="font-size:10px">Roles</text></g>
+<g><rect x="156" y="162" width="86" height="24" rx="12" class="col"/><text x="199" y="178" text-anchor="middle" class="t" style="font-size:10px">Measures</text></g>
+<rect x="256" y="46" width="130" height="86" rx="12" class="ink"/>
+<text x="270" y="66" class="tw" style="font-size:10px">CAMPAIGNS</text>
+<rect x="270" y="76" width="48" height="10" rx="5" class="org grow"/><rect x="270" y="94" width="76" height="10" rx="5" fill="var(--paper)" opacity=".8" class="grow"/><rect x="270" y="112" width="60" height="10" rx="5" fill="var(--paper)" opacity=".8" class="grow"/>
+<rect x="256" y="144" width="130" height="86" rx="12" class="ink"/>
+<text x="270" y="164" class="tw" style="font-size:10px">TOOLS</text>
+<rect x="270" y="174" width="22" height="44" rx="4" fill="var(--paper)" opacity=".85"/><rect x="296" y="174" width="22" height="44" rx="4" fill="var(--paper)" opacity=".85"/><rect x="322" y="174" width="22" height="44" rx="4" fill="var(--paper)" opacity=".85"/><rect x="348" y="174" width="22" height="44" rx="4" fill="var(--paper)" opacity=".85"/>
+<rect x="273" y="180" width="16" height="10" rx="3" class="org ping"/><rect x="299" y="194" width="16" height="10" rx="3" class="org ping d2"/>
+<path d="M414 135 H440" class="ln flow"/><path d="M434 129l7 6-7 6" class="ln"/>
+<rect x="444" y="96" width="70" height="78" rx="14" class="org"/>
+<text x="479" y="126" text-anchor="middle" class="t" style="font-size:11px">Faster,</text><text x="479" y="141" text-anchor="middle" class="t" style="font-size:11px">better</text><text x="479" y="156" text-anchor="middle" class="t" style="font-size:11px">marketing</text>
+<text x="74" y="214" text-anchor="middle" class="ts">The big picture</text><text x="199" y="210" text-anchor="middle" class="ts">The plan</text><text x="321" y="241" text-anchor="middle" class="ts">The work</text>
 </svg>
-<figcaption>One idea, from the board to the feed</figcaption>
+<figcaption>Every tool sits inside a plan. Every plan sits inside a strategy.</figcaption>
 </figure>
 <ol>
-<li><span><b>Strategy first.</b> Who we're talking to, what we want each audience to feel, and one core message.</span></li>
-<li><span><b>An open idea board.</b> Anyone can add an idea. One person approves. Ideas move from vetted, to developed, to the calendar.</span></li>
-<li><span><b>Reach, then hold.</b> Short hooks go out as Reels to reach new people. Pinned posts and highlights hold the story for anyone who looks closer.</span></li>
+<li><span><b>Set the strategy.</b> The brand, who we are talking to, one core message, and the channels that reach them.</span></li>
+<li><span><b>Make the plan.</b> Goals, a calendar, who does what, and how we will know it is working.</span></li>
+<li><span><b>Run the work.</b> Campaigns, plus custom tools like an open idea board and content workflows, so posts go out with a plan and better quality.</span></li>
 </ol>
 <p class="tools">Built with Claude, GitHub, Cloudflare and a shared project board.</p>
 </article>
@@ -289,9 +290,13 @@
 <p class="tools">A simple website you own. The sky is the limit on what goes in it.</p>
 </article>
 
-<article class="pcard" aria-labelledby="p-train">
-<div class="intro"><div><div class="tagrow"><span class="status">Approach &#183; Training</span></div>
-<h2 id="p-train">Training built around your people</h2></div>
+<article class="pcard tbc" aria-labelledby="p-tbc">
+<div class="tbc-head"><div class="tagrow"><span class="status">Training &#183; Culture</span></div>
+<h2 id="p-tbc">Train and build your culture</h2>
+<p class="for">Built from years of teaching young adults to grow with technology, coaching teams, consulting with startups and building my own, and designing and running curriculum. All of it with one purpose: helping people grow through experience.</p></div>
+<div class="tbc-part">
+<div class="intro"><div><div class="tagrow"><span class="status">Part 1 &#183; Training</span></div>
+<h3 id="p-train">Training built around your people</h3></div>
 <p class="for">Learning that starts with what people already care about and ends with skills they use at work.</p></div>
 <figure class="stage" aria-label="Diagram: a concept goes into customized learning, built from personal interests, podcasts, visuals, in-person sessions, learning on your own time, curiosity, and problem solving. It then moves into customized skill building: real-work exercises, hands-on labs, problems that get harder each round, and quick feedback. The result is a curious problem solver.">
 <svg viewBox="0 0 520 300">
@@ -322,11 +327,10 @@
 <li><span><b>Build the skill.</b> Exercises from their real work, hands-on labs in their own tools, and problems that get harder as they go.</span></li>
 <li><span><b>Keep going.</b> People leave curious enough to learn what is new and practical enough to put it to work.</span></li>
 </ol>
-</article>
-
-<article class="pcard" aria-labelledby="p-culture">
-<div class="intro"><div><div class="tagrow"><span class="status">Approach &#183; Culture</span></div>
-<h2 id="p-culture">A culture of curious problem solvers</h2></div>
+</div>
+<div class="tbc-part">
+<div class="intro"><div><div class="tagrow"><span class="status">Part 2 &#183; Culture</span></div>
+<h3 id="p-culture">A culture of curious problem solvers</h3></div>
 <p class="for">For organizations that want people to keep growing with technology long after a training ends.</p></div>
 <figure class="stage" aria-label="Diagram: first, set the norms: the big picture of your company, technology, and growth. Second, create environments where growth is experienced through technology and valued, and error is not treated as failure. Third, one curious problem solver becomes a connected group.">
 <svg viewBox="0 0 520 300">
@@ -372,6 +376,7 @@
 <li><span><b>Create the environments.</b> Places where growth is experienced through technology and valued, and an error is part of learning, not a failure.</span></li>
 <li><span><b>Grow the culture.</b> A culture of curious problem solvers, growing through technology and through your company.</span></li>
 </ol>
+</div>
 </article>
 
 <p class="coming">More on the way: video editing, websites, AI 101 training. Each gets added here once it ships.</p>
