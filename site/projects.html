@@ -70,6 +70,13 @@
 @media (prefers-reduced-motion:reduce){.tick,.star,.grow{animation:none;stroke-dashoffset:0;transform:none}.flow,.idea,.ping,.drop,.type,.ans{animation:none}.idea{opacity:0}.idea.k{opacity:1;transform:translate(312px,0)}.ans,.type{opacity:1}.drop{opacity:0}}
 .coming{border:2px dashed var(--rule);border-radius:20px;padding:24px 28px;color:var(--soft);font-size:16px}
 @media (max-width:960px){.pcard{padding:22px}.pcard .intro{grid-template-columns:1fr}.pcard ol{grid-template-columns:1fr}.stage{padding:12px}}
+.paperdot{fill:var(--paper)}
+.bob{animation:bob 3.2s ease-in-out infinite}.b1{animation-delay:-.8s}.b2{animation-delay:-1.6s}.b3{animation-delay:-2.4s}
+@keyframes bob{0%,100%{transform:translate(0,0)}25%{transform:translate(2px,-3px)}50%{transform:translate(-2px,1px)}75%{transform:translate(1px,3px)}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop 7s ease infinite}
+.p1{animation-delay:.3s}.p2{animation-delay:.6s}.p3{animation-delay:.9s}.p4{animation-delay:1.2s}.p5{animation-delay:1.5s}.p6{animation-delay:1.8s}
+@keyframes pop{0%,8%{transform:scale(0);opacity:0}20%,88%{transform:scale(1);opacity:1}100%{transform:scale(0);opacity:0}}
+@media (prefers-reduced-motion:reduce){.bob,.pop{animation:none}}
 </style>
 <style>
 .viz{background:var(--stone);border-radius:14px;padding:12px;font-size:12px}
@@ -184,49 +191,41 @@
 <div class="intro"><div><div class="tagrow"><span class="status">In progress &#183; Knowledge</span></div>
 <h2 id="p-brain">A company brain</h2></div>
 <p class="for">For a small family company whose know-how lived in one person's head, a few inboxes, and a lot of old files.</p></div>
-<figure class="stage" aria-label="Diagram: notes, documents, meetings and voice memos flow into a repository with three folders. A person asks a question and gets an answer that cites its source file.">
+<figure class="stage" aria-label="Diagram: you reach the company brain by voice in the car, a phone app, or a laptop, and it answers back. On the other side it connects, in both directions, to customer inquiries, scheduling, follow-ups, invoicing, and marketing.">
 <svg viewBox="0 0 520 300">
-<g>
-<rect x="12" y="30" width="96" height="30" rx="8" class="box"/><text x="60" y="50" text-anchor="middle" class="t">Notes</text>
-<rect x="12" y="76" width="96" height="30" rx="8" class="box"/><text x="60" y="96" text-anchor="middle" class="t">Documents</text>
-<rect x="12" y="122" width="96" height="30" rx="8" class="box"/><text x="60" y="142" text-anchor="middle" class="t">Meetings</text>
-<rect x="12" y="168" width="96" height="30" rx="8" class="box"/><text x="60" y="188" text-anchor="middle" class="t">Voice memos</text>
-</g>
-<circle cx="114" cy="45" r="5" class="org drop" style="--dx:88px;--dy:62px"/>
-<circle cx="114" cy="91" r="5" class="org drop d2" style="--dx:88px;--dy:16px"/>
-<circle cx="114" cy="137" r="5" class="org drop d3" style="--dx:88px;--dy:-30px"/>
-<circle cx="114" cy="183" r="5" class="org drop d4" style="--dx:88px;--dy:-76px"/>
-<rect x="196" y="40" width="140" height="150" rx="14" class="ink"/>
-<path d="M281.6 118.4 A21 21 0 1 1 262.6 89.6" fill="none" stroke="var(--paper)" stroke-width="12" stroke-linecap="round" transform="translate(-4,-14)"/>
-<circle cx="275" cy="80" r="6" class="org"/>
-<text x="266" y="140" text-anchor="middle" class="tw">COMPANY BRAIN</text>
-<rect x="208" y="150" width="36" height="28" rx="5" fill="var(--paper)"/><text x="226" y="168" text-anchor="middle" class="t" style="font-size:9px">ideas</text>
-<rect x="248" y="150" width="36" height="28" rx="5" fill="var(--paper)"/><text x="266" y="168" text-anchor="middle" class="t" style="font-size:9px">log</text>
-<rect x="288" y="150" width="36" height="28" rx="5" fill="var(--paper)"/><text x="306" y="168" text-anchor="middle" class="t" style="font-size:9px">inbox</text>
-<path d="M336 115 H356" class="ln flow"/>
-<g class="type">
-<rect x="358" y="40" width="150" height="44" rx="12" class="box"/>
-<text x="370" y="58" class="ts">ASKED</text>
-<text x="370" y="74" class="t" style="font-size:11px">How do we price repairs?</text>
-</g>
-<g class="ans">
-<rect x="358" y="96" width="150" height="94" rx="12" class="box"/>
-<text x="370" y="114" class="ts">ANSWER</text>
-<rect x="370" y="122" width="124" height="7" rx="3.5" fill="var(--soft)"/>
-<rect x="370" y="136" width="110" height="7" rx="3.5" fill="var(--soft)"/>
-<rect x="370" y="150" width="90" height="7" rx="3.5" fill="var(--soft)"/>
-<rect x="370" y="164" width="96" height="18" rx="9" class="org"/><text x="418" y="177" text-anchor="middle" class="t" style="font-size:9px">log/pricing.md</text>
-</g>
-<path d="M60 240 H460" class="dash"/>
-<circle cx="60" cy="240" r="6" class="org"/><circle cx="266" cy="240" r="6" class="ink"/><circle cx="460" cy="240" r="6" class="org"/>
-<text x="60" y="266" text-anchor="middle" class="ts">Gather</text><text x="266" y="266" text-anchor="middle" class="ts">Organize</text><text x="460" y="266" text-anchor="middle" class="ts">Ask</text>
-</svg>
-<figcaption>Know-how goes in once. Answers come back with a source.</figcaption>
+<text x="64" y="26" text-anchor="middle" class="ts">YOU, ANYWHERE</text>
+<text x="452" y="14" text-anchor="middle" class="ts">YOUR OPERATIONS</text>
+<g class=""><rect x="8" y="44" width="112" height="26" rx="13" class="ink"/><text x="64.0" y="61" text-anchor="middle" class="tw" style="font-size:10px">Voice, in the car</text></g>
+<path d="M122 57 H186" class="ln"/><path d="M180 52l6 5-6 5M128 52l-6 5 6 5" class="ln"/>
+<g class=""><rect x="8" y="100" width="112" height="26" rx="13" class="ink"/><text x="64.0" y="117" text-anchor="middle" class="tw" style="font-size:10px">Phone app</text></g>
+<path d="M122 113 H186" class="ln"/><path d="M180 108l6 5-6 5M128 108l-6 5 6 5" class="ln"/>
+<g class=""><rect x="8" y="156" width="112" height="26" rx="13" class="ink"/><text x="64.0" y="173" text-anchor="middle" class="tw" style="font-size:10px">Laptop</text></g>
+<path d="M122 169 H186" class="ln"/><path d="M180 164l6 5-6 5M128 164l-6 5 6 5" class="ln"/>
+<circle cx="124" cy="57" r="4.5" class="org drop d" style="--dx:60px;--dy:0px"/>
+<circle cx="124" cy="113" r="4.5" class="org drop d2" style="--dx:60px;--dy:0px"/>
+<circle cx="124" cy="169" r="4.5" class="org drop d3" style="--dx:60px;--dy:0px"/>
+<rect x="190" y="40" width="140" height="150" rx="14" class="ink"/>
+<path d="M275.6 104.4 A21 21 0 1 1 256.6 75.6" fill="none" stroke="var(--paper)" stroke-width="12" stroke-linecap="round"/><circle cx="269" cy="80" r="6" class="org"/>
+<text x="260" y="140" text-anchor="middle" class="tw">COMPANY BRAIN</text><text x="260" y="160" text-anchor="middle" class="tw" style="font-weight:600;font-size:10px;opacity:.75">one place you own</text>
+<g class=""><rect x="386" y="22" width="126" height="26" rx="13" class="box"/><text x="449.0" y="39" text-anchor="middle" class="t" style="font-size:10.5px">Customer inquiries</text></g>
+<path d="M330 115 C356 115 360 35 384 35" class="ln flow"/>
+<g class=""><rect x="386" y="66" width="126" height="26" rx="13" class="box"/><text x="449.0" y="83" text-anchor="middle" class="t" style="font-size:10.5px">Scheduling</text></g>
+<path d="M330 115 C356 115 360 79 384 79" class="ln flow"/>
+<g class=""><rect x="386" y="110" width="126" height="26" rx="13" class="box"/><text x="449.0" y="127" text-anchor="middle" class="t" style="font-size:10.5px">Follow-ups</text></g>
+<path d="M330 115 C356 115 360 123 384 123" class="ln flow"/>
+<g class=""><rect x="386" y="154" width="126" height="26" rx="13" class="box"/><text x="449.0" y="171" text-anchor="middle" class="t" style="font-size:10.5px">Invoicing</text></g>
+<path d="M330 115 C356 115 360 167 384 167" class="ln flow"/>
+<g class=""><rect x="386" y="198" width="126" height="26" rx="13" class="box"/><text x="449.0" y="215" text-anchor="middle" class="t" style="font-size:10.5px">Marketing</text></g>
+<path d="M330 115 C356 115 360 211 384 211" class="ln flow"/>
+<circle cx="334" cy="115" r="4.5" class="org drop d3" style="--dx:50px;--dy:-80px"/><circle cx="334" cy="115" r="4.5" class="org drop" style="--dx:50px;--dy:52px"/>
+<path d="M60 248 H460" class="dash"/><circle cx="60" cy="248" r="6" class="org"/><circle cx="260" cy="248" r="6" class="ink"/><circle cx="460" cy="248" r="6" class="org"/>
+<text x="60" y="274" text-anchor="middle" class="ts">Talk to it anywhere</text><text x="260" y="274" text-anchor="middle" class="ts">It remembers</text><text x="460" y="274" text-anchor="middle" class="ts">It helps run the work</text></svg>
+<figcaption>Same brain wherever you are. It talks with you on one side and with the work on the other.</figcaption>
 </figure>
 <ol>
-<li><span><b>Gather it.</b> Notes, documents, meeting recaps and voice memos go into one place.</span></li>
-<li><span><b>Organize it.</b> It lives in a private repository, sorted into ideas, a running log, and an inbox for anything new. Plain files the company owns.</span></li>
-<li><span><b>Ask it.</b> Anyone on the team asks a question in plain words. The answer points to the file it came from.</span></li>
+<li><span><b>Talk to it anywhere.</b> Voice while you drive, a message from your phone, or typing at your laptop. Each one adds to it and gets answers back.</span></li>
+<li><span><b>It remembers.</b> Notes, meetings, and past work live in one private place the company owns, sorted so anyone can find them.</span></li>
+<li><span><b>It helps run the work.</b> The next step connects it to customer inquiries, scheduling, follow-ups, invoicing, and marketing, in both directions.</span></li>
 </ol>
 <p class="tools">Built with Claude and a private GitHub repository.</p>
 </article>
@@ -288,6 +287,91 @@
 <li><span><b>Share a link.</b> It opens on any phone with no app to download and nothing tracking them. You control the login, it runs on your email, the data stays with you, and you can change it anytime.</span></li>
 </ol>
 <p class="tools">A simple website you own. The sky is the limit on what goes in it.</p>
+</article>
+
+<article class="pcard" aria-labelledby="p-train">
+<div class="intro"><div><div class="tagrow"><span class="status">Approach &#183; Training</span></div>
+<h2 id="p-train">Training built around your people</h2></div>
+<p class="for">Learning that starts with what people already care about and ends with skills they use at work.</p></div>
+<figure class="stage" aria-label="Diagram: a concept goes into customized learning, built from personal interests, podcasts, visuals, in-person sessions, learning on your own time, curiosity, and problem solving. It then moves into customized skill building: real-work exercises, hands-on labs, problems that get harder each round, and quick feedback. The result is a curious problem solver.">
+<svg viewBox="0 0 520 300">
+<rect x="6" y="96" width="98" height="46" rx="12" class="ink"/><text x="55" y="124" text-anchor="middle" class="tw">Concepts</text>
+<path d="M104 119 H134" class="ln flow"/><path d="M128 113l7 6-7 6" class="ln"/>
+<rect x="138" y="20" width="200" height="180" rx="16" class="col"/><text x="238" y="40" text-anchor="middle" class="ts">CUSTOMIZED LEARNING</text>
+<g class="bob b0"><g class=""><rect x="150" y="52" width="96" height="26" rx="13" class="box"/><text x="198.0" y="69" text-anchor="middle" class="t" style="font-size:9.5px">Personal interests</text></g></g>
+<g class="bob b1"><g class=""><rect x="258" y="52" width="64" height="26" rx="13" class="box"/><text x="290.0" y="69" text-anchor="middle" class="t" style="font-size:9.5px">Podcasts</text></g></g>
+<g class="bob b2"><g class=""><rect x="150" y="88" width="56" height="26" rx="13" class="box"/><text x="178.0" y="105" text-anchor="middle" class="t" style="font-size:9.5px">Visuals</text></g></g>
+<g class="bob b3"><g class=""><rect x="214" y="88" width="66" height="26" rx="13" class="box"/><text x="247.0" y="105" text-anchor="middle" class="t" style="font-size:9.5px">In person</text></g></g>
+<g class="bob b0"><g class=""><rect x="150" y="124" width="104" height="26" rx="13" class="box"/><text x="202.0" y="141" text-anchor="middle" class="t" style="font-size:9.5px">On your own time</text></g></g>
+<g class="bob b1"><g class=""><rect x="262" y="124" width="62" height="26" rx="13" class="box"/><text x="293.0" y="141" text-anchor="middle" class="t" style="font-size:9.5px">Curiosity</text></g></g>
+<g class="bob b2"><g class=""><rect x="180" y="160" width="100" height="26" rx="13" class="box"/><text x="230.0" y="177" text-anchor="middle" class="t" style="font-size:9.5px">Problem solving</text></g></g>
+<path d="M338 110 H364" class="ln flow"/><path d="M358 104l7 6-7 6" class="ln"/>
+<rect x="368" y="20" width="132" height="180" rx="16" class="col"/><text x="434" y="40" text-anchor="middle" class="ts">CUSTOMIZED SKILLS</text>
+<g class=""><rect x="378" y="60" width="112" height="26" rx="13" class="box"/><text x="434.0" y="77" text-anchor="middle" class="t" style="font-size:9.5px">Real-work exercises</text></g>
+<g class=""><rect x="378" y="96" width="112" height="26" rx="13" class="box"/><text x="434.0" y="113" text-anchor="middle" class="t" style="font-size:9.5px">Hands-on labs</text></g>
+<g class=""><rect x="378" y="132" width="112" height="26" rx="13" class="box"/><text x="434.0" y="149" text-anchor="middle" class="t" style="font-size:9.5px">Harder each round</text></g>
+<g class=""><rect x="378" y="168" width="112" height="26" rx="13" class="box"/><text x="434.0" y="185" text-anchor="middle" class="t" style="font-size:9.5px">Quick feedback</text></g>
+<circle cx="72" cy="119" r="5" class="org drop" style="--dx:300px;--dy:-10px"/>
+<path d="M434 200 V222" class="ln"/><rect x="330" y="226" width="186" height="34" rx="17" class="org"/><text x="423" y="248" text-anchor="middle" class="t">Curious problem solver</text>
+<path d="M40 243 H328" class="dash"/><circle cx="40" cy="243" r="6" class="ink"/><circle cx="238" cy="243" r="6" class="ink"/>
+<text x="40" y="276" text-anchor="middle" class="ts">The idea</text><text x="238" y="276" text-anchor="middle" class="ts">Learned your way</text><text x="423" y="282" text-anchor="middle" class="ts">Skilled, and still curious</text></svg>
+<figcaption>Curious enough to learn what&#8217;s new. Practical enough to use it.</figcaption>
+</figure>
+<ol>
+<li><span><b>Learn it your way.</b> The same concept, delivered through what each person cares about: their interests, audio, visuals, in person or on their own time.</span></li>
+<li><span><b>Build the skill.</b> Exercises from their real work, hands-on labs in their own tools, and problems that get harder as they go.</span></li>
+<li><span><b>Keep going.</b> People leave curious enough to learn what is new and practical enough to put it to work.</span></li>
+</ol>
+</article>
+
+<article class="pcard" aria-labelledby="p-culture">
+<div class="intro"><div><div class="tagrow"><span class="status">Approach &#183; Culture</span></div>
+<h2 id="p-culture">A culture of curious problem solvers</h2></div>
+<p class="for">For organizations that want people to keep growing with technology long after a training ends.</p></div>
+<figure class="stage" aria-label="Diagram: first, set the norms: the big picture of your company, technology, and growth. Second, create environments where growth is experienced through technology and valued, and error is not treated as failure. Third, one curious problem solver becomes a connected group.">
+<svg viewBox="0 0 520 300">
+<rect x="8" y="30" width="150" height="170" rx="16" class="col"/><text x="83" y="52" text-anchor="middle" class="ts">1 &#183; SET THE NORMS</text>
+<g class=""><rect x="22" y="64" width="122" height="26" rx="13" class="box"/><text x="83.0" y="81" text-anchor="middle" class="t" style="font-size:10px">Your company</text></g>
+<g class=""><rect x="22" y="96" width="122" height="26" rx="13" class="box"/><text x="83.0" y="113" text-anchor="middle" class="t" style="font-size:10px">Technology</text></g>
+<g class=""><rect x="22" y="128" width="122" height="26" rx="13" class="box"/><text x="83.0" y="145" text-anchor="middle" class="t" style="font-size:10px">Growth</text></g>
+<g class=""><rect x="22" y="160" width="122" height="26" rx="13" class="ink"/><text x="83.0" y="177" text-anchor="middle" class="tw" style="font-size:10px">The big picture</text></g>
+<path d="M158 115 H184" class="ln flow"/><path d="M178 109l7 6-7 6" class="ln"/>
+<rect x="188" y="30" width="150" height="170" rx="16" class="col"/><text x="263" y="52" text-anchor="middle" class="ts">2 &#183; CREATE ENVIRONMENTS</text>
+<g class="bob b0"><g class=""><rect x="202" y="64" width="122" height="26" rx="13" class="box"/><text x="263.0" y="81" text-anchor="middle" class="t" style="font-size:10px">Growth experienced</text></g></g>
+<g class="bob b1"><g class=""><rect x="202" y="96" width="122" height="26" rx="13" class="box"/><text x="263.0" y="113" text-anchor="middle" class="t" style="font-size:10px">Error, not failure</text></g></g>
+<g class="bob b2"><g class=""><rect x="202" y="128" width="122" height="26" rx="13" class="box"/><text x="263.0" y="145" text-anchor="middle" class="t" style="font-size:10px">Growth valued</text></g></g>
+<g class="bob b3"><g class=""><rect x="202" y="160" width="122" height="26" rx="13" class="box"/><text x="263.0" y="177" text-anchor="middle" class="t" style="font-size:10px">Through technology</text></g></g>
+<path d="M338 115 H364" class="ln flow"/><path d="M358 109l7 6-7 6" class="ln"/>
+<rect x="368" y="30" width="144" height="170" rx="16" class="ink"/><text x="440" y="52" text-anchor="middle" class="tw" style="font-size:10px">3 &#183; THE CULTURE</text>
+<path d="M440 112 L440.0 70.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M440 112 L476.4 91.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M440 112 L476.4 133.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M440 112 L440.0 154.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M440 112 L403.6 133.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M440 112 L403.6 91.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M440.0 70.0 L476.4 91.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M476.4 91.0 L476.4 133.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M476.4 133.0 L440.0 154.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M440.0 154.0 L403.6 133.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M403.6 133.0 L403.6 91.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<path d="M403.6 91.0 L440.0 70.0" stroke="var(--paper)" stroke-width="1.5" opacity=".5" class="join"/>
+<circle cx="440.0" cy="112.0" r="8" class="org "/>
+<circle cx="440.0" cy="70.0" r="6" class="paperdot pop p1"/>
+<circle cx="476.4" cy="91.0" r="6" class="paperdot pop p2"/>
+<circle cx="476.4" cy="133.0" r="6" class="paperdot pop p3"/>
+<circle cx="440.0" cy="154.0" r="6" class="paperdot pop p4"/>
+<circle cx="403.6" cy="133.0" r="6" class="paperdot pop p5"/>
+<circle cx="403.6" cy="91.0" r="6" class="paperdot pop p6"/>
+<text x="440" y="180" text-anchor="middle" class="tw" style="font-size:10px">Curious problem solvers</text>
+<path d="M83 243 H440" class="dash"/><circle cx="83" cy="243" r="6" class="ink"/><circle cx="263" cy="243" r="6" class="ink"/><circle cx="440" cy="243" r="6" class="org"/>
+<text x="83" y="270" text-anchor="middle" class="ts">Understand it</text><text x="263" y="270" text-anchor="middle" class="ts">Experience it</text><text x="440" y="270" text-anchor="middle" class="ts">Grow together</text></svg>
+<figcaption>One curious problem solver becomes a group of them.</figcaption>
+</figure>
+<ol>
+<li><span><b>Set the norms.</b> Understand the big picture of your company, technology, and growth, and agree on how growth is supported.</span></li>
+<li><span><b>Create the environments.</b> Places where growth is experienced through technology and valued, and an error is part of learning, not a failure.</span></li>
+<li><span><b>Grow the culture.</b> A culture of curious problem solvers, growing through technology and through your company.</span></li>
+</ol>
 </article>
 
 <p class="coming">More on the way: video editing, websites, AI 101 training. Each gets added here once it ships.</p>
